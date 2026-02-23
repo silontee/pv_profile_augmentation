@@ -1,0 +1,84 @@
+# ========================================
+# 기본: 모든 파일 무시
+# ========================================
+*
+
+# ========================================
+# 필수 파일만 포함 (whitelist)
+# ========================================
+
+# 루트 파일
+!.gitignore
+!requirements.txt
+!PROJECT_HANDOVER.md
+!pyproject.toml
+!uv.lock
+!.python-version
+
+# generator 디렉토리 구조
+!generator/
+!generator/__init__.py
+!generator/mian.py
+
+# v2 코드 파일들
+!generator/v2/
+!generator/v2/*.py
+!generator/v2/*.ipynb
+
+# v2 필수 데이터 파일
+!generator/v2/source/
+!generator/v2/source/gdf_v3.pkl
+!generator/v2/source/최종3.csv
+!generator/v2/source/최종_기반_기초자치단체별_데이터2.csv
+!generator/v2/source/최종2_지역코드_set.csv
+
+# v2 rps 데이터
+!generator/v2/source/rps/
+!generator/v2/source/rps/raw/
+!generator/v2/source/rps/raw/rps2.csv
+
+# v2 openstreetmap (권장)
+!generator/v2/source/openstreetmap/
+!generator/v2/source/openstreetmap/*.geojson
+!generator/v2/source/openstreetmap/*.csv
+
+# v2 인구 데이터 (권장)
+!generator/v2/source/인구/
+!generator/v2/source/인구/*.csv
+
+# 레거시 utils (일부 함수 참조됨)
+!generator/utils/
+!generator/utils/utils.py
+
+# ========================================
+# 명시적 제외 (위 whitelist에 포함되어도 제외)
+# ========================================
+
+# 가상환경
+bin/
+lib/
+share/
+pyvenv.cfg
+
+# 캐시
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS 파일
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# 대용량 데이터 (삭제 대상)
+generator/source/
+generator/v2/source/용도지역정보/
+generator/v2/source/전국태양광패널데이터/
+generator/v2/source/해안선/
+generator/v2/source/cells_*.gpkg
+generator/v2/source/4-2.cell/
+generator/v2/source/tmp/
