@@ -21,6 +21,15 @@
 !generator/__init__.py
 !generator/mian.py
 
+# 신규 작업 디렉토리
+!generator_next/
+!generator_next/README.md
+!generator_next/crawlers/
+!generator_next/crawlers/*.py
+!generator_next/source/
+!generator_next/source/raw_csv/
+!generator_next/source/raw_csv/.gitkeep
+
 # v2 코드 파일들
 !generator/v2/
 !generator/v2/*.py
