@@ -57,20 +57,6 @@ def safe_close_modal(page) -> bool:
     return False
 
 
-def unique_path(path: Path) -> Path:
-    if not path.exists():
-        return path
-    stem = path.stem
-    suffix = path.suffix
-    parent = path.parent
-    i = 1
-    while True:
-        candidate = parent / f"{stem}_{i}{suffix}"
-        if not candidate.exists():
-            return candidate
-        i += 1
-
-
 def get_max_page(page) -> int:
     candidates = page.locator("a[onclick*='fn_pageClick']")
     count = candidates.count()
@@ -147,6 +133,7 @@ def run_crawler(
     state: dict[str, dict[str, str]],
     timeout_ms: int,
     headless: bool,
+    max_attempts: int,
 ):
     rows = []
 
@@ -194,25 +181,40 @@ def run_crawler(
                     if is_up_to_date(state, state_key, modified_date, download_dir):
                         status = "skipped:up_to_date"
                     else:
-                        link.click()
-                        download_link = page.locator(
-                            "a[onclick*='fn_fileDataDown'][onclick*='csv'], "
-                            "a[onclick*='fn_fileDataDown'][onclick*='CSV']"
-                        ).last
-                        download_link.wait_for(state="visible")
-                        download_onclick = download_link.get_attribute("onclick") or ""
+                        attempt = 0
+                        while attempt < max_attempts:
+                            attempt += 1
+                            try:
+                                link.click()
+                                download_link = page.locator(
+                                    "a[onclick*='fn_fileDataDown'][onclick*='csv'], "
+                                    "a[onclick*='fn_fileDataDown'][onclick*='CSV']"
+                                ).last
+                                download_link.wait_for(state="visible")
+                                download_onclick = download_link.get_attribute("onclick") or ""
 
-                        with page.expect_download() as download_info:
-                            download_link.click()
-                        download = download_info.value
+                                with page.expect_download() as download_info:
+                                    download_link.click()
+                                download = download_info.value
 
-                        target = unique_path(download_dir / download.suggested_filename)
-                        download.save_as(str(target))
-                        saved_file = str(target)
+                                target = download_dir / download.suggested_filename
+                                download.save_as(str(target))
+                                saved_file = str(target)
 
-                        if not safe_close_modal(page):
-                            status = "warn:close_failed"
-                        page.wait_for_timeout(300)
+                                if not safe_close_modal(page):
+                                    status = "warn:close_failed"
+                                page.wait_for_timeout(300)
+                                break
+                            except PlaywrightTimeoutError:
+                                status = f"timeout:attempt_{attempt}"
+                                safe_close_modal(page)
+                                if attempt >= max_attempts:
+                                    status = "timeout"
+                            except Exception as exc:  # noqa: BLE001
+                                status = f"error:{type(exc).__name__}:attempt_{attempt}"
+                                safe_close_modal(page)
+                                if attempt >= max_attempts:
+                                    status = f"error:{type(exc).__name__}"
 
                 except PlaywrightTimeoutError:
                     status = "timeout"
@@ -288,7 +290,8 @@ def main() -> None:
     parser.add_argument("--download-dir", default="generator_next/source/raw_csv")
     parser.add_argument("--log-path", default="generator_next/source/raw_csv/download_log_playwright.csv")
     parser.add_argument("--state-path", default="generator_next/source/raw_csv/pv_facility_profile_state.csv")
-    parser.add_argument("--timeout-ms", type=int, default=20000)
+    parser.add_argument("--timeout-ms", type=int, default=45000)
+    parser.add_argument("--max-attempts", type=int, default=3)
     parser.add_argument("--headless", action="store_true")
     args = parser.parse_args()
 
@@ -304,6 +307,7 @@ def main() -> None:
         state=state,
         timeout_ms=args.timeout_ms,
         headless=args.headless,
+        max_attempts=args.max_attempts,
     )
     write_log(Path(args.log_path), rows)
     write_state(state_path, state)

@@ -95,3 +95,13 @@ generator/v2/source/tmp/
 
 # CSV 데이터는 작업 편의를 위해 포함
 !generator/**/*.csv
+
+.env
+
+# Large CSV data folders (do not track)
+generator_next/source/raw_csv/
+generator_next/source/final/
+generator/v2/source/rps/raw/
+!generator_next/source/raw_csv/.gitkeep
+
+generator/v2/source/gdf_v3.pkl
