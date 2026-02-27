@@ -1,6 +1,7 @@
 """OpenInfraMap 수집 데이터 지도 시각화.
 
-수집한 변전소(Point) + 송전선(LineString) GeoJSON을 지도 위에 표시한다.
+수집한 변전소(Point) + 송전선(LineString) + 발전소(Point) GeoJSON을
+지도 위에 표시한다.
 출력: HTML 인터랙티브 맵 (folium) 또는 정적 이미지 (matplotlib).
 """
 
@@ -16,6 +17,7 @@ from pathlib import Path
 def render_folium(
     substations_path: Path | None,
     lines_path: Path | None,
+    plants_path: Path | None,
     output: Path,
 ) -> None:
     import folium
@@ -97,6 +99,44 @@ def render_folium(
                 tooltip=name,
             ).add_to(m)
 
+    # 발전소 / 발전기
+    if plants_path and plants_path.exists():
+        with plants_path.open(encoding="utf-8") as f:
+            plants_fc = json.load(f)
+
+        for feat in plants_fc["features"]:
+            lon, lat = feat["geometry"]["coordinates"]
+            if lat is None or lon is None:
+                continue
+            props = feat["properties"]
+            power_type = props.get("power_type", "")
+            name = props.get("name", "") or props.get("name_en", "") or (
+                "발전소" if power_type == "plant" else "발전기"
+            )
+            source = props.get("plant_source", "")
+            output_elec = props.get("plant_output", "")
+
+            popup = (
+                f"<b>{name}</b><br>"
+                f"유형: {power_type}<br>"
+                f"에너지원: {source or '미상'}<br>"
+                f"출력: {output_elec or '미상'}<br>"
+                f"운영: {props.get('operator', '') or '미상'}"
+            )
+
+            radius, color, icon = _plant_style(source, power_type)
+            folium.CircleMarker(
+                location=[lat, lon],
+                radius=radius,
+                color="white",
+                weight=1,
+                fill=True,
+                fill_color=color,
+                fill_opacity=0.9,
+                popup=popup,
+                tooltip=f"{icon} {name}",
+            ).add_to(m)
+
     # 범례
     legend_html = """
     <div style="position:fixed; bottom:30px; left:30px; z-index:1000;
@@ -118,7 +158,20 @@ def render_folium(
         <line x1="0" y1="2" x2="30" y2="2" stroke="#29b6f6" stroke-width="2"
               stroke-dasharray="6,4"/></svg> 케이블<br>
       <svg width="30" height="10" style="vertical-align:middle;">
-        <circle cx="6" cy="5" r="5" fill="#e85d15" stroke="white" stroke-width="1"/></svg> 변전소
+        <circle cx="6" cy="5" r="5" fill="#e85d15" stroke="white" stroke-width="1"/></svg> 변전소<br>
+      <b style="font-size:12px; margin-top:4px; display:inline-block;">발전소</b><br>
+      <svg width="30" height="10" style="vertical-align:middle;">
+        <circle cx="6" cy="5" r="5" fill="#ffeb3b" stroke="white" stroke-width="1"/></svg> 태양광<br>
+      <svg width="30" height="10" style="vertical-align:middle;">
+        <circle cx="6" cy="5" r="5" fill="#26c6da" stroke="white" stroke-width="1"/></svg> 풍력<br>
+      <svg width="30" height="10" style="vertical-align:middle;">
+        <circle cx="6" cy="5" r="5" fill="#42a5f5" stroke="white" stroke-width="1"/></svg> 수력<br>
+      <svg width="30" height="10" style="vertical-align:middle;">
+        <circle cx="6" cy="5" r="5" fill="#ef5350" stroke="white" stroke-width="1"/></svg> 화력<br>
+      <svg width="30" height="10" style="vertical-align:middle;">
+        <circle cx="6" cy="5" r="5" fill="#ab47bc" stroke="white" stroke-width="1"/></svg> 원자력<br>
+      <svg width="30" height="10" style="vertical-align:middle;">
+        <circle cx="6" cy="5" r="5" fill="#78909c" stroke="white" stroke-width="1"/></svg> 기타
     </div>
     """
     m.get_root().html.add_child(folium.Element(legend_html))
@@ -193,6 +246,31 @@ def _substation_style(voltage: str) -> tuple[int, str]:
     return 5, "#4aa82e"
 
 
+# 에너지원 키워드 → (색상, 아이콘)
+_SOURCE_STYLES: dict[str, tuple[str, str]] = {
+    "solar":       ("#ffeb3b", "S"),
+    "wind":        ("#26c6da", "W"),
+    "hydro":       ("#42a5f5", "H"),
+    "coal":        ("#ef5350", "C"),
+    "gas":         ("#ef5350", "G"),
+    "oil":         ("#ef5350", "O"),
+    "nuclear":     ("#ab47bc", "N"),
+    "biomass":     ("#66bb6a", "B"),
+    "geothermal":  ("#ff7043", "T"),
+    "waste":       ("#8d6e63", "R"),
+}
+
+
+def _plant_style(source: str, power_type: str) -> tuple[int, str, str]:
+    """발전소/발전기 에너지원 → (반지름, 색상, 아이콘 문자)."""
+    radius = 8 if power_type == "plant" else 5
+    src = source.lower()
+    for key, (color, icon) in _SOURCE_STYLES.items():
+        if key in src:
+            return radius, color, icon
+    return radius, "#78909c", "?"
+
+
 # --------------- matplotlib 방식 (정적) ---------------
 
 
@@ -232,6 +310,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="OpenInfraMap 수집 데이터 지도 시각화")
     parser.add_argument("--substations", type=Path, default=None, help="변전소 GeoJSON 경로")
     parser.add_argument("--lines", type=Path, default=None, help="송전선 GeoJSON 경로")
+    parser.add_argument("--plants", type=Path, default=None, help="발전소 GeoJSON 경로")
     parser.add_argument(
         "--output",
         type=Path,
@@ -248,6 +327,7 @@ def main() -> None:
 
     substations = args.substations
     lines = args.lines
+    plants = args.plants
 
     # --data-dir 지정 시 가장 최근 파일 자동 탐색
     if args.data_dir and args.data_dir.is_dir():
@@ -257,15 +337,18 @@ def main() -> None:
         if not lines:
             candidates = sorted(args.data_dir.glob("power_lines_*.geojson"))
             lines = candidates[-1] if candidates else None
+        if not plants:
+            candidates = sorted(args.data_dir.glob("plants_*.geojson"))
+            plants = candidates[-1] if candidates else None
 
-    if not substations and not lines:
-        print("표시할 GeoJSON 파일이 없습니다. --substations, --lines, 또는 --data-dir를 지정하세요.")
+    if not substations and not lines and not plants:
+        print("표시할 GeoJSON 파일이 없습니다. --data-dir를 지정하세요.")
         return
 
     if args.output.suffix == ".png":
-        render_matplotlib(substations, lines, args.output)
+        render_matplotlib(substations, lines, output=args.output)
     else:
-        render_folium(substations, lines, args.output)
+        render_folium(substations, lines, plants, args.output)
 
 
 if __name__ == "__main__":

@@ -9,6 +9,8 @@ OpenInfraMap이 보여주는 데이터와 동일한 OSM 원본이다.
   - power=line         (송전선: 고압 송전)
   - power=minor_line   (배전선: 저압 배전)
   - power=cable        (지중·해저 케이블)
+  - power=plant        (발전소)
+  - power=generator    (발전기)
 """
 
 from __future__ import annotations
@@ -79,6 +81,48 @@ area["name"="{sido}"]["admin_level"="4"]->.sido;
 );
 out geom;
 """
+
+
+def _plant_query(sido: str) -> str:
+    return f"""
+[out:json][timeout:180];
+area["name"="{sido}"]["admin_level"="4"]->.sido;
+(
+  node["power"="plant"](area.sido);
+  way["power"="plant"](area.sido);
+  relation["power"="plant"](area.sido);
+  node["power"="generator"](area.sido);
+  way["power"="generator"](area.sido);
+);
+out tags center;
+"""
+
+
+def _parse_plant(el: dict, sido: str) -> dict:
+    """발전소/발전기 element → GeoJSON Feature (Point)."""
+    tags = el.get("tags", {})
+    center = el.get("center", {})
+    lat = center.get("lat") or el.get("lat")
+    lon = center.get("lon") or el.get("lon")
+    return {
+        "type": "Feature",
+        "geometry": {
+            "type": "Point",
+            "coordinates": [lon, lat],
+        },
+        "properties": {
+            "osm_type": el["type"],
+            "osm_id": el["id"],
+            "sido": sido,
+            "power_type": tags.get("power", ""),
+            "name": tags.get("name", ""),
+            "name_en": tags.get("name:en", ""),
+            "plant_source": tags.get("plant:source", tags.get("generator:source", "")),
+            "plant_output": tags.get("plant:output:electricity", tags.get("generator:output:electricity", "")),
+            "plant_method": tags.get("plant:method", tags.get("generator:method", "")),
+            "operator": tags.get("operator", ""),
+        },
+    }
 
 
 def _parse_substation(el: dict, sido: str) -> dict:
@@ -199,8 +243,8 @@ async def crawl_sido_infra(
     sem: asyncio.Semaphore,
     mirror_url: str,
     sido: str,
-) -> tuple[list[dict], list[dict]]:
-    """단일 시도의 변전소 + 송전선 데이터를 수집한다."""
+) -> tuple[list[dict], list[dict], list[dict]]:
+    """단일 시도의 변전소 + 송전선 + 발전소 데이터를 수집한다."""
     mirror_name = mirror_url.split("/")[2]
     print(f"  [{mirror_name}] {sido} 변전소 조회 중...")
     sub_els = await _query_overpass(session, sem, mirror_url, _substation_query(sido))
@@ -218,7 +262,14 @@ async def crawl_sido_infra(
 
     await asyncio.sleep(REQUEST_DELAY)
 
-    return substations, lines
+    print(f"  [{mirror_name}] {sido} 발전소/발전기 조회 중...")
+    plant_els = await _query_overpass(session, sem, mirror_url, _plant_query(sido))
+    plants = [_parse_plant(el, sido) for el in plant_els]
+    print(f"  [{mirror_name}] {sido} 발전소/발전기: {len(plants)}건")
+
+    await asyncio.sleep(REQUEST_DELAY)
+
+    return substations, lines, plants
 
 
 def _sido_filename(sido: str) -> str:
@@ -229,8 +280,8 @@ def _sido_filename(sido: str) -> str:
 def _find_collected_sidos(output_dir: Path) -> set[str]:
     """이미 수집 완료된 시도 목록을 반환한다.
 
-    by_sido/ 디렉토리에 substations_*.geojson AND power_lines_*.geojson
-    둘 다 존재하는 시도만 수집 완료로 판정한다.
+    by_sido/ 디렉토리에 substations, power_lines, plants 3종이
+    모두 존재하는 시도만 수집 완료로 판정한다.
     """
     sido_dir = output_dir / "by_sido"
     if not sido_dir.is_dir():
@@ -238,7 +289,8 @@ def _find_collected_sidos(output_dir: Path) -> set[str]:
 
     sub_files = {p.stem.replace("substations_", "") for p in sido_dir.glob("substations_*.geojson")}
     line_files = {p.stem.replace("power_lines_", "") for p in sido_dir.glob("power_lines_*.geojson")}
-    collected_keys = sub_files & line_files
+    plant_files = {p.stem.replace("plants_", "") for p in sido_dir.glob("plants_*.geojson")}
+    collected_keys = sub_files & line_files & plant_files
 
     # 영문 key → 한글 시도 역매핑
     en_to_kr = {v.lower(): k for k, v in SIDOS.items()}
@@ -249,8 +301,8 @@ async def crawl_all(
     sido_filter: str | None = None,
     output_dir: Path | None = None,
     force: bool = False,
-) -> tuple[list[dict], list[dict]]:
-    """전국 송·변전 인프라 데이터를 미러별 병렬로 수집한다.
+) -> tuple[list[dict], list[dict], list[dict]]:
+    """전국 송·변전·발전 인프라 데이터를 미러별 병렬로 수집한다.
 
     시도 목록을 미러 수만큼 그룹으로 나누고,
     각 그룹은 전담 미러에 순차 요청 / 그룹 간에는 동시 실행.
@@ -274,8 +326,7 @@ async def crawl_all(
 
     if not target:
         print("모든 시도가 이미 수집되었습니다. (재수집: --force)")
-        # 기존 파일에서 로드하여 반환
-        return _load_existing(output_dir) if output_dir else ([], [])
+        return _load_existing(output_dir) if output_dir else ([], [], [])
 
     mirrors = OVERPASS_MIRRORS
     n_mirrors = len(mirrors)
@@ -302,22 +353,26 @@ async def crawl_all(
         mirror_url: str,
         sem: asyncio.Semaphore,
         sidos: list[str],
-    ) -> tuple[list[dict], list[dict]]:
+    ) -> tuple[list[dict], list[dict], list[dict]]:
         subs_all: list[dict] = []
         lines_all: list[dict] = []
+        plants_all: list[dict] = []
         for sido in sidos:
-            subs, lines = await crawl_sido_infra(session, sem, mirror_url, sido)
+            subs, lines, plants = await crawl_sido_infra(session, sem, mirror_url, sido)
             subs_all.extend(subs)
             lines_all.extend(lines)
+            plants_all.extend(plants)
             # 시도별 즉시 저장 (중간 중단 대비)
             if sido_dir:
                 key = _sido_filename(sido)
                 save_geojson(subs, sido_dir / f"substations_{key}.geojson")
                 save_geojson(lines, sido_dir / f"power_lines_{key}.geojson")
-        return subs_all, lines_all
+                save_geojson(plants, sido_dir / f"plants_{key}.geojson")
+        return subs_all, lines_all, plants_all
 
     all_substations: list[dict] = []
     all_lines: list[dict] = []
+    all_plants: list[dict] = []
 
     async with aiohttp.ClientSession(timeout=timeout) as session:
         tasks = [
@@ -327,45 +382,57 @@ async def crawl_all(
         ]
         results = await asyncio.gather(*tasks)
 
-        for subs, lines in results:
+        for subs, lines, plants in results:
             all_substations.extend(subs)
             all_lines.extend(lines)
+            all_plants.extend(plants)
 
     # 스킵된 시도의 기존 데이터도 합산
     if skipped and output_dir:
-        exist_subs, exist_lines = _load_existing_sidos(output_dir, skipped)
+        exist_subs, exist_lines, exist_plants = _load_existing_sidos(output_dir, skipped)
         all_substations.extend(exist_subs)
         all_lines.extend(exist_lines)
+        all_plants.extend(exist_plants)
 
-    print(f"\n수집 완료: 변전소 {len(all_substations)}건, 송·배전선/케이블 {len(all_lines)}건")
-    return all_substations, all_lines
+    print(
+        f"\n수집 완료: 변전소 {len(all_substations)}건, "
+        f"송·배전선/케이블 {len(all_lines)}건, "
+        f"발전소/발전기 {len(all_plants)}건"
+    )
+    return all_substations, all_lines, all_plants
 
 
-def _load_existing(output_dir: Path) -> tuple[list[dict], list[dict]]:
+def _load_existing(output_dir: Path) -> tuple[list[dict], list[dict], list[dict]]:
     """by_sido/ 디렉토리의 모든 기존 데이터를 로드한다."""
     return _load_existing_sidos(output_dir, list(SIDOS.keys()))
 
 
 def _load_existing_sidos(
     output_dir: Path, sidos: list[str]
-) -> tuple[list[dict], list[dict]]:
+) -> tuple[list[dict], list[dict], list[dict]]:
     """지정된 시도들의 기존 per-sido 파일을 로드한다."""
     sido_dir = output_dir / "by_sido"
     all_subs: list[dict] = []
     all_lines: list[dict] = []
+    all_plants: list[dict] = []
     for sido in sidos:
         key = _sido_filename(sido)
-        sub_path = sido_dir / f"substations_{key}.geojson"
-        line_path = sido_dir / f"power_lines_{key}.geojson"
-        if sub_path.exists():
-            with sub_path.open(encoding="utf-8") as f:
-                all_subs.extend(json.load(f).get("features", []))
-        if line_path.exists():
-            with line_path.open(encoding="utf-8") as f:
-                all_lines.extend(json.load(f).get("features", []))
-    if all_subs or all_lines:
-        print(f"기존 데이터 로드: 변전소 {len(all_subs)}건, 송·배전선/케이블 {len(all_lines)}건")
-    return all_subs, all_lines
+        for prefix, target in [
+            ("substations_", all_subs),
+            ("power_lines_", all_lines),
+            ("plants_", all_plants),
+        ]:
+            path = sido_dir / f"{prefix}{key}.geojson"
+            if path.exists():
+                with path.open(encoding="utf-8") as f:
+                    target.extend(json.load(f).get("features", []))
+    if all_subs or all_lines or all_plants:
+        print(
+            f"기존 데이터 로드: 변전소 {len(all_subs)}건, "
+            f"송·배전선/케이블 {len(all_lines)}건, "
+            f"발전소/발전기 {len(all_plants)}건"
+        )
+    return all_subs, all_lines, all_plants
 
 
 def save_geojson(features: list[dict], path: Path) -> None:
@@ -406,7 +473,7 @@ def main() -> None:
     output_dir = Path(args.output_dir)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    substations, lines = asyncio.run(
+    substations, lines, plants = asyncio.run(
         crawl_all(sido_filter=args.sido, output_dir=output_dir, force=args.force)
     )
 
@@ -414,6 +481,7 @@ def main() -> None:
     suffix = f"_{args.sido}" if args.sido else ""
     save_geojson(substations, output_dir / f"substations_{timestamp}{suffix}.geojson")
     save_geojson(lines, output_dir / f"power_lines_{timestamp}{suffix}.geojson")
+    save_geojson(plants, output_dir / f"plants_{timestamp}{suffix}.geojson")
 
 
 if __name__ == "__main__":
