@@ -91,15 +91,18 @@ python3 generator_next/crawlers/openinframap_power_crawler.py --output-dir gener
 수집한 GeoJSON을 인터랙티브 지도(HTML)로 시각화한다.
 
 ```bash
-# data 디렉토리에서 최신 GeoJSON 자동 탐색
+# data 디렉토리에서 최신 GeoJSON 자동 탐색 → HTML 생성
 python3 generator_next/crawlers/visualize_infra_map.py --data-dir generator_next/data/openinframap
+
+# 브라우저에서 바로 열기
+open generator_next/data/openinframap/infra_map.html
 
 # 파일 직접 지정
 python3 generator_next/crawlers/visualize_infra_map.py \
   --substations generator_next/data/openinframap/substations_XXXXXX.geojson \
   --lines generator_next/data/openinframap/power_lines_XXXXXX.geojson
 
-# 정적 이미지로 출력 (matplotlib)
+# 정적 이미지로 출력 (matplotlib, geopandas 필요)
 python3 generator_next/crawlers/visualize_infra_map.py \
   --data-dir generator_next/data/openinframap \
   --output generator_next/data/openinframap/infra_map.png
@@ -108,6 +111,24 @@ python3 generator_next/crawlers/visualize_infra_map.py \
 - `.html` 출력: folium 인터랙티브 맵 (어두운 배경, 전압별 색상/굵기 구분)
 - `.png` 출력: matplotlib 정적 이미지
 - 출력: `generator_next/data/openinframap/infra_map.html`
+
+### 지도 미리보기
+
+> 아래 HTML 파일을 브라우저에서 열면 인터랙티브 지도를 확인할 수 있다.
+>
+> **[`generator_next/data/openinframap/infra_map.html`](data/openinframap/infra_map.html)**
+
+전압별 색상 구분:
+
+| 색상 | 구분 |
+|------|------|
+| 🔴 빨강 (굵은 선) | 765kV 송전선 |
+| 🟠 주황 | 345kV 송전선 |
+| 🟡 노랑 | 154kV 송전선 |
+| 🟢 초록 | 66kV 이하 송전선 |
+| 🟣 보라 (얇은 선) | 배전선 |
+| 🔵 파랑 (점선) | 지중/해저 케이블 |
+| 🔴 빨간 원 | 변전소 (크기 = 전압 비례) |
 
 ## 전환 원칙
 
