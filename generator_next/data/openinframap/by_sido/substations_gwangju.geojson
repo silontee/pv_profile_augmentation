@@ -1,0 +1,511 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9341956,
+          35.2085626
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 310226151,
+        "sido": "광주광역시",
+        "name": "신광주변전소",
+        "name_en": "Sin-Gwangju Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9006598,
+          35.1152423
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 312458506,
+        "sido": "광주광역시",
+        "name": "남광주변전소",
+        "name_en": "Namgwangju Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7965176,
+          35.206947
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 333222927,
+        "sido": "광주광역시",
+        "name": "하남변전소",
+        "name_en": "Hanam Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7545476,
+          35.1337858
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 371952408,
+        "sido": "광주광역시",
+        "name": "평동변전소",
+        "name_en": "Pyeongdong Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "한국전력공사",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8512676,
+          35.2131391
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 485995057,
+        "sido": "광주광역시",
+        "name": "비아변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8831129,
+          35.1524298
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 491558154,
+        "sido": "광주광역시",
+        "name": "화정변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8512673,
+          35.2130321
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 502129538,
+        "sido": "광주광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.756834,
+          35.1075202
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 548475415,
+        "sido": "광주광역시",
+        "name": "노안변전소",
+        "name_en": "Noan Substation",
+        "substation_type": "traction",
+        "voltage": "154000;55000;27500",
+        "frequency": "",
+        "operator": "한국철도시설공단",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9086276,
+          35.1513604
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892604014,
+        "sido": "광주광역시",
+        "name": "충장변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8892987,
+          35.2001218
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892604015,
+        "sido": "광주광역시",
+        "name": "일곡변전소",
+        "name_en": "Ilgok Subtation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8907523,
+          35.1779304
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892604016,
+        "sido": "광주광역시",
+        "name": "북광주변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9371517,
+          35.183982
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892604018,
+        "sido": "광주광역시",
+        "name": "계림변전소",
+        "name_en": "Gyelim Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7895111,
+          35.1480303
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892604020,
+        "sido": "광주광역시",
+        "name": "송정변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8653428,
+          35.11555
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892604021,
+        "sido": "광주광역시",
+        "name": "매월변전소",
+        "name_en": "Maewol Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8652767,
+          35.1607177
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892604022,
+        "sido": "광주광역시",
+        "name": "농성변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8621753,
+          35.1088578
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 893655198,
+        "sido": "광주광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9367921,
+          35.1839608
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1037354907,
+        "sido": "광주광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9371678,
+          35.1839402
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1037354908,
+        "sido": "광주광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8025718,
+          35.186807
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1080851943,
+        "sido": "광주광역시",
+        "name": "흑석변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6690766,
+          35.1802494
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1103978486,
+        "sido": "광주광역시",
+        "name": "덕림변전소",
+        "name_en": "Deoklim Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "한국전력공사",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.792981,
+          35.1767743
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1135323485,
+        "sido": "광주광역시",
+        "name": "하남병렬급전소",
+        "name_en": "Hanam Parallel Post",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "한국철도시설공단",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7616808,
+          35.2058282
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193541788,
+        "sido": "광주광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7958062,
+          35.1465433
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193541789,
+        "sido": "광주광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,1061 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5687439,
+          35.8692254
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 1246590571,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6121757,
+          35.8863783
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 12077750452,
+        "sido": "대구광역시",
+        "name": "공평변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "154000",
+        "frequency": "",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.568549,
+          35.8692747
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 108724543,
+        "sido": "대구광역시",
+        "name": "내당변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.594877,
+          35.8367596
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 239170987,
+        "sido": "대구광역시",
+        "name": "봉덕변전소",
+        "name_en": "Bongdeok Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6349121,
+          35.8399119
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 297601178,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "transition",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6496939,
+          35.8201676
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 297601183,
+        "sido": "대구광역시",
+        "name": "범물 변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.690062,
+          35.7332193
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 308765054,
+        "sido": "대구광역시",
+        "name": "대구변전소",
+        "name_en": "Daegu Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4734148,
+          35.8448972
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 312375499,
+        "sido": "대구광역시",
+        "name": "강창변전소",
+        "name_en": "Gangchang Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4551864,
+          35.6574631
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 312375502,
+        "sido": "대구광역시",
+        "name": "유가변전소",
+        "name_en": "Yuga Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4635239,
+          35.7292145
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 312375513,
+        "sido": "대구광역시",
+        "name": "논공변전소",
+        "name_en": "Nongong Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.510515,
+          35.8101524
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 312375515,
+        "sido": "대구광역시",
+        "name": "달성변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6974383,
+          35.8362743
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 313355106,
+        "sido": "대구광역시",
+        "name": "노변 변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7406909,
+          35.8692369
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 473260813,
+        "sido": "대구광역시",
+        "name": "반야월변전소",
+        "name_en": "Banyangwol Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.661094,
+          35.871311
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 497159697,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.64149,
+          35.8751335
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 561134351,
+        "sido": "대구광역시",
+        "name": "효목변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5176058,
+          35.8297494
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 670381650,
+        "sido": "대구광역시",
+        "name": "월배변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6203828,
+          35.8618732
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 856223876,
+        "sido": "대구광역시",
+        "name": "남대구변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "underground"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5353467,
+          35.8788766
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 865119869,
+        "sido": "대구광역시",
+        "name": "팔달변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.495735,
+          35.8607503
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 865119871,
+        "sido": "대구광역시",
+        "name": "달서변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5837905,
+          35.8866709
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 886654307,
+        "sido": "대구광역시",
+        "name": "서침산변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4768447,
+          35.691256
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 891430207,
+        "sido": "대구광역시",
+        "name": "현풍변전소",
+        "name_en": "Hyeonpung Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5914326,
+          35.8926466
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 891430208,
+        "sido": "대구광역시",
+        "name": "침산변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4931065,
+          35.8310696
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 891430214,
+        "sido": "대구광역시",
+        "name": "성서변전소",
+        "name_en": "Seongseo Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4248768,
+          35.869062
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 891430234,
+        "sido": "대구광역시",
+        "name": "다사변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4308517,
+          35.6352927
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 891430235,
+        "sido": "대구광역시",
+        "name": "구지변전소",
+        "name_en": "Guji Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5799532,
+          36.1828927
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 891818257,
+        "sido": "대구광역시",
+        "name": "군위변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5268949,
+          35.8618747
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892093939,
+        "sido": "대구광역시",
+        "name": "와룡변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.3950147,
+          35.6560611
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892093940,
+        "sido": "대구광역시",
+        "name": "서구지변전소",
+        "name_en": "West-Guji Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5461781,
+          35.8057706
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892093971,
+        "sido": "대구광역시",
+        "name": "상인변전소",
+        "name_en": "Sangin Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5585245,
+          35.853818
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892093973,
+        "sido": "대구광역시",
+        "name": "두류변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "underground"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6084338,
+          35.9033281
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892093974,
+        "sido": "대구광역시",
+        "name": "산격변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6207896,
+          35.8614057
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892093978,
+        "sido": "대구광역시",
+        "name": "한국전력공사",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "한국전력공사",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6014895,
+          35.8726422
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892093979,
+        "sido": "대구광역시",
+        "name": "동인변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "underground"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6105785,
+          35.9134531
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892093980,
+        "sido": "대구광역시",
+        "name": "검단변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6868941,
+          35.8735203
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892213737,
+        "sido": "대구광역시",
+        "name": "안심변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5750539,
+          35.9452305
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892213742,
+        "sido": "대구광역시",
+        "name": "구암변전소",
+        "name_en": "Guam Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5422023,
+          35.9439689
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 892213806,
+        "sido": "대구광역시",
+        "name": "관음변전소",
+        "name_en": "Gwaneum Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7414508,
+          35.885861
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 960107502,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7418565,
+          35.8859906
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 960107503,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7417947,
+          35.8862529
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 960107506,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7412471,
+          35.8861166
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 960107507,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7410698,
+          35.8856965
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 960107508,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.740352,
+          35.8742458
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 960111506,
+        "sido": "대구광역시",
+        "name": "신서변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.5466835,
+          35.8807716
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1194151286,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6217688,
+          35.8774943
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1194151287,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.7008373,
+          35.8513717
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1194151288,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.6361681,
+          35.9277633
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1304186226,
+        "sido": "대구광역시",
+        "name": "봉무변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "154000",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.485988,
+          35.8577228
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1447419922,
+        "sido": "대구광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    }
+  ]
+}
