@@ -21,7 +21,13 @@ from pathlib import Path
 
 import aiohttp
 
-OVERPASS_URL = "https://overpass-api.de/api/interpreter"
+# 공개 Overpass API 미러 목록 — 각 미러는 독립적인 rate limit을 가진다.
+# 시도를 미러별로 분배하면 병렬 수집이 가능하다.
+OVERPASS_MIRRORS: list[str] = [
+    "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+    "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+]
 
 SIDOS: dict[str, str] = {
     "서울특별시": "Seoul",
@@ -43,9 +49,8 @@ SIDOS: dict[str, str] = {
      "전북특별자치도": "Jeonbuk",
 }
 
-# Overpass rate limit 대응
-MAX_CONCURRENCY = 2
-REQUEST_DELAY = 6  # 초
+# 미러당 동시 요청 제한 (각 미러에 semaphore 1개씩)
+REQUEST_DELAY = 3  # 같은 미러 내 연속 요청 간격(초)
 
 
 def _substation_query(sido: str) -> str:
@@ -154,86 +159,213 @@ def _parse_line(el: dict, sido: str) -> list[dict]:
 async def _query_overpass(
     session: aiohttp.ClientSession,
     sem: asyncio.Semaphore,
+    mirror_url: str,
     query: str,
     max_retries: int = 3,
 ) -> list[dict]:
     """Overpass API에 쿼리를 보내고 elements를 반환한다. rate limit 시 재시도."""
+    mirror_name = mirror_url.split("/")[2]
     async with sem:
         for attempt in range(max_retries):
             try:
                 async with session.post(
-                    OVERPASS_URL, data={"data": query}
+                    mirror_url, data={"data": query}
                 ) as resp:
                     if resp.status == 429 or resp.status == 504:
                         wait = 15 * (attempt + 1)
-                        print(f"    rate limited({resp.status}), {wait}s 대기...")
+                        print(f"    [{mirror_name}] rate limited({resp.status}), {wait}s 대기...")
                         await asyncio.sleep(wait)
                         continue
                     resp.raise_for_status()
                     text = await resp.text()
                     if not text.strip():
                         wait = 10 * (attempt + 1)
-                        print(f"    빈 응답, {wait}s 대기 후 재시도...")
+                        print(f"    [{mirror_name}] 빈 응답, {wait}s 대기 후 재시도...")
                         await asyncio.sleep(wait)
                         continue
                     data = json.loads(text)
                     return data.get("elements", [])
             except (aiohttp.ClientError, json.JSONDecodeError) as e:
                 wait = 10 * (attempt + 1)
-                print(f"    오류({e}), {wait}s 대기 후 재시도...")
+                print(f"    [{mirror_name}] 오류({e}), {wait}s 대기 후 재시도...")
                 await asyncio.sleep(wait)
 
-        print("    최대 재시도 초과, 빈 결과 반환")
+        print(f"    [{mirror_name}] 최대 재시도 초과, 빈 결과 반환")
         return []
 
 
 async def crawl_sido_infra(
     session: aiohttp.ClientSession,
     sem: asyncio.Semaphore,
+    mirror_url: str,
     sido: str,
 ) -> tuple[list[dict], list[dict]]:
     """단일 시도의 변전소 + 송전선 데이터를 수집한다."""
-    print(f"  {sido} 변전소 조회 중...")
-    sub_els = await _query_overpass(session, sem, _substation_query(sido))
+    mirror_name = mirror_url.split("/")[2]
+    print(f"  [{mirror_name}] {sido} 변전소 조회 중...")
+    sub_els = await _query_overpass(session, sem, mirror_url, _substation_query(sido))
     substations = [_parse_substation(el, sido) for el in sub_els]
-    print(f"  {sido} 변전소: {len(substations)}건")
+    print(f"  [{mirror_name}] {sido} 변전소: {len(substations)}건")
 
     await asyncio.sleep(REQUEST_DELAY)
 
-    print(f"  {sido} 송·배전선/케이블 조회 중...")
-    line_els = await _query_overpass(session, sem, _line_query(sido))
+    print(f"  [{mirror_name}] {sido} 송·배전선/케이블 조회 중...")
+    line_els = await _query_overpass(session, sem, mirror_url, _line_query(sido))
     lines: list[dict] = []
     for el in line_els:
         lines.extend(_parse_line(el, sido))
-    print(f"  {sido} 송·배전선/케이블: {len(lines)}건")
+    print(f"  [{mirror_name}] {sido} 송·배전선/케이블: {len(lines)}건")
 
     await asyncio.sleep(REQUEST_DELAY)
 
     return substations, lines
 
 
-async def crawl_all(
-    concurrency: int = MAX_CONCURRENCY,
-    sido_filter: str | None = None,
-) -> tuple[list[dict], list[dict]]:
-    """전국 송·변전 인프라 데이터를 수집한다."""
-    sem = asyncio.Semaphore(concurrency)
-    timeout = aiohttp.ClientTimeout(total=300)
+def _sido_filename(sido: str) -> str:
+    """시도 이름 → 파일명에 쓸 수 있는 영문 키."""
+    return SIDOS.get(sido, sido).lower()
 
-    target = {sido_filter: SIDOS.get(sido_filter, "")} if sido_filter else SIDOS
+
+def _find_collected_sidos(output_dir: Path) -> set[str]:
+    """이미 수집 완료된 시도 목록을 반환한다.
+
+    by_sido/ 디렉토리에 substations_*.geojson AND power_lines_*.geojson
+    둘 다 존재하는 시도만 수집 완료로 판정한다.
+    """
+    sido_dir = output_dir / "by_sido"
+    if not sido_dir.is_dir():
+        return set()
+
+    sub_files = {p.stem.replace("substations_", "") for p in sido_dir.glob("substations_*.geojson")}
+    line_files = {p.stem.replace("power_lines_", "") for p in sido_dir.glob("power_lines_*.geojson")}
+    collected_keys = sub_files & line_files
+
+    # 영문 key → 한글 시도 역매핑
+    en_to_kr = {v.lower(): k for k, v in SIDOS.items()}
+    return {en_to_kr[k] for k in collected_keys if k in en_to_kr}
+
+
+async def crawl_all(
+    sido_filter: str | None = None,
+    output_dir: Path | None = None,
+    force: bool = False,
+) -> tuple[list[dict], list[dict]]:
+    """전국 송·변전 인프라 데이터를 미러별 병렬로 수집한다.
+
+    시도 목록을 미러 수만큼 그룹으로 나누고,
+    각 그룹은 전담 미러에 순차 요청 / 그룹 간에는 동시 실행.
+    이미 수집된 시도는 스킵한다 (--force 로 재수집 가능).
+    """
+    timeout = aiohttp.ClientTimeout(total=600)
+
+    all_target = list({sido_filter: SIDOS.get(sido_filter, "")} if sido_filter else SIDOS)
+
+    # 이미 수집된 시도 스킵
+    skipped: list[str] = []
+    if not force and output_dir:
+        collected = _find_collected_sidos(output_dir)
+        target = [s for s in all_target if s not in collected]
+        skipped = [s for s in all_target if s in collected]
+    else:
+        target = all_target
+
+    if skipped:
+        print(f"이미 수집된 시도 스킵({len(skipped)}개): {', '.join(skipped)}")
+
+    if not target:
+        print("모든 시도가 이미 수집되었습니다. (재수집: --force)")
+        # 기존 파일에서 로드하여 반환
+        return _load_existing(output_dir) if output_dir else ([], [])
+
+    mirrors = OVERPASS_MIRRORS
+    n_mirrors = len(mirrors)
+
+    # 시도를 미러 수만큼 라운드로빈 분배
+    groups: list[list[str]] = [[] for _ in range(n_mirrors)]
+    for i, sido in enumerate(target):
+        groups[i % n_mirrors].append(sido)
+
+    # 미러별 semaphore (미러당 동시 1개 요청)
+    sems = [asyncio.Semaphore(1) for _ in range(n_mirrors)]
+
+    print(f"\n미러 {n_mirrors}개로 시도 {len(target)}개 병렬 수집 시작")
+    for idx, (mirror, group) in enumerate(zip(mirrors, groups)):
+        if not group:
+            continue
+        mirror_name = mirror.split("/")[2]
+        print(f"  미러{idx + 1} [{mirror_name}]: {', '.join(group)}")
+
+    sido_dir = output_dir / "by_sido" if output_dir else None
+
+    async def _worker(
+        session: aiohttp.ClientSession,
+        mirror_url: str,
+        sem: asyncio.Semaphore,
+        sidos: list[str],
+    ) -> tuple[list[dict], list[dict]]:
+        subs_all: list[dict] = []
+        lines_all: list[dict] = []
+        for sido in sidos:
+            subs, lines = await crawl_sido_infra(session, sem, mirror_url, sido)
+            subs_all.extend(subs)
+            lines_all.extend(lines)
+            # 시도별 즉시 저장 (중간 중단 대비)
+            if sido_dir:
+                key = _sido_filename(sido)
+                save_geojson(subs, sido_dir / f"substations_{key}.geojson")
+                save_geojson(lines, sido_dir / f"power_lines_{key}.geojson")
+        return subs_all, lines_all
 
     all_substations: list[dict] = []
     all_lines: list[dict] = []
 
     async with aiohttp.ClientSession(timeout=timeout) as session:
-        # Overpass rate limit 때문에 시도를 순차 처리
-        for sido in target:
-            subs, lines = await crawl_sido_infra(session, sem, sido)
+        tasks = [
+            _worker(session, mirror, sem, group)
+            for mirror, sem, group in zip(mirrors, sems, groups)
+            if group
+        ]
+        results = await asyncio.gather(*tasks)
+
+        for subs, lines in results:
             all_substations.extend(subs)
             all_lines.extend(lines)
 
+    # 스킵된 시도의 기존 데이터도 합산
+    if skipped and output_dir:
+        exist_subs, exist_lines = _load_existing_sidos(output_dir, skipped)
+        all_substations.extend(exist_subs)
+        all_lines.extend(exist_lines)
+
     print(f"\n수집 완료: 변전소 {len(all_substations)}건, 송·배전선/케이블 {len(all_lines)}건")
     return all_substations, all_lines
+
+
+def _load_existing(output_dir: Path) -> tuple[list[dict], list[dict]]:
+    """by_sido/ 디렉토리의 모든 기존 데이터를 로드한다."""
+    return _load_existing_sidos(output_dir, list(SIDOS.keys()))
+
+
+def _load_existing_sidos(
+    output_dir: Path, sidos: list[str]
+) -> tuple[list[dict], list[dict]]:
+    """지정된 시도들의 기존 per-sido 파일을 로드한다."""
+    sido_dir = output_dir / "by_sido"
+    all_subs: list[dict] = []
+    all_lines: list[dict] = []
+    for sido in sidos:
+        key = _sido_filename(sido)
+        sub_path = sido_dir / f"substations_{key}.geojson"
+        line_path = sido_dir / f"power_lines_{key}.geojson"
+        if sub_path.exists():
+            with sub_path.open(encoding="utf-8") as f:
+                all_subs.extend(json.load(f).get("features", []))
+        if line_path.exists():
+            with line_path.open(encoding="utf-8") as f:
+                all_lines.extend(json.load(f).get("features", []))
+    if all_subs or all_lines:
+        print(f"기존 데이터 로드: 변전소 {len(all_subs)}건, 송·배전선/케이블 {len(all_lines)}건")
+    return all_subs, all_lines
 
 
 def save_geojson(features: list[dict], path: Path) -> None:
@@ -260,15 +392,14 @@ def main() -> None:
         help="특정 시도만 수집 (예: 인천광역시)",
     )
     parser.add_argument(
-        "--concurrency",
-        type=int,
-        default=MAX_CONCURRENCY,
-        help=f"동시 요청 수 (기본: {MAX_CONCURRENCY})",
-    )
-    parser.add_argument(
         "--output-dir",
         default="generator_next/data/openinframap",
         help="출력 디렉토리",
+    )
+    parser.add_argument(
+        "--force",
+        action="store_true",
+        help="이미 수집된 시도도 재수집",
     )
     args = parser.parse_args()
 
@@ -276,9 +407,10 @@ def main() -> None:
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     substations, lines = asyncio.run(
-        crawl_all(concurrency=args.concurrency, sido_filter=args.sido)
+        crawl_all(sido_filter=args.sido, output_dir=output_dir, force=args.force)
     )
 
+    # 전체 합본 저장
     suffix = f"_{args.sido}" if args.sido else ""
     save_geojson(substations, output_dir / f"substations_{timestamp}{suffix}.geojson")
     save_geojson(lines, output_dir / f"power_lines_{timestamp}{suffix}.geojson")
