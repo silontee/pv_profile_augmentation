@@ -62,6 +62,35 @@ SIDO_CODES: dict[str, str] = {
 # 동시 요청 제한 (서버 부하 방지)
 MAX_CONCURRENCY = 5
 
+# "시+구" 형태 도시: 구 단위 코드로는 데이터가 없고 시 단위 코드(끝 0)로 합산 조회해야 함
+# key = 상위 시 코드, value = 해당 시의 구 코드 접두사 (이 접두사로 시작하면 합산 대상)
+CITY_WITH_GU: dict[str, str] = {
+    "41110": "4111",   # 수원시
+    "41130": "4113",   # 성남시
+    "41170": "4117",   # 안양시
+    "41270": "4127",   # 안산시
+    "41280": "4128",   # 고양시
+    "41460": "4146",   # 용인시
+    "43110": "4311",   # 청주시
+    "44130": "4413",   # 천안시
+    "47110": "4711",   # 포항시
+    "48120": "4812",   # 창원시
+    "52110": "5211",   # 전주시
+}
+
+# 구 코드 → 상위 시 코드 역매핑 (자동 생성)
+_GU_TO_CITY: dict[str, str] = {}
+for city_code, prefix in CITY_WITH_GU.items():
+    # 구 코드는 접두사 + 1~9 (예: 41111, 41113, ...)
+    for suffix in range(1, 10):
+        _GU_TO_CITY[prefix + str(suffix)] = city_code
+
+# area_code API와 power API 간 코드 불일치 보정
+# key = area_code API가 주는 코드, value = (power API 코드, sido_code)
+CODE_REMAP: dict[str, tuple[str, str]] = {
+    "47720": ("27720", "27"),  # 군위군: 2023년 대구 편입, power API는 대구(27) 코드 사용
+}
+
 
 async def fetch_sido_summary(session: aiohttp.ClientSession) -> list[dict]:
     """메인 페이지 JSONP에서 전국 + 17개 광역시도 집계 데이터를 파싱한다."""
@@ -148,13 +177,56 @@ async def crawl_sido(
     sido_code: str,
     sido_name: str,
 ) -> list[dict]:
-    """단일 광역시도 내 모든 시군구를 비동기로 수집한다."""
+    """단일 광역시도 내 모든 시군구를 비동기로 수집한다.
+
+    "시+구" 형태 도시(수원시, 청주시 등)는 구 단위 코드 대신
+    상위 시 코드로 합산 조회하여 중복 없이 1건만 반환한다.
+    """
     guguns = await fetch_gugun_codes(session, sido_code)
-    print(f"  {sido_name}({sido_code}): {len(guguns)}개 시군구")
+
+    # 구 코드를 시 코드로 치환하고, 코드 불일치를 보정하며, 중복 제거
+    seen_city_codes: set[str] = set()
+    deduped: list[dict[str, str]] = []
+    for g in guguns:
+        code = g["code"]
+        name = g["name"]
+
+        # 1) "시+구" 도시 → 상위 시 코드로 합산
+        city_code = _GU_TO_CITY.get(code)
+        if city_code:
+            if city_code in seen_city_codes:
+                continue
+            seen_city_codes.add(city_code)
+            parts = name.split()
+            deduped.append({
+                "code": city_code,
+                "name": parts[0] if len(parts) > 1 else name,
+                "sido_override": sido_code,
+            })
+            continue
+
+        # 2) 코드 불일치 보정 (예: 군위군 경북→대구)
+        if code in CODE_REMAP:
+            remapped_code, remapped_sido = CODE_REMAP[code]
+            deduped.append({
+                "code": remapped_code,
+                "name": name,
+                "sido_override": remapped_sido,
+            })
+            continue
+
+        # 3) 일반 시군구
+        deduped.append({"code": code, "name": name, "sido_override": sido_code})
+
+    print(f"  {sido_name}({sido_code}): {len(guguns)}개 행정구역 -> {len(deduped)}개 조회 단위")
 
     tasks = [
-        fetch_gugun_power(session, sem, sido_code, sido_name, g["code"], g["name"])
-        for g in guguns
+        fetch_gugun_power(
+            session, sem,
+            g["sido_override"], sido_name,
+            g["code"], g["name"],
+        )
+        for g in deduped
     ]
     results = await asyncio.gather(*tasks)
     return [r for r in results if r is not None]
