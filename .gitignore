@@ -27,5 +27,3 @@ Thumbs.db
 .env
 .env.*
 
-# Data files
-*.csv
