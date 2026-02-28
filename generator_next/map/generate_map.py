@@ -54,7 +54,24 @@ def add_plant_layer(m: folium.Map, df: pl.DataFrame, status: str) -> folium.Feat
     fg = folium.FeatureGroup(name=f"태양광 {status} ({len(df.filter(pl.col('가동상태구분명')==status)):,}개)", show=(status == "정상가동"))
 
     sub = df.filter(pl.col("가동상태구분명") == status)
-    coords = sub.select(["위도", "경도", "태양광발전시설명", "설비용량", "허가일자"]).to_dicts()
+    cols = [
+        "위도", "경도",
+        "태양광발전시설명",       # 0→2
+        "설비용량",               # 1→3
+        "허가일자",               # 2→4
+        "허가기관",               # 3→5
+        "소재지도로명주소",        # 4→6
+        "소재지지번주소",          # 5→7
+        "설치연도",               # 6→8
+        "설치면적",               # 7→9
+        "공급전압",               # 8→10
+        "주파수",                 # 9→11
+        "설치상세위치구분명",       # 10→12
+        "세부용도",               # 11→13
+        "가동상태구분명",          # 12→14
+        "데이터기준일자",          # 13→15
+    ]
+    coords = sub.select(cols).to_dicts()
 
     # FastMarkerCluster — 대량 포인트에 최적
     callback = f"""
@@ -69,15 +86,36 @@ def add_plant_layer(m: folium.Map, df: pl.DataFrame, status: str) -> folium.Feat
                 weight: 1
             }}
         );
+        var d = function(v) {{ return v || '-'; }};
+        var addr = d(row[6]) !== '-' ? d(row[6]) : d(row[7]);
         marker.bindPopup(
-            '<b>' + (row[2] || '이름없음') + '</b><br>' +
-            '설비용량: ' + (row[3] || '-') + ' kW<br>' +
-            '허가일자: ' + (row[4] || '-')
+            '<b>' + d(row[2]) + '</b><br>' +
+            '<hr style=\"margin:3px 0\">' +
+            '가동상태: ' + d(row[14]) + '<br>' +
+            '설비용량: ' + d(row[3]) + ' kW<br>' +
+            '주소: ' + addr + '<br>' +
+            '허가일자: ' + d(row[4]) + '<br>' +
+            '허가기관: ' + d(row[5]) + '<br>' +
+            '설치연도: ' + d(row[8]) + '<br>' +
+            '설치면적: ' + d(row[9]) + ' m²<br>' +
+            '공급전압: ' + d(row[10]) + ' V<br>' +
+            '주파수: ' + d(row[11]) + ' Hz<br>' +
+            '설치위치: ' + d(row[12]) + '<br>' +
+            '세부용도: ' + d(row[13]) + '<br>' +
+            '데이터기준일: ' + d(row[15]),
+            {{maxWidth: 280}}
         );
         return marker;
     }}
     """
-    data = [[r["위도"], r["경도"], r["태양광발전시설명"] or "", r["설비용량"] or "", r["허가일자"] or ""] for r in coords]
+    data = [[
+        r["위도"], r["경도"],
+        r["태양광발전시설명"] or "", r["설비용량"] or "", r["허가일자"] or "",
+        r["허가기관"] or "", r["소재지도로명주소"] or "", r["소재지지번주소"] or "",
+        r["설치연도"] or "", r["설치면적"] or "", r["공급전압"] or "",
+        r["주파수"] or "", r["설치상세위치구분명"] or "", r["세부용도"] or "",
+        r["가동상태구분명"] or "", r["데이터기준일자"] or "",
+    ] for r in coords]
     FastMarkerCluster(data, callback=callback).add_to(fg)
     fg.add_to(m)
     return fg
