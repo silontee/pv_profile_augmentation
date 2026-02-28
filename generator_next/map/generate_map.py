@@ -23,7 +23,7 @@ import polars as pl
 ROOT = Path(__file__).resolve().parents[2]
 PARQUET_PATH = ROOT / "generator_next/source/processed/pv_facility_processed.parquet"
 INFRA_DIR = ROOT / "generator_next/source/openinframap/by_sido"
-BOUNDARY_PATH = ROOT / "generator_next/source/boundaries/sigungu_2013_simple.geojson"
+BOUNDARY_PATH = ROOT / "generator_next/source/boundaries/sigungu_2018_simple.geojson"
 OUTPUT_PATH = ROOT / "generator_next/map/output/pv_map.html"
 
 # 가동상태별 색상
@@ -219,15 +219,24 @@ def add_power_lines(m: folium.Map) -> None:
 def add_boundaries(m: folium.Map) -> None:
     data = json.loads(BOUNDARY_PATH.read_text(encoding="utf-8"))
     fg = folium.FeatureGroup(name="시군구 경계", show=True)
-    folium.GeoJson(
-        data,
-        style_function=lambda _: {
-            "color": "#555555",
-            "weight": 0.8,
-            "fillOpacity": 0,
-        },
-        tooltip=folium.GeoJsonTooltip(fields=["name"], aliases=["시군구:"], localize=True),
-    ).add_to(fg)
+    # PolyLine으로 직접 렌더링 → 클릭 팝업 없음, hover 툴팁만
+    for feat in data["features"]:
+        name = feat["properties"].get("name", "")
+        geom = feat["geometry"]
+        rings = []
+        if geom["type"] == "Polygon":
+            rings = [geom["coordinates"][0]]
+        elif geom["type"] == "MultiPolygon":
+            rings = [poly[0] for poly in geom["coordinates"]]
+        for ring in rings:
+            latlngs = [[c[1], c[0]] for c in ring]
+            folium.PolyLine(
+                latlngs,
+                color="#555555",
+                weight=0.8,
+                opacity=0.9,
+                tooltip=name,
+            ).add_to(fg)
     fg.add_to(m)
     count = len(data["features"])
     print(f"[INFO] 시군구 경계 추가: {count:,}개")
