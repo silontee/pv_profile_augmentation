@@ -23,6 +23,7 @@ import polars as pl
 ROOT = Path(__file__).resolve().parents[2]
 PARQUET_PATH = ROOT / "generator_next/source/processed/pv_facility_processed.parquet"
 INFRA_DIR = ROOT / "generator_next/source/openinframap/by_sido"
+BOUNDARY_PATH = ROOT / "generator_next/source/boundaries/sigungu_2013_simple.geojson"
 OUTPUT_PATH = ROOT / "generator_next/map/output/pv_map.html"
 
 # 가동상태별 색상
@@ -215,6 +216,23 @@ def add_power_lines(m: folium.Map) -> None:
     print(f"[INFO] 송배전선 추가: {count:,}건")
 
 
+def add_boundaries(m: folium.Map) -> None:
+    data = json.loads(BOUNDARY_PATH.read_text(encoding="utf-8"))
+    fg = folium.FeatureGroup(name="시군구 경계", show=True)
+    folium.GeoJson(
+        data,
+        style_function=lambda _: {
+            "color": "#555555",
+            "weight": 0.8,
+            "fillOpacity": 0,
+        },
+        tooltip=folium.GeoJsonTooltip(fields=["name"], aliases=["시군구:"], localize=True),
+    ).add_to(fg)
+    fg.add_to(m)
+    count = len(data["features"])
+    print(f"[INFO] 시군구 경계 추가: {count:,}개")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--no-infra", action="store_true", help="인프라 레이어(변전소/송전선) 제외")
@@ -229,20 +247,23 @@ def main() -> None:
         tiles="CartoDB positron",
     )
 
-    print("[2/4] 발전소 레이어 추가...")
+    print("[2/5] 시군구 경계 레이어 추가...")
+    add_boundaries(m)
+
+    print("[3/5] 발전소 레이어 추가...")
     df = load_plants(args.status)
     statuses = [args.status] if args.status else ["정상가동", "가동중단", "폐기"]
     for status in statuses:
         add_plant_layer(m, df, status)
 
     if not args.no_infra:
-        print("[3/4] 인프라 레이어 추가...")
+        print("[4/5] 인프라 레이어 추가...")
         add_substations(m)
         add_power_lines(m)
     else:
-        print("[3/4] 인프라 레이어 스킵.")
+        print("[4/5] 인프라 레이어 스킵.")
 
-    print("[4/4] 레이어 컨트롤 추가 및 저장...")
+    print("[5/5] 레이어 컨트롤 추가 및 저장...")
     folium.LayerControl(collapsed=False).add_to(m)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
