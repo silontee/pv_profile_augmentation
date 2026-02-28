@@ -28,8 +28,8 @@ OUTPUT_PATH = ROOT / "generator_next/map/output/pv_map.html"
 # 가동상태별 색상
 STATUS_COLOR = {
     "정상가동": "#2ecc71",   # 초록
-    "가동중단": "#f39c12",   # 주황
-    "폐기":     "#e74c3c",   # 빨강
+    "가동중단": "#95a5a6",   # 회색
+    "폐기":     "#2c3e50",   # 검정
 }
 
 STATUS_RADIUS = {
