@@ -83,6 +83,24 @@ def add_plant_layer(m: folium.Map, df: pl.DataFrame, status: str) -> folium.Feat
     return fg
 
 
+def _substation_radius(voltage_str: str) -> tuple[int, str]:
+    """전압(V 단위 문자열) → (반지름, MW 등급 레이블)
+    다중 전압(예: '345000;154000')은 최대값 기준.
+    765kV → 1000MW급(r=16), 345kV → 500MW급(r=10), 154kV → 100MW급(r=6), 그 외 → r=3
+    """
+    try:
+        max_v = max(int(v) for v in voltage_str.split(";") if v.strip().isdigit())
+    except (ValueError, AttributeError):
+        return 3, "-"
+    if max_v >= 700_000:
+        return 16, "1000MW급 (765kV)"
+    if max_v >= 300_000:
+        return 10, "500MW급 (345kV)"
+    if max_v >= 130_000:
+        return 6, "100MW급 (154kV)"
+    return 3, f"{max_v // 1000}kV"
+
+
 def add_substations(m: folium.Map) -> None:
     fg = folium.FeatureGroup(name="변전소 (OSM)", show=True)
     files = sorted(INFRA_DIR.glob("substations_*.geojson"))
@@ -93,18 +111,37 @@ def add_substations(m: folium.Map) -> None:
             coord = feat["geometry"]["coordinates"]
             p = feat["properties"]
             name = p.get("name") or "변전소"
+            voltage_str = p.get("voltage") or ""
+            radius, mw_label = _substation_radius(voltage_str)
+            def _val(key: str) -> str:
+                return p.get(key) or "-"
+
+            voltage_display = voltage_str or "-"
+            # V → kV 변환 표기 (예: 154000;25000 → 154kV / 25kV)
+            if voltage_str:
+                parts = [v.strip() for v in voltage_str.split(";") if v.strip().isdigit()]
+                voltage_display = " / ".join(f"{int(v)//1000}kV" for v in parts)
+
+            popup_html = (
+                f"<b>{name}</b><br>"
+                f"영문명: {_val('name_en')}<br>"
+                f"전압: {voltage_display}<br>"
+                f"용량 등급: {mw_label}<br>"
+                f"타입: {_val('substation_type')}<br>"
+                f"주파수: {_val('frequency')} Hz<br>"
+                f"운영사: {_val('operator')}<br>"
+                f"위치형태: {_val('location')}<br>"
+                f"OSM ID: {_val('osm_type')}/{_val('osm_id')}"
+            )
             folium.CircleMarker(
                 location=[coord[1], coord[0]],
-                radius=5,
+                radius=radius,
                 color="#3498db",
                 fill=True,
                 fill_color="#3498db",
                 fill_opacity=0.8,
-                popup=folium.Popup(
-                    f"<b>{name}</b><br>전압: {p.get('voltage','-')}<br>타입: {p.get('substation_type','-')}",
-                    max_width=200,
-                ),
-                tooltip=name,
+                popup=folium.Popup(popup_html, max_width=260),
+                tooltip=f"{name} ({voltage_display}, {mw_label})",
             ).add_to(fg)
             count += 1
     fg.add_to(m)
