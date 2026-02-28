@@ -24,12 +24,11 @@ router = APIRouter(tags=["infra"])
 
 # 시군구 경계 GeoJSON 파일 경로
 # Docker: BOUNDARIES_PATH 환경변수, 로컬: parents[5] 기반 경로
-_BOUNDARIES_PATH = Path(
-    os.getenv(
-        "BOUNDARIES_PATH",
-        str(Path(__file__).parents[5] / "generator_next" / "source" / "boundaries" / "sigungu_2018_simple.geojson"),
-    )
-)
+_boundaries_env = os.getenv("BOUNDARIES_PATH")
+if _boundaries_env:
+    _BOUNDARIES_PATH = Path(_boundaries_env)
+else:
+    _BOUNDARIES_PATH = Path(__file__).parents[5] / "generator_next" / "source" / "boundaries" / "sigungu_2018_simple.geojson"
 
 # DB 장애 공통 응답
 _DB_ERROR_RESPONSE = {"error": "서비스 일시 중단", "retry_after": 30}
