@@ -30,7 +30,7 @@ def extract_modified_date(link) -> str:
         text = link.locator("xpath=ancestor::li[1]//div[contains(@class,'txt')]").inner_text().strip()
     except Exception:  # noqa: BLE001
         return ""
-    match = re.search(r"수정일\s*:\s*(\d{4}-\d{2}-\d{2})", text)
+    match = re.search(r"?�정??s*:\s*(\d{4}-\d{2}-\d{2})", text)
     return match.group(1) if match else ""
 
 
@@ -259,10 +259,7 @@ def run_crawler(
     return rows
 
 
-def write_log(log_path: Path, rows) -> None:
-    if not rows:
-        return
-    with log_path.open("w", newline="", encoding="utf-8-sig") as f:
+def write_log(log_path: Path, rows) -> None:`r`n    if not rows:`r`n        return`r`n    log_path.parent.mkdir(parents=True, exist_ok=True)`r`n    with log_path.open("w", newline="", encoding="utf-8-sig") as f:
         writer = csv.DictWriter(
             f,
             fieldnames=[
@@ -288,8 +285,8 @@ def main() -> None:
     )
     parser.add_argument("--url", default=TARGET_URL)
     parser.add_argument("--download-dir", default="generator_next/source/raw_csv")
-    parser.add_argument("--log-path", default="generator_next/source/raw_csv/download_log_playwright.csv")
-    parser.add_argument("--state-path", default="generator_next/source/raw_csv/pv_facility_profile_state.csv")
+    parser.add_argument("--log-path", default="generator_next/source/logs/crawler/download_log_playwright.csv")
+    parser.add_argument("--state-path", default="generator_next/source/logs/crawler/pv_facility_profile_state.csv")
     parser.add_argument("--timeout-ms", type=int, default=45000)
     parser.add_argument("--max-attempts", type=int, default=3)
     parser.add_argument("--headless", action="store_true")
@@ -317,3 +314,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+

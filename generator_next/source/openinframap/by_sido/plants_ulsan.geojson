@@ -1,0 +1,2007 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3104339,
+          35.3371837
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 5747874265,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "Saeul-1",
+        "name_en": "Saeul-1",
+        "plant_source": "nuclear",
+        "plant_output": "1416 MW",
+        "plant_method": "fission",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3109488,
+          35.3384703
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 5747874266,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "Seaul-2",
+        "name_en": "Saeul-2",
+        "plant_source": "nuclear",
+        "plant_output": "1418 MW",
+        "plant_method": "fission",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.38236,
+          35.4772545
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056344,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3790769,
+          35.4730169
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056345,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3798065,
+          35.4738557
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056346,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3808365,
+          35.4752711
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056347,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "oil",
+        "plant_output": "400 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3811729,
+          35.4756935
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056348,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "oil",
+        "plant_output": "400 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3814802,
+          35.4760793
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056349,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "oil",
+        "plant_output": "400 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3192677,
+          35.3396036
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11799575145,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3190786,
+          35.3396463
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11799575146,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3189096,
+          35.3397021
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11799575147,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.4536216,
+          35.5266457
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11871423619,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "wind",
+        "plant_output": "1.65 MW",
+        "plant_method": "wind_turbine",
+        "operator": "현대중공업"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2955077,
+          35.3284614
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 403402694,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "고리원자력발전소",
+        "name_en": "Kori Nuclear Power Plant",
+        "plant_source": "nuclear",
+        "plant_output": "7489 MW",
+        "plant_method": "fission",
+        "operator": "한국수력원자력"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3117227,
+          35.3392227
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 606158232,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "Saeul Nuclear Plant",
+        "name_en": "Saeul Nuclear Plant",
+        "plant_source": "nuclear",
+        "plant_output": "2834 MW",
+        "plant_method": "fission",
+        "operator": "KHNP/KEPCO"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3807157,
+          35.4763522
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 640088063,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "울산화력발전소",
+        "name_en": "Ulsan Oil-Fired & C.C Power Complex",
+        "plant_source": "gas;oil",
+        "plant_output": "3271.9 MW",
+        "plant_method": "combustion",
+        "operator": "한국동서발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3287031,
+          35.4925067
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 640088065,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "대한유화 열병합",
+        "name_en": "",
+        "plant_source": "waste",
+        "plant_output": "16.18 MW",
+        "plant_method": "combustion",
+        "operator": "대한유화"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3833202,
+          35.512937
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 814808445,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "영남파워",
+        "name_en": "KOSPO Youngnam Power Plant",
+        "plant_source": "gas",
+        "plant_output": "476 MW",
+        "plant_method": "combustion",
+        "operator": "한국남부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.335785,
+          35.474651
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1031608802,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3357654,
+          35.4748512
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1031608803,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3357314,
+          35.4749582
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1031608804,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3357551,
+          35.4750993
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1031608805,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3139447,
+          35.5632037
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1208181966,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3145339,
+          35.5636162
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1208181967,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3145711,
+          35.5634736
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1208181968,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.314603,
+          35.5633225
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1208181969,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3357512,
+          35.4748125
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1209341387,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3021506,
+          35.337054
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1270612987,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3007839,
+          35.3373992
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1270612988,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2995777,
+          35.3372241
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1270612990,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2210234,
+          35.5712418
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278444578,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "천상 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "0.25 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "울산시"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1076823,
+          35.5269282
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278712515,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "울산 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "7 MW",
+        "plant_method": "fuel_cell",
+        "operator": "한국동서발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.107627,
+          35.5275123
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278712516,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "울주햇빛상생 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "8.1 MW",
+        "plant_method": "fuel_cell",
+        "operator": "한국동서발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3657887,
+          35.5541426
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278712517,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "대원그린 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "19.8 MW",
+        "plant_method": "fuel_cell",
+        "operator": "대원그린에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1131266,
+          35.5565827
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1301012834,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3524895,
+          35.4233653
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1333531059,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "Korea Zinc Onsan Smelter power station",
+        "plant_source": "gas",
+        "plant_output": "270 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.4352708,
+          35.6249006
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1344760272,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.4353008,
+          35.6315781
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1419945845,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": "강동초등학교"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.4349618,
+          35.6313854
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1419945846,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": "강동초등학교"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.4349576,
+          35.6311618
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1419945847,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": "강동초등학교"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.4354031,
+          35.6314197
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1419945848,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": "강동초등학교"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.4349538,
+          35.6309729
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1419945850,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": "강동초등학교"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.4366216,
+          35.6246007
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1421667424,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3510269,
+          35.4924169
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1432388151,
+        "sido": "울산광역시",
+        "power_type": "plant",
+        "name": "울산 GPS",
+        "name_en": "Ulsan GPS power station",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1889373,
+          35.6968076
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1435267983,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1892352,
+          35.6967792
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1435267984,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1895566,
+          35.6967416
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1435267985,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1901383,
+          35.6966782
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1435267988,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1900685,
+          35.6961838
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1435267989,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1888675,
+          35.696349
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1435267990,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1615096,
+          35.61786
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1464238306,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3686399,
+          35.5471364
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182545,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3691333,
+          35.5474858
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182546,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.369487,
+          35.5477528
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182547,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3697553,
+          35.5479814
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182548,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3703766,
+          35.5484631
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182549,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3700989,
+          35.548236
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182550,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3705864,
+          35.5478144
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182551,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3710438,
+          35.5478723
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182552,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3711249,
+          35.5474343
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182553,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3704128,
+          35.5474085
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182554,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3691852,
+          35.546452
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182555,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3694125,
+          35.546612
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182556,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3696877,
+          35.5468194
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182557,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3699785,
+          35.5470092
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182558,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3701479,
+          35.547169
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182559,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.370905,
+          35.5466131
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182560,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3701723,
+          35.5459531
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182561,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3704368,
+          35.5461479
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182562,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3711101,
+          35.5460163
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182563,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3710269,
+          35.5456174
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182564,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3707661,
+          35.5454338
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182565,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3703891,
+          35.5454402
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182566,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3714134,
+          35.544545
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182567,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3715969,
+          35.5446937
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182568,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3718645,
+          35.5449234
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182569,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3721484,
+          35.5451351
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182570,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3723407,
+          35.5438063
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182571,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3719718,
+          35.5441215
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182572,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3727986,
+          35.5443232
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182573,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3743529,
+          35.542438
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182574,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3739539,
+          35.542125
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182575,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3748324,
+          35.5413831
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182576,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3752126,
+          35.5416191
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182577,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3757844,
+          35.5421046
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182578,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3749178,
+          35.5428419
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182579,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3754399,
+          35.5432645
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182580,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3750557,
+          35.5429944
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182581,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3759697,
+          35.5422527
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182582,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3763189,
+          35.5424841
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182583,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3757516,
+          35.5435121
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182584,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3766275,
+          35.5427721
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1475182585,
+        "sido": "울산광역시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    }
+  ]
+}

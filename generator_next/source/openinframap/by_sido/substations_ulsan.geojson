@@ -1,0 +1,643 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2123813,
+          35.6777353
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 143609113,
+        "sido": "울산광역시",
+        "name": "울주변전소",
+        "name_en": "Ulju Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3411529,
+          35.5155174
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 143752002,
+        "sido": "울산광역시",
+        "name": "울산변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2984954,
+          35.4944688
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 143756950,
+        "sido": "울산광역시",
+        "name": "신울산변전소",
+        "name_en": "Shin-Ulsan Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3292927,
+          35.4358576
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 143758352,
+        "sido": "울산광역시",
+        "name": "신온산변전소",
+        "name_en": "Shin-Onsan Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3597554,
+          35.4823421
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 313221688,
+        "sido": "울산광역시",
+        "name": "용연변전소",
+        "name_en": "Yongyeon Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3278968,
+          35.4930139
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 313221691,
+        "sido": "울산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "industrial",
+        "voltage": "154000",
+        "frequency": "",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3180018,
+          35.5805952
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 313221692,
+        "sido": "울산광역시",
+        "name": "북울산변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3461552,
+          35.527599
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 313221693,
+        "sido": "울산광역시",
+        "name": "매암변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.4255563,
+          35.5388058
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 313221695,
+        "sido": "울산광역시",
+        "name": "방어진변전소",
+        "name_en": "Bangeojin Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3741702,
+          35.5687707
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 313221696,
+        "sido": "울산광역시",
+        "name": "효문변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3928433,
+          35.6511983
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 576074205,
+        "sido": "울산광역시",
+        "name": "동울산변전소",
+        "name_en": "East-Ulsan Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3089948,
+          35.3406079
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 606158230,
+        "sido": "울산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "transmission",
+        "voltage": "765000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.354866,
+          35.4873952
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 621990457,
+        "sido": "울산광역시",
+        "name": "성암변전소",
+        "name_en": "Seongam Substation",
+        "substation_type": "transmission",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3787661,
+          35.4752071
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 640088062,
+        "sido": "울산광역시",
+        "name": "울산화력변전소",
+        "name_en": "Ulsan Thermal Power Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2902344,
+          35.561945
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 886489288,
+        "sido": "울산광역시",
+        "name": "태화변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2108837,
+          35.4646001
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894528098,
+        "sido": "울산광역시",
+        "name": "웅촌변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2807125,
+          35.5388585
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894528099,
+        "sido": "울산광역시",
+        "name": "옥동변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1513383,
+          35.55522
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894528100,
+        "sido": "울산광역시",
+        "name": "반천변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0971406,
+          35.5136489
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894528101,
+        "sido": "울산광역시",
+        "name": "언양변전소",
+        "name_en": "Eonyang Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3364378,
+          35.4126268
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894528102,
+        "sido": "울산광역시",
+        "name": "당월변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3377721,
+          35.4621336
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894528105,
+        "sido": "울산광역시",
+        "name": "처용변전소",
+        "name_en": "Cheoyong Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1327898,
+          35.580288
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894528107,
+        "sido": "울산광역시",
+        "name": "직동변전소",
+        "name_en": "Jikdong Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3049847,
+          35.3400036
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1035905367,
+        "sido": "울산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1736734,
+          35.5488644
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1098279242,
+        "sido": "울산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.401354,
+          35.5045299
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1103298134,
+        "sido": "울산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "154000",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3561852,
+          35.4881667
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1255613947,
+        "sido": "울산광역시",
+        "name": "남울산변전소",
+        "name_en": "",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3125242,
+          35.3375447
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1270612645,
+        "sido": "울산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3119724,
+          35.3362544
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1270612649,
+        "sido": "울산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1839023,
+          35.7036121
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1427245183,
+        "sido": "울산광역시",
+        "name": "울산전철 변전소",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "154000;55000;27500",
+        "frequency": "",
+        "operator": "국가철도공단",
+        "location": ""
+      }
+    }
+  ]
+}

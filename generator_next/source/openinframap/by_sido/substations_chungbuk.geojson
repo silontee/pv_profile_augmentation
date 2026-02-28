@@ -1,0 +1,1787 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5326907,
+          36.2943426
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 156580308,
+        "sido": "충청북도",
+        "name": "신옥천변전소",
+        "name_en": "New Okcheon Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4141006,
+          36.7167675
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 205296347,
+        "sido": "충청북도",
+        "name": "오창변전소",
+        "name_en": "Ochang Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.424571,
+          36.6385153
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 294600703,
+        "sido": "충청북도",
+        "name": "Power",
+        "name_en": "",
+        "substation_type": "transition",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4459037,
+          36.8804495
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 308953870,
+        "sido": "충청북도",
+        "name": "진천변전소",
+        "name_en": "Jincheon Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4607944,
+          36.5535774
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 310065312,
+        "sido": "충청북도",
+        "name": "청원변전소",
+        "name_en": "Cheongwon Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3883301,
+          36.8216019
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 310574464,
+        "sido": "충청북도",
+        "name": "신진천변전소",
+        "name_en": "New Jincheon Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3699827,
+          36.5830137
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 310689428,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "distribution;traction",
+        "voltage": "154000;55000;27500",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3976954,
+          36.6811286
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 311068711,
+        "sido": "충청북도",
+        "name": "국사변전소",
+        "name_en": "Guksa Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.2325396,
+          37.1775791
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 311223102,
+        "sido": "충청북도",
+        "name": "신제천변전소",
+        "name_en": "New Jecheon Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4432025,
+          36.6066253
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 312319437,
+        "sido": "충청북도",
+        "name": "죽림변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.8057106,
+          37.0189944
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 371952375,
+        "sido": "충청북도",
+        "name": "신충주변전소",
+        "name_en": "Shin-Chungju Substation",
+        "substation_type": "distribution",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.8969534,
+          36.9327886
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 371952409,
+        "sido": "충청북도",
+        "name": "풍동변전소",
+        "name_en": "Pungdong Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.7031665,
+          36.9463976
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 371952429,
+        "sido": "충청북도",
+        "name": "음성변전소",
+        "name_en": "Eumseong Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.8337232,
+          36.2539698
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 511900626,
+        "sido": "충청북도",
+        "name": "영동변전소",
+        "name_en": "Yeongdong Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4622231,
+          36.6280631
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 665834150,
+        "sido": "충청북도",
+        "name": "특고압 변전실",
+        "name_en": "",
+        "substation_type": "yes",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5573756,
+          36.9189874
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 680249152,
+        "sido": "충청북도",
+        "name": "남음성변전소",
+        "name_en": "South-Eumseong Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.9127079,
+          37.0421384
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 682152044,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3253667,
+          36.6209567
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 692756045,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4320167,
+          36.9854092
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 702436285,
+        "sido": "충청북도",
+        "name": "만승변전소",
+        "name_en": "Manseung Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.6096572,
+          36.7258413
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 771936556,
+        "sido": "충청북도",
+        "name": "초정변전소",
+        "name_en": "Chojeong Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5112838,
+          36.5982856
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 771936560,
+        "sido": "충청북도",
+        "name": "청주변전소",
+        "name_en": "Cheongju Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.6496035,
+          36.8098106
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 771936572,
+        "sido": "충청북도",
+        "name": "증평변전소",
+        "name_en": "Jeungpyeong Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "platform"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3592204,
+          36.7488859
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 882280300,
+        "sido": "충청북도",
+        "name": "신중부변전소",
+        "name_en": "Shin-Jungbu Substation",
+        "substation_type": "transmission",
+        "voltage": "765000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.786465,
+          36.8274917
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 893895766,
+        "sido": "충청북도",
+        "name": "괴산변전소",
+        "name_en": "Goesan Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.6837731,
+          37.1179927
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 893895771,
+        "sido": "충청북도",
+        "name": "감곡변전소",
+        "name_en": "Gamgok Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "한국전력공사",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.3321022,
+          36.994255
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894076506,
+        "sido": "충청북도",
+        "name": "단양변전소",
+        "name_en": "Danyang Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5796068,
+          36.9816284
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894076510,
+        "sido": "충청북도",
+        "name": "금왕변전소",
+        "name_en": "Geumwang Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3363461,
+          36.6346474
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167068,
+        "sido": "충청북도",
+        "name": "오송변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4307788,
+          36.6325597
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167069,
+        "sido": "충청북도",
+        "name": "서청주변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5101415,
+          36.6628081
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167070,
+        "sido": "충청북도",
+        "name": "상당변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4754036,
+          36.6422403
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167071,
+        "sido": "충청북도",
+        "name": "사직변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.9201265,
+          36.9997985
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167075,
+        "sido": "충청북도",
+        "name": "충주변전소",
+        "name_en": "Chungju Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.9711861,
+          37.0937817
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167078,
+        "sido": "충청북도",
+        "name": "북충주변전소",
+        "name_en": "North-Chunju Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4548352,
+          36.6575066
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167079,
+        "sido": "충청북도",
+        "name": "북청주변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4548004,
+          36.6580293
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167080,
+        "sido": "충청북도",
+        "name": "봉명변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.7284894,
+          36.4281613
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167085,
+        "sido": "충청북도",
+        "name": "보은변전소",
+        "name_en": "Boeun Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4943651,
+          36.9142823
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167089,
+        "sido": "충청북도",
+        "name": "덕산변전소",
+        "name_en": "Deoksan Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.3302886,
+          36.9399138
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894167090,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.2122417,
+          37.1542435
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894402289,
+        "sido": "충청북도",
+        "name": "제천변전소",
+        "name_en": "Jecheon Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.9675793,
+          36.8487523
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894402291,
+        "sido": "충청북도",
+        "name": "장연변전소",
+        "name_en": "Jangyeon Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.1636696,
+          37.1513732
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894402294,
+        "sido": "충청북도",
+        "name": "왕암변전소",
+        "name_en": "Wangam Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.6523905,
+          36.2475298
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894402295,
+        "sido": "충청북도",
+        "name": "옥천변전소",
+        "name_en": "Okcheon Substation",
+        "substation_type": "distribution;traction",
+        "voltage": "154000;55000;27500",
+        "frequency": "60",
+        "operator": "국가철도공단",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5854329,
+          36.3006138
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 894402298,
+        "sido": "충청북도",
+        "name": "옥천변전소",
+        "name_en": "Okcheon Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.2983791,
+          36.6381509
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 989445183,
+        "sido": "충청북도",
+        "name": "북오송변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5227364,
+          36.2883321
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1069906048,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5835235,
+          36.2608068
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1069906621,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.2894899,
+          37.1980536
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1094774807,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3597008,
+          36.7497348
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1190074378,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3589772,
+          36.7498379
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1190074379,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.3167988,
+          37.0322585
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193756697,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.2939133,
+          37.1918031
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193756698,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.2274577,
+          37.1221863
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193756699,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.1580168,
+          37.1243554
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193756700,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.1217949,
+          37.1305893
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193756701,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3119653,
+          36.6129157
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762355,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.388639,
+          36.64209
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762356,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4705022,
+          36.6911066
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762357,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.540068,
+          36.7292878
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762358,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.6179184,
+          36.8050927
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762359,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.6654485,
+          36.8794575
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762360,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.7879711,
+          36.9608353
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762361,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.8700566,
+          36.9624594
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762362,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.9157522,
+          37.0004535
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762363,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.8697513,
+          37.0677267
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762364,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.7721146,
+          37.0986082
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193762365,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3557526,
+          36.5823735
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1193995778,
+        "sido": "충청북도",
+        "name": "강내 급전구분소",
+        "name_en": "Gangnae Sectioning Post",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5733187,
+          36.2837245
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1195121226,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.641904,
+          36.2491597
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1195121227,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.7257224,
+          36.2292109
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1195121228,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "154000",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.7427014,
+          36.2041369
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1195121229,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "154000",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.0015487,
+          36.2078465
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1195121233,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.9062861,
+          36.2245146
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1195121234,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.805068,
+          36.1694277
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1195121235,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.8169759,
+          36.1629542
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1195121236,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.9021997,
+          36.145131
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1195121237,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.0187401,
+          36.7852758
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1389518147,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "25000",
+        "frequency": "",
+        "operator": "한국철도공사",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.0058173,
+          36.8349551
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1389518175,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "25000",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.0059005,
+          36.8373158
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1390438892,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "25000",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.0041075,
+          36.8456262
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1390438905,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "25000",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.9938043,
+          36.8809516
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1390438908,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "25000",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.6592827,
+          37.1275962
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1431347632,
+        "sido": "충청북도",
+        "name": "",
+        "name_en": "",
+        "substation_type": "industrial",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": "indoor"
+      }
+    }
+  ]
+}

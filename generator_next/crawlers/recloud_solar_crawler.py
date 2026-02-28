@@ -302,21 +302,20 @@ def main() -> None:
     )
     parser.add_argument(
         "--output-dir",
-        default="generator_next/data/recloud",
-        help="출력 디렉토리 (기본: generator_next/data/recloud)",
+        default="generator_next/source/recloud",
+        help="출력 디렉토리 (기본: generator_next/source/recloud)",
     )
     args = parser.parse_args()
 
     output_dir = Path(args.output_dir)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    sido_rows, gugun_rows = asyncio.run(
+    _, gugun_rows = asyncio.run(
         crawl_all(concurrency=args.concurrency, sido_filter=args.sido)
     )
 
     suffix = f"_{args.sido}" if args.sido else ""
-    save_csv(sido_rows, output_dir / f"sido_summary_{timestamp}{suffix}.csv")
-    save_csv(gugun_rows, output_dir / f"gugun_detail_{timestamp}{suffix}.csv")
+    save_csv(gugun_rows, output_dir / f"rps_{timestamp}{suffix}.csv")
 
 
 if __name__ == "__main__":

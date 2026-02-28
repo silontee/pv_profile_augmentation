@@ -460,7 +460,7 @@ def main() -> None:
     )
     parser.add_argument(
         "--output-dir",
-        default="generator_next/data/openinframap",
+        default="generator_next/source/openinframap",
         help="출력 디렉토리",
     )
     parser.add_argument(

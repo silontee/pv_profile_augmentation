@@ -1,0 +1,1149 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.104481,
+          35.1653889
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 2019661789,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "minor_distribution",
+        "voltage": "",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0208265,
+          35.2657467
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 4643409683,
+        "sido": "부산광역시",
+        "name": "송전탑",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0340644,
+          35.1565639
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11084641761,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0360814,
+          35.0880753
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11981168860,
+        "sido": "부산광역시",
+        "name": "영도변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0614846,
+          35.1527119
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11985186757,
+        "sido": "부산광역시",
+        "name": "범천변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": "underground"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0601489,
+          35.1526878
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11985196876,
+        "sido": "부산광역시",
+        "name": "서면변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": "underground"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1448303,
+          35.1601449
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11985328894,
+        "sido": "부산광역시",
+        "name": "우동변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": "underground"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0247057,
+          35.2360985
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 117614725,
+        "sido": "부산광역시",
+        "name": "북부산변전소",
+        "name_en": "North-Busan Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1086611,
+          35.1663257
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 191382779,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "transition",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1031641,
+          35.2836053
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 244523744,
+        "sido": "부산광역시",
+        "name": "노포변전소",
+        "name_en": "Nopo Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1791963,
+          35.2405341
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 310281736,
+        "sido": "부산광역시",
+        "name": "신양산변전소",
+        "name_en": "Shin-Yangsan Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0586255,
+          35.1757581
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 312424733,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "transition",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0534814,
+          35.1948343
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 312424741,
+        "sido": "부산광역시",
+        "name": "미남변전소",
+        "name_en": "Minam Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2083112,
+          35.2489115
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 312458492,
+        "sido": "부산광역시",
+        "name": "기장변전소",
+        "name_en": "Gijang Substation",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0936074,
+          35.2771311
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 313355102,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1700624,
+          35.1815911
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 313355111,
+        "sido": "부산광역시",
+        "name": "좌동변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.8651026,
+          35.0984161
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 415837596,
+        "sido": "부산광역시",
+        "name": "신녹산변전소",
+        "name_en": "Shin-Noksan Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.8599549,
+          35.1319638
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 415888460,
+        "sido": "부산광역시",
+        "name": "미음변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1311994,
+          35.1734864
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 453444606,
+        "sido": "부산광역시",
+        "name": "정보 변전소",
+        "name_en": "",
+        "substation_type": "transmission",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0350498,
+          35.2033276
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 473042574,
+        "sido": "부산광역시",
+        "name": "만덕3주공 변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2924141,
+          35.3247825
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 606158231,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.8986635,
+          35.09154
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 653239981,
+        "sido": "부산광역시",
+        "name": "명지변전소",
+        "name_en": "Myeongji Substation",
+        "substation_type": "yes",
+        "voltage": "",
+        "frequency": "60",
+        "operator": "KEPCO",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3003798,
+          35.3362051
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 692533549,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.097765,
+          35.2478061
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 799592473,
+        "sido": "부산광역시",
+        "name": "구서변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.9957429,
+          35.1478816
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 885052091,
+        "sido": "부산광역시",
+        "name": "서부산변전소",
+        "name_en": "",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0933834,
+          35.1477543
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 885052093,
+        "sido": "부산광역시",
+        "name": "동부산변전소",
+        "name_en": "East-Busan Substation",
+        "substation_type": "transmission",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0196952,
+          35.1503813
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 890917085,
+        "sido": "부산광역시",
+        "name": "개금변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0793577,
+          35.1752106
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 956232291,
+        "sido": "부산광역시",
+        "name": "양정변전소",
+        "name_en": "",
+        "substation_type": "yes",
+        "voltage": "154000",
+        "frequency": "",
+        "operator": "한국전력공사",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3023453,
+          35.3258259
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1094118644,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3028382,
+          35.3257427
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1094118645,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "765000",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2963154,
+          35.3236036
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1094118646,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1002613,
+          35.2482209
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1094410695,
+        "sido": "부산광역시",
+        "name": "구서변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1351099,
+          35.1728661
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1094410702,
+        "sido": "부산광역시",
+        "name": "수영변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.9989352,
+          35.2064079
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1194151294,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0933469,
+          35.290305
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1196122077,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "traction",
+        "voltage": "55000;27500",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2947403,
+          35.3242083
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1270612254,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "transition",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2943607,
+          35.3245389
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1270612256,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "transition",
+        "voltage": "345000",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3020059,
+          35.3278233
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1270612527,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "generation",
+        "voltage": "",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2964998,
+          35.3328857
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1270612804,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.8301153,
+          35.1521395
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1292362429,
+        "sido": "부산광역시",
+        "name": "지사변전소",
+        "name_en": "",
+        "substation_type": "distribution",
+        "voltage": "154000",
+        "frequency": "60",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0162304,
+          35.1024964
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1292814156,
+        "sido": "부산광역시",
+        "name": "부민변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0450045,
+          35.1231226
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1292814535,
+        "sido": "부산광역시",
+        "name": "수정변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0649452,
+          35.1360712
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1292814774,
+        "sido": "부산광역시",
+        "name": "범일변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1046682,
+          35.1183328
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1292815780,
+        "sido": "부산광역시",
+        "name": "용호변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.9896765,
+          35.1687989
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1292820117,
+        "sido": "부산광역시",
+        "name": "덕포변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.9916669,
+          35.1713865
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1292820120,
+        "sido": "부산광역시",
+        "name": "엄궁변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.9863767,
+          35.1816907
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1292820324,
+        "sido": "부산광역시",
+        "name": "모라변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.0947397,
+          35.1921015
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1292829013,
+        "sido": "부산광역시",
+        "name": "연산변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2083251,
+          35.1942087
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1292837629,
+        "sido": "부산광역시",
+        "name": "시랑변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.1060031,
+          35.3050687
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1295175667,
+        "sido": "부산광역시",
+        "name": "부산변전소",
+        "name_en": "",
+        "substation_type": "",
+        "voltage": "",
+        "frequency": "",
+        "operator": "",
+        "location": "indoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.3021509,
+          35.3267343
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1330692414,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "generation",
+        "voltage": "",
+        "frequency": "60",
+        "operator": "",
+        "location": "outdoor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          129.2892092,
+          35.3216814
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1330692418,
+        "sido": "부산광역시",
+        "name": "",
+        "name_en": "",
+        "substation_type": "transmission",
+        "voltage": "154000",
+        "frequency": "",
+        "operator": "",
+        "location": "outdoor"
+      }
+    }
+  ]
+}
