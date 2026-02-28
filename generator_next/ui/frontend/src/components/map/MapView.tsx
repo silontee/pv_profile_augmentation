@@ -1,0 +1,567 @@
+// ============================================================
+// MapLibre GL JS 메인 지도 컴포넌트
+// - zoom < 10: 클러스터(시군구 집계 원형) 표시
+// - zoom ≥ 10: 개별 CircleMarker 표시
+// - 클릭 이벤트 → 하이라이트 + DetailPanel 전환
+// ============================================================
+
+import React, { useEffect, useRef, useCallback } from 'react'
+import maplibregl from 'maplibre-gl'
+import 'maplibre-gl/dist/maplibre-gl.css'
+import { useMapStore } from '../../stores/mapStore'
+import { useUiStore } from '../../stores/uiStore'
+import { useFacilities } from '../../hooks/useFacilities'
+import { fetchFacility } from '../../api/facilities'
+import { fetchSubstationsBbox, fetchPowerLinesBbox } from '../../api/infra'
+import { LayerToggle } from './LayerToggle'
+import type { Facility, ClusterItem, Substation, PowerLine } from '../../types'
+
+// ─── 색상 상수 ──────────────────────────────────────────────
+const COLOR = {
+  active:     '#2ecc71',
+  stopped:    '#95a5a6',
+  retired:    '#4a5568',
+  highlight:  '#ffffff',
+  cluster:    '#6366f1',
+  substation: '#3498db',
+  powerline:  '#e67e22',
+} as const
+
+const CLUSTER_ZOOM = 10  // zoom < 10: 클러스터 모드
+
+// ─── 소스/레이어 ID 상수 ────────────────────────────────────
+const SRC_MARKERS    = 'pv-markers'
+const SRC_CLUSTERS   = 'pv-clusters'
+const SRC_SUBSTATIONS = 'infra-substations'
+const SRC_POWERLINES  = 'infra-powerlines'
+const LYR_MARKERS  = 'pv-marker-layer'
+const LYR_CLUSTERS = 'pv-cluster-layer'
+const LYR_CLUSTER_COUNT = 'pv-cluster-count'
+const LYR_SUBSTATIONS = 'infra-substation-layer'
+const LYR_POWERLINES  = 'infra-powerline-layer'
+
+// ─── GeoJSON 변환 헬퍼 ──────────────────────────────────────
+function markersToGeoJSON(markers: Facility[]): GeoJSON.FeatureCollection {
+  return {
+    type: 'FeatureCollection',
+    features: markers
+      .filter((f) => f.lng != null && f.lat != null)
+      .map((f) => ({
+        type: 'Feature' as const,
+        geometry: {
+          type: 'Point' as const,
+          coordinates: [f.lng!, f.lat!],
+        },
+        properties: {
+          id:       f.id,
+          name:     f.name,
+          status:   f.status,
+          capacity: f.capacity_kw,
+        },
+      })),
+  }
+}
+
+function substationsToGeoJSON(subs: Substation[]): GeoJSON.FeatureCollection {
+  return {
+    type: 'FeatureCollection',
+    features: subs.map((s) => ({
+      type: 'Feature' as const,
+      geometry: { type: 'Point' as const, coordinates: [s.lng, s.lat] },
+      properties: { id: s.id, name: s.name, voltage: s.voltage },
+    })),
+  }
+}
+
+function powerlinesToGeoJSON(lines: PowerLine[]): GeoJSON.FeatureCollection {
+  return {
+    type: 'FeatureCollection',
+    features: lines.map((l) => ({
+      type: 'Feature' as const,
+      geometry: { type: 'LineString' as const, coordinates: l.coordinates },
+      properties: { id: l.id, name: l.name, voltage: l.voltage, power_type: l.power_type },
+    })),
+  }
+}
+
+function clustersToGeoJSON(clusters: ClusterItem[]): GeoJSON.FeatureCollection {
+  return {
+    type: 'FeatureCollection',
+    features: clusters.map((c) => ({
+      type: 'Feature' as const,
+      geometry: {
+        type: 'Point' as const,
+        coordinates: [c.center_lng, c.center_lat],
+      },
+      properties: {
+        sigungu: c.sigungu,
+        cnt:     c.cnt,
+      },
+    })),
+  }
+}
+
+// ─── MapView 컴포넌트 ────────────────────────────────────────
+
+export const MapView: React.FC = () => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const mapRef       = useRef<maplibregl.Map | null>(null)
+  const popupRef     = useRef<maplibregl.Popup | null>(null)
+
+  const setSelectedId    = useMapStore((s) => s.setSelectedId)
+  const setHighlightedId = useMapStore((s) => s.setHighlightedId)
+  const highlightedId    = useMapStore((s) => s.highlightedId)
+  const viewport         = useMapStore((s) => s.viewport)
+  const setBbox          = useMapStore((s) => s.setBbox)
+  const setViewport      = useMapStore((s) => s.setViewport)
+
+  const setPanelMode = useUiStore((s) => s.setPanelMode)
+  const layers       = useUiStore((s) => s.layers)
+  const setDbError   = useUiStore((s) => s.setDbError)
+
+  const { markers, clusters } = useFacilities()
+
+  // ─── 지도 초기화 ──────────────────────────────────────────
+  useEffect(() => {
+    if (!containerRef.current || mapRef.current) return
+
+    const map = new maplibregl.Map({
+      container: containerRef.current,
+      style: 'https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json',
+      center: [127.5, 36.5],
+      zoom: 7,
+      attributionControl: false,
+    })
+
+    map.addControl(new maplibregl.NavigationControl(), 'bottom-right')
+    map.addControl(new maplibregl.AttributionControl({ compact: true }), 'bottom-left')
+
+    // 팝업 인스턴스 (마커 hover용)
+    popupRef.current = new maplibregl.Popup({
+      closeButton: false,
+      closeOnClick: false,
+      offset: 10,
+    })
+
+    map.on('load', () => {
+      // ── 개별 마커 소스/레이어 ─────────────────────────────
+      map.addSource(SRC_MARKERS, {
+        type: 'geojson',
+        data: markersToGeoJSON([]),
+      })
+
+      map.addLayer({
+        id: LYR_MARKERS,
+        type: 'circle',
+        source: SRC_MARKERS,
+        layout: { visibility: 'none' },
+        paint: {
+          'circle-radius': [
+            'case',
+            ['boolean', ['feature-state', 'highlighted'], false], 9,
+            6,
+          ],
+          'circle-color': [
+            'match',
+            ['get', 'status'],
+            '정상가동', COLOR.active,
+            '가동중단', COLOR.stopped,
+            '폐기',     COLOR.retired,
+            COLOR.stopped,
+          ],
+          'circle-stroke-width': [
+            'case',
+            ['boolean', ['feature-state', 'highlighted'], false], 2,
+            0,
+          ],
+          'circle-stroke-color': COLOR.highlight,
+          'circle-opacity': 0.9,
+        },
+      })
+
+      // ── 클러스터 소스/레이어 ──────────────────────────────
+      map.addSource(SRC_CLUSTERS, {
+        type: 'geojson',
+        data: clustersToGeoJSON([]),
+      })
+
+      // 집계 원형
+      map.addLayer({
+        id: LYR_CLUSTERS,
+        type: 'circle',
+        source: SRC_CLUSTERS,
+        layout: { visibility: 'visible' },
+        paint: {
+          'circle-radius': [
+            'interpolate',
+            ['linear'],
+            ['get', 'cnt'],
+            1,   8,
+            100, 18,
+            1000, 30,
+            5000, 40,
+          ],
+          'circle-color': COLOR.cluster,
+          'circle-opacity': 0.75,
+          'circle-stroke-width': 2,
+          'circle-stroke-color': '#818cf8',
+        },
+      })
+
+      // 집계 숫자 텍스트
+      map.addLayer({
+        id: LYR_CLUSTER_COUNT,
+        type: 'symbol',
+        source: SRC_CLUSTERS,
+        layout: {
+          visibility: 'visible',
+          'text-field': ['get', 'cnt'],
+          'text-size': 11,
+          'text-font': ['Noto Sans Regular'],
+        },
+        paint: {
+          'text-color': '#ffffff',
+        },
+      })
+
+      // ── 변전소 소스/레이어 ──────────────────────────────
+      map.addSource(SRC_SUBSTATIONS, {
+        type: 'geojson',
+        data: substationsToGeoJSON([]),
+      })
+      map.addLayer({
+        id: LYR_SUBSTATIONS,
+        type: 'circle',
+        source: SRC_SUBSTATIONS,
+        layout: { visibility: 'visible' },
+        paint: {
+          'circle-radius': 5,
+          'circle-color': COLOR.substation,
+          'circle-opacity': 0.85,
+          'circle-stroke-width': 1,
+          'circle-stroke-color': '#2980b9',
+        },
+      })
+
+      // ── 송배전선 소스/레이어 ──────────────────────────────
+      map.addSource(SRC_POWERLINES, {
+        type: 'geojson',
+        data: powerlinesToGeoJSON([]),
+      })
+      map.addLayer({
+        id: LYR_POWERLINES,
+        type: 'line',
+        source: SRC_POWERLINES,
+        layout: { visibility: 'visible', 'line-cap': 'round', 'line-join': 'round' },
+        paint: {
+          'line-color': COLOR.powerline,
+          'line-width': 2,
+          'line-opacity': 0.6,
+        },
+      })
+
+      // ── 변전소 hover 팝업 ──────────────────────────────
+      map.on('mouseenter', LYR_SUBSTATIONS, (e) => {
+        map.getCanvas().style.cursor = 'pointer'
+        const feat = e.features?.[0]
+        if (!feat || !popupRef.current) return
+        popupRef.current
+          .setLngLat(e.lngLat)
+          .setHTML(
+            `<div style="font-size:12px;line-height:1.5">
+               <strong style="color:${COLOR.substation}">${feat.properties?.name ?? '변전소'}</strong><br/>
+               ${feat.properties?.voltage ? `전압: ${feat.properties.voltage}` : ''}
+             </div>`,
+          )
+          .addTo(map)
+      })
+      map.on('mouseleave', LYR_SUBSTATIONS, () => {
+        map.getCanvas().style.cursor = ''
+        popupRef.current?.remove()
+      })
+
+      // ── 송배전선 hover 팝업 ──────────────────────────────
+      map.on('mouseenter', LYR_POWERLINES, (e) => {
+        map.getCanvas().style.cursor = 'pointer'
+        const feat = e.features?.[0]
+        if (!feat || !popupRef.current) return
+        popupRef.current
+          .setLngLat(e.lngLat)
+          .setHTML(
+            `<div style="font-size:12px">
+               <strong style="color:${COLOR.powerline}">${feat.properties?.name ?? '송배전선'}</strong>
+               ${feat.properties?.voltage ? ` · ${feat.properties.voltage}V` : ''}
+             </div>`,
+          )
+          .addTo(map)
+      })
+      map.on('mouseleave', LYR_POWERLINES, () => {
+        map.getCanvas().style.cursor = ''
+        popupRef.current?.remove()
+      })
+
+      // ── 뷰포트 변경 이벤트 ────────────────────────────────
+      const onMove = () => {
+        const c = map.getCenter()
+        const z = map.getZoom()
+        const b = map.getBounds()
+        setViewport({ center: [c.lng, c.lat], zoom: z })
+        setBbox({
+          xmin: b.getWest(),
+          ymin: b.getSouth(),
+          xmax: b.getEast(),
+          ymax: b.getNorth(),
+        })
+
+        // zoom 임계 전환
+        const isCluster = z < CLUSTER_ZOOM
+        map.setLayoutProperty(LYR_CLUSTERS,      'visibility', isCluster ? 'visible' : 'none')
+        map.setLayoutProperty(LYR_CLUSTER_COUNT, 'visibility', isCluster ? 'visible' : 'none')
+        map.setLayoutProperty(LYR_MARKERS,       'visibility', isCluster ? 'none'    : 'visible')
+      }
+
+      map.on('moveend', onMove)
+      map.on('zoomend', onMove)
+      // 초기 호출
+      onMove()
+
+      // ── 개별 마커 클릭 ────────────────────────────────────
+      map.on('click', LYR_MARKERS, (e) => {
+        const feat = e.features?.[0]
+        if (!feat) return
+        const id = feat.properties?.id as number
+        if (!id) return
+
+        setHighlightedId(id)
+        setSelectedId(id)
+        setPanelMode('detail')
+
+        // 상세 정보 비동기 로드
+        fetchFacility(id).catch((err: Error & { status?: number }) => {
+          if (err.status === 503) setDbError(true)
+        })
+      })
+
+      // ── 클러스터 클릭 → fly-to zoom 12 ───────────────────
+      map.on('click', LYR_CLUSTERS, (e) => {
+        const feat = e.features?.[0]
+        if (!feat) return
+        const coords = (feat.geometry as GeoJSON.Point).coordinates as [number, number]
+        map.flyTo({ center: coords, zoom: 12, duration: 1000 })
+      })
+
+      // ── 마커 hover → 팝업 ─────────────────────────────────
+      map.on('mouseenter', LYR_MARKERS, (e) => {
+        map.getCanvas().style.cursor = 'pointer'
+        const feat = e.features?.[0]
+        if (!feat || !popupRef.current) return
+        const name     = feat.properties?.name as string
+        const capacity = feat.properties?.capacity as number | null
+        popupRef.current
+          .setLngLat(e.lngLat)
+          .setHTML(
+            `<div style="font-size:12px;line-height:1.5">
+               <strong style="color:var(--text-primary)">${name ?? '(이름 없음)'}</strong><br/>
+               ${capacity != null ? `${capacity.toLocaleString('ko-KR')} kW` : '용량 미상'}
+             </div>`,
+          )
+          .addTo(map)
+      })
+      map.on('mouseleave', LYR_MARKERS, () => {
+        map.getCanvas().style.cursor = ''
+        popupRef.current?.remove()
+      })
+
+      // ── 클러스터 hover ────────────────────────────────────
+      map.on('mouseenter', LYR_CLUSTERS, (e) => {
+        map.getCanvas().style.cursor = 'pointer'
+        const feat = e.features?.[0]
+        if (!feat || !popupRef.current) return
+        popupRef.current
+          .setLngLat(e.lngLat)
+          .setHTML(
+            `<div style="font-size:12px">
+               <strong>${feat.properties?.sigungu ?? ''}</strong>
+               &nbsp;${(feat.properties?.cnt as number).toLocaleString('ko-KR')}개소
+             </div>`,
+          )
+          .addTo(map)
+      })
+      map.on('mouseleave', LYR_CLUSTERS, () => {
+        map.getCanvas().style.cursor = ''
+        popupRef.current?.remove()
+      })
+    })
+
+    mapRef.current = map
+
+    return () => {
+      popupRef.current?.remove()
+      map.remove()
+      mapRef.current = null
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // ─── 마커 데이터 갱신 ─────────────────────────────────────
+  useEffect(() => {
+    const map = mapRef.current
+    if (!map || !map.isStyleLoaded()) return
+    const src = map.getSource(SRC_MARKERS) as maplibregl.GeoJSONSource | undefined
+    src?.setData(markersToGeoJSON(markers))
+  }, [markers])
+
+  // ─── 클러스터 데이터 갱신 ─────────────────────────────────
+  useEffect(() => {
+    const map = mapRef.current
+    if (!map || !map.isStyleLoaded()) return
+    const src = map.getSource(SRC_CLUSTERS) as maplibregl.GeoJSONSource | undefined
+    src?.setData(clustersToGeoJSON(clusters))
+  }, [clusters])
+
+  // ─── 인프라 데이터 갱신 (bbox 변경 시) ───────────────────
+  const infraAbortRef = useRef<AbortController | null>(null)
+  useEffect(() => {
+    const map = mapRef.current
+    if (!map || !map.isStyleLoaded()) return
+    const bbox = map.getBounds()
+    if (!bbox) return
+
+    // 이전 요청 취소
+    infraAbortRef.current?.abort()
+    infraAbortRef.current = new AbortController()
+
+    const bboxParams = {
+      xmin: bbox.getWest(),
+      ymin: bbox.getSouth(),
+      xmax: bbox.getEast(),
+      ymax: bbox.getNorth(),
+    }
+
+    // 변전소 로드
+    if (layers.substation) {
+      fetchSubstationsBbox(bboxParams)
+        .then((subs) => {
+          const src = map.getSource(SRC_SUBSTATIONS) as maplibregl.GeoJSONSource | undefined
+          src?.setData(substationsToGeoJSON(subs))
+        })
+        .catch(() => {})
+    }
+
+    // 송배전선 로드
+    if (layers.powerline) {
+      fetchPowerLinesBbox(bboxParams)
+        .then((lines) => {
+          const src = map.getSource(SRC_POWERLINES) as maplibregl.GeoJSONSource | undefined
+          src?.setData(powerlinesToGeoJSON(lines))
+        })
+        .catch(() => {})
+    }
+
+    return () => { infraAbortRef.current?.abort() }
+  }, [markers, clusters, layers.substation, layers.powerline])
+
+  // ─── 레이어 가시성 토글 반영 ────────────────────────────
+  useEffect(() => {
+    const map = mapRef.current
+    if (!map || !map.isStyleLoaded()) return
+    if (map.getLayer(LYR_SUBSTATIONS)) {
+      map.setLayoutProperty(LYR_SUBSTATIONS, 'visibility', layers.substation ? 'visible' : 'none')
+    }
+    if (map.getLayer(LYR_POWERLINES)) {
+      map.setLayoutProperty(LYR_POWERLINES, 'visibility', layers.powerline ? 'visible' : 'none')
+    }
+  }, [layers.substation, layers.powerline])
+
+  // ─── 하이라이트 feature-state 갱신 ───────────────────────
+  const prevHighlightRef = useRef<number | null>(null)
+  useEffect(() => {
+    const map = mapRef.current
+    if (!map || !map.isStyleLoaded()) return
+
+    // 이전 하이라이트 해제
+    if (prevHighlightRef.current !== null) {
+      map.setFeatureState(
+        { source: SRC_MARKERS, id: prevHighlightRef.current },
+        { highlighted: false },
+      )
+    }
+    // 새 하이라이트 적용
+    if (highlightedId !== null) {
+      map.setFeatureState(
+        { source: SRC_MARKERS, id: highlightedId },
+        { highlighted: true },
+      )
+    }
+    prevHighlightRef.current = highlightedId
+  }, [highlightedId])
+
+  // ─── URL 딥링크: 초기 로드 시 복원 ───────────────────────
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const id  = params.get('id')
+    const lng = params.get('lng')
+    const lat = params.get('lat')
+    const z   = params.get('z')
+
+    if (lng && lat) {
+      const map = mapRef.current
+      if (map) {
+        map.jumpTo({
+          center: [parseFloat(lng), parseFloat(lat)],
+          zoom:   z ? parseFloat(z) : 12,
+        })
+      }
+    }
+    if (id) {
+      const numId = parseInt(id, 10)
+      setSelectedId(numId)
+      setHighlightedId(numId)
+      setPanelMode('detail')
+    }
+  // 마운트 시 1회만 실행
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // ─── 레이어 가시성 반영 ───────────────────────────────────
+  useEffect(() => {
+    const map = mapRef.current
+    if (!map || !map.isStyleLoaded()) return
+    // 개별 마커 레이어는 zoom에 따라 제어되므로 여기선 추가 처리 생략
+    // (레이어별 필터링은 paint 속성으로 처리 가능하지만 단순화)
+  }, [layers])
+
+  // ─── 외부 flyTo 요청 반영 (mapStore.viewport 변경) ───────
+  const flyTo = useCallback((lng: number, lat: number, zoom = 15) => {
+    mapRef.current?.flyTo({ center: [lng, lat], zoom, duration: 1200 })
+  }, [])
+
+  // viewport.center 변경 감지는 App.tsx에서 처리
+  // flyTo 함수를 window에 임시 노출 (다른 컴포넌트에서 호출)
+  useEffect(() => {
+    (window as Window & { __mapFlyTo?: typeof flyTo }).__mapFlyTo = flyTo
+    return () => {
+      delete (window as Window & { __mapFlyTo?: typeof flyTo }).__mapFlyTo
+    }
+  }, [flyTo])
+
+  return (
+    <div className="relative w-full h-full">
+      {/* 지도 컨테이너 */}
+      <div ref={containerRef} className="w-full h-full" />
+
+      {/* 레이어 토글 오버레이 */}
+      <LayerToggle />
+
+      {/* 현재 줌 레벨 표시 (디버그) */}
+      <div
+        className="absolute top-2 left-3 px-2 py-0.5 rounded text-[10px]
+                   bg-[var(--bg-elevated)]/80 text-[var(--text-muted)]
+                   pointer-events-none select-none"
+      >
+        zoom {viewport.zoom.toFixed(1)}
+        {viewport.zoom < CLUSTER_ZOOM ? ' · 클러스터' : ' · 마커'}
+      </div>
+    </div>
+  )
+}
