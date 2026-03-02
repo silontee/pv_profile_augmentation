@@ -73,20 +73,32 @@ export async function fetchFacility(id: number): Promise<Facility> {
   return apiFetch<Facility>(`/api/facilities/${id}`)
 }
 
+export interface BboxFetchOptions {
+  status?:   FacilityStatus | ''
+  cap_min?:  number
+  cap_max?:  number
+  year_min?: number
+  year_max?: number
+}
+
 /**
  * 뷰포트 bbox 내 마커 목록 (좌표 있는 것만, zoom ≥ 10 전용)
- * GET /api/facilities/bbox?xmin=&ymin=&xmax=&ymax=&status=
+ * GET /api/facilities/bbox?xmin=&ymin=&xmax=&ymax=&...
  */
 export async function fetchBbox(
   bbox: BboxParams,
-  status?: FacilityStatus | '',
+  opts: BboxFetchOptions = {},
 ): Promise<Facility[]> {
   const qs = buildQuery({
-    xmin:   bbox.xmin,
-    ymin:   bbox.ymin,
-    xmax:   bbox.xmax,
-    ymax:   bbox.ymax,
-    status: status || undefined,
+    xmin:     bbox.xmin,
+    ymin:     bbox.ymin,
+    xmax:     bbox.xmax,
+    ymax:     bbox.ymax,
+    status:   opts.status   || undefined,
+    cap_min:  opts.cap_min,
+    cap_max:  opts.cap_max,
+    year_min: opts.year_min,
+    year_max: opts.year_max,
   })
   const res = await apiFetch<{ items: Facility[] }>(`/api/facilities/bbox${qs}`)
   return res.items
@@ -106,11 +118,24 @@ export async function fetchNearby(
   return res.items
 }
 
+export interface ClusterFetchOptions {
+  cap_min?:  number
+  cap_max?:  number
+  year_min?: number
+  year_max?: number
+}
+
 /**
  * zoom < 10 시군구 집계 클러스터
- * GET /api/facilities/clusters
+ * GET /api/facilities/clusters?cap_min=&cap_max=&year_min=&year_max=
  */
-export async function fetchClusters(): Promise<ClusterItem[]> {
-  const res = await apiFetch<{ items: ClusterItem[] }>('/api/facilities/clusters')
+export async function fetchClusters(opts: ClusterFetchOptions = {}): Promise<ClusterItem[]> {
+  const qs = buildQuery({
+    cap_min:  opts.cap_min,
+    cap_max:  opts.cap_max,
+    year_min: opts.year_min,
+    year_max: opts.year_max,
+  })
+  const res = await apiFetch<{ items: ClusterItem[] }>(`/api/facilities/clusters${qs}`)
   return res.items
 }

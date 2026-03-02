@@ -6,17 +6,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 태양광 발전소 전기사업허가 데이터(data.go.kr)를 자동 수집·정제·지오코딩하여 `rps_rawdata`와 실제 세부 발전량 데이터 간 간극을 보완하는 파이프라인. 최종 목표는 통계적 증강까지 포함.
 
-PRD 문서: `plan/overall/PRD_v0.6.md` (단일 기준 문서)
-세부 트랙 PRD: `plan/crawling/`, `plan/preprocessing/`, `plan/map/`, `plan/statistical_augmentation/`
+PRD 문서: `plan/overall/PRD_v0.7.md` (단일 기준 문서)
+세부 트랙 PRD: `plan/crawling/`, `plan/preprocessing/`, `plan/ui/`, `plan/statistical_augmentation/`
 
 ## 환경 및 실행
 
 패키지 관리자: `uv` (pyproject.toml + uv.lock)
 Python: 3.12+
 핵심 라이브러리: Polars, Playwright, requests, folium
+UI 스택: Docker (PostgreSQL+PostGIS 16, FastAPI, React+MapLibre GL JS)
 
 ```bash
-# 의존성 설치
+# Python 파이프라인 의존성 설치
 uv sync
 
 # 크롤러 실행 (프로젝트 루트에서)
@@ -25,8 +26,14 @@ uv run python generator_next/crawlers/data_go_kr_solar_download_playwright.py --
 # 전처리 + 지오코딩 실행
 uv run python generator_next/preprocessing/preprocess.py
 
-# 지도 생성
+# 지도 생성 (정적 HTML — 레거시)
 uv run python generator_next/map/generate_map.py
+
+# UI 실행 (풀스택)
+cd generator_next/ui
+docker compose up --build   # 최초 빌드 + ETL 적재
+docker compose up -d         # 이후 실행
+# 접속: http://localhost:5173
 ```
 
 ## 코드 구조
@@ -36,7 +43,19 @@ generator/          # 레거시 — 건드리지 않음, 안정화 후 제거 �
 generator_next/     # 모든 신규 개발은 여기서만
   crawlers/         # 수집 스크립트
   preprocessing/    # 전처리 스크립트
-  map/              # 지도 시각화 스크립트 + output/
+  map/              # 정적 HTML 지도 (folium) — 레거시화 예정
+  ui/               # 풀스택 UI (Docker)
+    docker-compose.yml
+    backend/        # FastAPI + asyncpg + PostGIS
+      app/
+        api/        # 발전소·인프라·통계 엔드포인트
+        db/         # DB 세션 + ETL 로더
+    frontend/       # React + Vite + MapLibre GL JS
+      src/
+        components/ # MapView, LayerToggle, SearchPanel, DetailPanel, RangeSlider
+        hooks/      # useFacilities, useSearch
+        stores/     # mapStore, searchStore, uiStore (Zustand)
+        api/        # facilities, infra, stats 클라이언트
   source/
     raw_csv/        # data.go.kr 시군구별 전기사업허가 CSV
     recloud/        # recloud 시군구별 RPS 이용률 CSV (rps_*.csv)
@@ -46,9 +65,10 @@ generator_next/     # 모든 신규 개발은 여기서만
       crawler/      # 크롤 상태/다운로드 로그
       geocode/      # 지오코딩 캐시/실패 로그
 plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
+  overall/          # 전체 파이프라인 PRD
   crawling/
   preprocessing/
-  map/
+  ui/               # UI 트랙 PRD
   statistical_augmentation/
 ```
 
@@ -64,9 +84,16 @@ plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
 - Kakao API 지오코딩 인라인 retry: 도로명→지번, 원본→정제 순 fallback
 - 실패 로그: `geocode_failures_kakao_raw.csv`
 
-**3. 지도 시각화** (`generator_next/map/generate_map.py`) — 완료
+**3. UI 시각화** (`generator_next/ui/`) — v0.1 완료
+- Docker: PostgreSQL+PostGIS / FastAPI / React+MapLibre GL JS
+- zoom < 10: 시군구 클러스터 (정상가동=초록·가동중단=회색·폐기=빨강 3레이어)
+- zoom ≥ 10: 개별 마커 (상태별 색상)
+- 검색·필터 패널 (텍스트·상태·용량·연도), 발전소 상세 패널
+- 변전소·송배전선 인프라 레이어
+- 세부: `plan/ui/PRD_v0.1.md`
+
+**3-레거시. 정적 지도** (`generator_next/map/generate_map.py`) — 완료 (레거시화 예정)
 - folium + FastMarkerCluster로 114,840개 발전소 포인트 클러스터링
-- 가동상태별 색상 구분 + 변전소·송배전선 레이어
 - 출력: `generator_next/map/output/pv_map.html`
 
 **4. 통계적 증강** (미착수 — 방법론 미확정)
@@ -96,10 +123,17 @@ plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
 | OSM 송배전선 | 4,685건 | by_sido GeoJSON |
 | OSM 태양광발전소 | 10,646건 | by_sido GeoJSON (참고용) |
 
+## 데이터 분포 참고 (슬라이더 범위 기준)
+
+- **설비용량**: 중앙값 99 kW / p99 999 kW → UI 슬라이더 0~1,000 kW
+- **설치연도**: 유효 범위 2008~2025년 (1900·9999 등 오기 존재)
+
 ## 현재 블로커
 
 1. `http_400` 4건 원인 미분류
-2. 통계적 증강 방법론 미선정
+2. 설치연도·설비용량 오기 데이터 전처리 미완료
+3. 통계적 증강 방법론 미선정
+4. UI 시군구 경계 GeoJSON 미확보 (boundary 레이어 미구현)
 
 ## 개발 규칙
 

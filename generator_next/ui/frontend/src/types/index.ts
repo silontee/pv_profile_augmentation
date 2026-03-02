@@ -70,8 +70,11 @@ export interface PowerLine {
 
 /** zoom < 10 클러스터 집계 아이템 */
 export interface ClusterItem {
-  sigungu: string
+  sigungu: string | null
   cnt: number
+  cnt_active: number
+  cnt_stopped: number
+  cnt_retired: number
   center_lat: number
   center_lng: number
 }

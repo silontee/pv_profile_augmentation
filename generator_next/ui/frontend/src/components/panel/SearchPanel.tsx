@@ -185,16 +185,16 @@ export const SearchPanel: React.FC = () => {
           max={1000}
           step={10}
           value={capRange}
-          onChange={setCapRange}
+          onChangeCommitted={setCapRange}
           unit=" kW"
         />
         <RangeSlider
           label="설치연도"
-          min={2000}
-          max={2026}
+          min={2008}
+          max={2025}
           step={1}
           value={yearRange}
-          onChange={setYearRange}
+          onChangeCommitted={setYearRange}
           unit="년"
         />
       </div>

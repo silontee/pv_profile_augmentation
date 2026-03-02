@@ -37,7 +37,7 @@ interface SearchState {
 }
 
 const DEFAULT_CAP_RANGE: [number, number]  = [0, 1000]
-const DEFAULT_YEAR_RANGE: [number, number] = [2000, 2026]
+const DEFAULT_YEAR_RANGE: [number, number] = [2008, 2025]
 
 export const useSearchStore = create<SearchState>((set) => ({
   query:     '',

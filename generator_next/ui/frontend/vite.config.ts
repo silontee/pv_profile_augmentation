@@ -7,6 +7,10 @@ export default defineConfig({
   server: {
     port: 5173,
     host: '0.0.0.0', // Docker 컨테이너에서 외부 접근 허용
+    watch: {
+      usePolling: true, // Windows + Docker 환경에서 파일 변경 감지
+      interval: 500,
+    },
     proxy: {
       // /api/* 요청을 FastAPI 백엔드로 프록시
       // Docker: VITE_API_TARGET=http://backend:8000, 로컬: localhost:8000

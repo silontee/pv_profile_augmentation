@@ -94,6 +94,9 @@ class ClusterItem(BaseModel):
     """시군구 집계 아이템 (zoom < 10 클러스터용)."""
     sigungu: Optional[str] = None
     cnt: int
+    cnt_active: int = 0
+    cnt_stopped: int = 0
+    cnt_retired: int = 0
     center_lat: Optional[float] = None
     center_lng: Optional[float] = None
 

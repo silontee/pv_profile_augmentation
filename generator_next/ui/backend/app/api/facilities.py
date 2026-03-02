@@ -138,31 +138,58 @@ async def list_facilities(
 
 @router.get("/facilities/clusters", response_model=ClusterResponse)
 async def get_clusters(
+    cap_min:  Optional[float] = Query(None, ge=0,    description="설비용량 최솟값 (kW)"),
+    cap_max:  Optional[float] = Query(None, ge=0,    description="설비용량 최댓값 (kW)"),
+    year_min: Optional[int]   = Query(None, ge=1990, description="설치연도 최솟값"),
+    year_max: Optional[int]   = Query(None, le=2030, description="설치연도 최댓값"),
     db: AsyncSession = Depends(get_db),
 ):
     """
     zoom < 10 용 시군구 집계.
     permit_org 기준으로 그룹핑, 좌표 있는 항목만.
+    용량·연도 필터 적용 가능.
     """
     try:
-        stmt = text("""
+        where_clauses = ["geom IS NOT NULL"]
+        params: dict = {}
+        if cap_min is not None:
+            where_clauses.append("capacity_kw >= :cap_min")
+            params["cap_min"] = cap_min
+        if cap_max is not None:
+            where_clauses.append("capacity_kw <= :cap_max")
+            params["cap_max"] = cap_max
+        if year_min is not None:
+            where_clauses.append("install_year >= :year_min")
+            params["year_min"] = year_min
+        if year_max is not None:
+            where_clauses.append("install_year <= :year_max")
+            params["year_max"] = year_max
+
+        where_sql = " AND ".join(where_clauses)
+        stmt = text(f"""
             SELECT
                 permit_org AS sigungu,
                 COUNT(*) AS cnt,
+                COUNT(*) FILTER (WHERE status = '정상가동') AS cnt_active,
+                COUNT(*) FILTER (WHERE status = '가동중단') AS cnt_stopped,
+                COUNT(*) FILTER (WHERE status = '폐기')     AS cnt_retired,
                 AVG(ST_Y(geom)) AS center_lat,
                 AVG(ST_X(geom)) AS center_lng
             FROM pv_facility
-            WHERE geom IS NOT NULL
+            WHERE {where_sql}
             GROUP BY permit_org
             ORDER BY cnt DESC
         """)
-        result = await db.execute(stmt)
+        result = await db.execute(stmt, params)
         rows = result.fetchall()
 
         items = [
             ClusterItem(
                 sigungu=row.sigungu,
                 cnt=row.cnt,
+                cnt_active=row.cnt_active,
+                cnt_stopped=row.cnt_stopped,
+                cnt_retired=row.cnt_retired,
                 center_lat=float(row.center_lat) if row.center_lat is not None else None,
                 center_lng=float(row.center_lng) if row.center_lng is not None else None,
             )
@@ -181,16 +208,37 @@ async def get_facilities_bbox(
     ymin: float = Query(..., description="bbox 남쪽 위도 (EPSG:4326)"),
     xmax: float = Query(..., description="bbox 동쪽 경도 (EPSG:4326)"),
     ymax: float = Query(..., description="bbox 북쪽 위도 (EPSG:4326)"),
-    status: Optional[str] = Query(None, description="가동상태 필터"),
+    status:   Optional[str]   = Query(None, description="가동상태 필터"),
+    cap_min:  Optional[float] = Query(None, ge=0,    description="설비용량 최솟값 (kW)"),
+    cap_max:  Optional[float] = Query(None, ge=0,    description="설비용량 최댓값 (kW)"),
+    year_min: Optional[int]   = Query(None, ge=1990, description="설치연도 최솟값"),
+    year_max: Optional[int]   = Query(None, le=2030, description="설치연도 최댓값"),
     db: AsyncSession = Depends(get_db),
 ):
     """
     뷰포트 바운딩박스 내 발전소 마커.
     geom IS NOT NULL 조건 필수 적용.
+    용량·연도 필터 적용 가능.
     """
     try:
-        # asyncpg는 `$N IS NULL` 패턴 비호환 → 동적 SQL 분기
-        where_status = "AND status = :status" if status else ""
+        extra = ""
+        params: dict = {"xmin": xmin, "ymin": ymin, "xmax": xmax, "ymax": ymax}
+        if status:
+            extra += " AND status = :status"
+            params["status"] = status
+        if cap_min is not None:
+            extra += " AND capacity_kw >= :cap_min"
+            params["cap_min"] = cap_min
+        if cap_max is not None:
+            extra += " AND capacity_kw <= :cap_max"
+            params["cap_max"] = cap_max
+        if year_min is not None:
+            extra += " AND install_year >= :year_min"
+            params["year_min"] = year_min
+        if year_max is not None:
+            extra += " AND install_year <= :year_max"
+            params["year_max"] = year_max
+
         sql = f"""
             SELECT
                 id,
@@ -203,16 +251,12 @@ async def get_facilities_bbox(
             WHERE
                 geom IS NOT NULL
                 AND geom && ST_MakeEnvelope(:xmin, :ymin, :xmax, :ymax, 4326)
-                {where_status}
+                {extra}
             ORDER BY capacity_kw DESC NULLS LAST
         """
-        params = {"xmin": xmin, "ymin": ymin, "xmax": xmax, "ymax": ymax}
-        if status:
-            params["status"] = status
 
         result = await db.execute(text(sql), params)
         rows = result.fetchall()
-
         items = [
             BboxFacilityItem(
                 id=row.id,

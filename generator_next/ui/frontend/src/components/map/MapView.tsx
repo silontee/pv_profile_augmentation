@@ -5,7 +5,7 @@
 // - 클릭 이벤트 → 하이라이트 + DetailPanel 전환
 // ============================================================
 
-import React, { useEffect, useRef, useCallback } from 'react'
+import React, { useEffect, useRef, useCallback, useState } from 'react'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { useMapStore } from '../../stores/mapStore'
@@ -30,15 +30,20 @@ const COLOR = {
 const CLUSTER_ZOOM = 10  // zoom < 10: 클러스터 모드
 
 // ─── 소스/레이어 ID 상수 ────────────────────────────────────
-const SRC_MARKERS    = 'pv-markers'
-const SRC_CLUSTERS   = 'pv-clusters'
+const SRC_MARKERS     = 'pv-markers'
+const SRC_CLUSTERS    = 'pv-clusters'
 const SRC_SUBSTATIONS = 'infra-substations'
 const SRC_POWERLINES  = 'infra-powerlines'
-const LYR_MARKERS  = 'pv-marker-layer'
-const LYR_CLUSTERS = 'pv-cluster-layer'
-const LYR_CLUSTER_COUNT = 'pv-cluster-count'
+const LYR_MARKERS          = 'pv-marker-layer'
+const LYR_CLUSTERS_ACTIVE  = 'pv-cluster-active'
+const LYR_CLUSTERS_STOPPED = 'pv-cluster-stopped'
+const LYR_CLUSTERS_RETIRED = 'pv-cluster-retired'
+const LYR_CLUSTER_COUNT    = 'pv-cluster-count'
 const LYR_SUBSTATIONS = 'infra-substation-layer'
 const LYR_POWERLINES  = 'infra-powerline-layer'
+
+// 모든 클러스터 레이어 목록 (visibility 일괄 제어용)
+const ALL_CLUSTER_LYRS = [LYR_CLUSTERS_ACTIVE, LYR_CLUSTERS_STOPPED, LYR_CLUSTERS_RETIRED, LYR_CLUSTER_COUNT]
 
 // ─── GeoJSON 변환 헬퍼 ──────────────────────────────────────
 function markersToGeoJSON(markers: Facility[]): GeoJSON.FeatureCollection {
@@ -94,8 +99,11 @@ function clustersToGeoJSON(clusters: ClusterItem[]): GeoJSON.FeatureCollection {
         coordinates: [c.center_lng, c.center_lat],
       },
       properties: {
-        sigungu: c.sigungu,
-        cnt:     c.cnt,
+        sigungu:     c.sigungu,
+        cnt:         c.cnt,
+        cnt_active:  c.cnt_active,
+        cnt_stopped: c.cnt_stopped,
+        cnt_retired: c.cnt_retired,
       },
     })),
   }
@@ -104,9 +112,10 @@ function clustersToGeoJSON(clusters: ClusterItem[]): GeoJSON.FeatureCollection {
 // ─── MapView 컴포넌트 ────────────────────────────────────────
 
 export const MapView: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const mapRef       = useRef<maplibregl.Map | null>(null)
-  const popupRef     = useRef<maplibregl.Popup | null>(null)
+  const containerRef  = useRef<HTMLDivElement>(null)
+  const mapRef        = useRef<maplibregl.Map | null>(null)
+  const popupRef      = useRef<maplibregl.Popup | null>(null)
+  const [mapLoaded, setMapLoaded] = useState(false)
 
   const setSelectedId    = useMapStore((s) => s.setSelectedId)
   const setHighlightedId = useMapStore((s) => s.setHighlightedId)
@@ -120,6 +129,10 @@ export const MapView: React.FC = () => {
   const setDbError   = useUiStore((s) => s.setDbError)
 
   const { markers, clusters } = useFacilities()
+
+  // layers를 ref로 추적 — onMove 클로저에서 최신 값 접근용
+  const layersRef = useRef(layers)
+  useEffect(() => { layersRef.current = layers }, [layers])
 
   // ─── 지도 초기화 ──────────────────────────────────────────
   useEffect(() => {
@@ -179,36 +192,67 @@ export const MapView: React.FC = () => {
         },
       })
 
-      // ── 클러스터 소스/레이어 ──────────────────────────────
+      // ── 클러스터 소스/레이어 (상태별 3개) ─────────────────
       map.addSource(SRC_CLUSTERS, {
         type: 'geojson',
         data: clustersToGeoJSON([]),
       })
 
-      // 집계 원형
+      // 공통 반경 표현식 생성 헬퍼
+      const clusterRadius = (field: string) => [
+        'interpolate', ['linear'], ['get', field],
+        1, 6, 50, 14, 500, 24, 5000, 38,
+      ] as maplibregl.ExpressionSpecification
+
+      // 정상가동 (초록) — 가장 먼저 그려 바닥에 위치
       map.addLayer({
-        id: LYR_CLUSTERS,
+        id: LYR_CLUSTERS_ACTIVE,
         type: 'circle',
         source: SRC_CLUSTERS,
+        filter: ['>', ['get', 'cnt_active'], 0],
         layout: { visibility: 'visible' },
         paint: {
-          'circle-radius': [
-            'interpolate',
-            ['linear'],
-            ['get', 'cnt'],
-            1,   8,
-            100, 18,
-            1000, 30,
-            5000, 40,
-          ],
-          'circle-color': COLOR.cluster,
-          'circle-opacity': 0.75,
-          'circle-stroke-width': 2,
-          'circle-stroke-color': '#818cf8',
+          'circle-radius': clusterRadius('cnt_active'),
+          'circle-color': COLOR.active,
+          'circle-opacity': 0.80,
+          'circle-stroke-width': 1.5,
+          'circle-stroke-color': '#27ae60',
         },
       })
 
-      // 집계 숫자 텍스트
+      // 가동중단 (회색) — 중간 레이어
+      map.addLayer({
+        id: LYR_CLUSTERS_STOPPED,
+        type: 'circle',
+        source: SRC_CLUSTERS,
+        filter: ['>', ['get', 'cnt_stopped'], 0],
+        layout: { visibility: 'visible' },
+        paint: {
+          'circle-radius': clusterRadius('cnt_stopped'),
+          'circle-color': COLOR.stopped,
+          'circle-opacity': 0.85,
+          'circle-stroke-width': 1.5,
+          'circle-stroke-color': '#7f8c8d',
+        },
+      })
+
+      // 폐기 (빨강) — 최상단
+      map.addLayer({
+        id: LYR_CLUSTERS_RETIRED,
+        type: 'circle',
+        source: SRC_CLUSTERS,
+        filter: ['>', ['get', 'cnt_retired'], 0],
+        layout: { visibility: 'visible' },
+        paint: {
+          'circle-radius': clusterRadius('cnt_retired'),
+          'circle-color': '#e74c3c',
+          'circle-opacity': 0.85,
+          'circle-stroke-width': 1.5,
+          'circle-stroke-color': '#c0392b',
+        },
+      })
+
+      // 합계 숫자 텍스트
       map.addLayer({
         id: LYR_CLUSTER_COUNT,
         type: 'symbol',
@@ -221,6 +265,8 @@ export const MapView: React.FC = () => {
         },
         paint: {
           'text-color': '#ffffff',
+          'text-halo-color': 'rgba(0,0,0,0.5)',
+          'text-halo-width': 1,
         },
       })
 
@@ -313,17 +359,25 @@ export const MapView: React.FC = () => {
           ymax: b.getNorth(),
         })
 
-        // zoom 임계 전환
+        // zoom 임계 전환 — 레이어 토글 상태도 함께 반영
         const isCluster = z < CLUSTER_ZOOM
-        map.setLayoutProperty(LYR_CLUSTERS,      'visibility', isCluster ? 'visible' : 'none')
-        map.setLayoutProperty(LYR_CLUSTER_COUNT, 'visibility', isCluster ? 'visible' : 'none')
-        map.setLayoutProperty(LYR_MARKERS,       'visibility', isCluster ? 'none'    : 'visible')
+        const lyr = layersRef.current
+        const setClusterVis = (id: string, on: boolean) => {
+          if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none')
+        }
+        setClusterVis(LYR_CLUSTERS_ACTIVE,  isCluster && lyr.active)
+        setClusterVis(LYR_CLUSTERS_STOPPED, isCluster && lyr.stopped)
+        setClusterVis(LYR_CLUSTERS_RETIRED, isCluster && lyr.retired)
+        setClusterVis(LYR_CLUSTER_COUNT,    isCluster && (lyr.active || lyr.stopped || lyr.retired))
+        setClusterVis(LYR_MARKERS,          !isCluster && (lyr.active || lyr.stopped || lyr.retired))
       }
 
       map.on('moveend', onMove)
       map.on('zoomend', onMove)
       // 초기 호출
       onMove()
+      // style 로드 완료 알림 → clusters/markers effect 재실행 트리거
+      setMapLoaded(true)
 
       // ── 개별 마커 클릭 ────────────────────────────────────
       map.on('click', LYR_MARKERS, (e) => {
@@ -343,12 +397,15 @@ export const MapView: React.FC = () => {
       })
 
       // ── 클러스터 클릭 → fly-to zoom 12 ───────────────────
-      map.on('click', LYR_CLUSTERS, (e) => {
+      const onClusterClick = (e: maplibregl.MapMouseEvent & { features?: maplibregl.MapGeoJSONFeature[] }) => {
         const feat = e.features?.[0]
         if (!feat) return
         const coords = (feat.geometry as GeoJSON.Point).coordinates as [number, number]
         map.flyTo({ center: coords, zoom: 12, duration: 1000 })
-      })
+      }
+      map.on('click', LYR_CLUSTERS_ACTIVE,  onClusterClick)
+      map.on('click', LYR_CLUSTERS_STOPPED, onClusterClick)
+      map.on('click', LYR_CLUSTERS_RETIRED, onClusterClick)
 
       // ── 마커 hover → 팝업 ─────────────────────────────────
       map.on('mouseenter', LYR_MARKERS, (e) => {
@@ -373,24 +430,34 @@ export const MapView: React.FC = () => {
       })
 
       // ── 클러스터 hover ────────────────────────────────────
-      map.on('mouseenter', LYR_CLUSTERS, (e) => {
+      const onClusterEnter = (e: maplibregl.MapMouseEvent & { features?: maplibregl.MapGeoJSONFeature[] }) => {
         map.getCanvas().style.cursor = 'pointer'
         const feat = e.features?.[0]
         if (!feat || !popupRef.current) return
+        const p = feat.properties ?? {}
         popupRef.current
           .setLngLat(e.lngLat)
           .setHTML(
-            `<div style="font-size:12px">
-               <strong>${feat.properties?.sigungu ?? ''}</strong>
-               &nbsp;${(feat.properties?.cnt as number).toLocaleString('ko-KR')}개소
+            `<div style="font-size:12px;line-height:1.8">
+               <strong style="font-size:13px">${p.sigungu ?? '(미분류)'}</strong>
+               &nbsp;<span style="color:#aaa">총 ${Number(p.cnt).toLocaleString('ko-KR')}개소</span><br/>
+               <span style="color:${COLOR.active}">● 정상가동</span> ${Number(p.cnt_active).toLocaleString('ko-KR')}개<br/>
+               <span style="color:${COLOR.stopped}">● 가동중단</span> ${Number(p.cnt_stopped).toLocaleString('ko-KR')}개<br/>
+               <span style="color:#e74c3c">● 폐기</span> ${Number(p.cnt_retired).toLocaleString('ko-KR')}개
              </div>`,
           )
           .addTo(map)
-      })
-      map.on('mouseleave', LYR_CLUSTERS, () => {
+      }
+      const onClusterLeave = () => {
         map.getCanvas().style.cursor = ''
         popupRef.current?.remove()
-      })
+      }
+      map.on('mouseenter', LYR_CLUSTERS_ACTIVE,  onClusterEnter)
+      map.on('mouseenter', LYR_CLUSTERS_STOPPED, onClusterEnter)
+      map.on('mouseenter', LYR_CLUSTERS_RETIRED, onClusterEnter)
+      map.on('mouseleave', LYR_CLUSTERS_ACTIVE,  onClusterLeave)
+      map.on('mouseleave', LYR_CLUSTERS_STOPPED, onClusterLeave)
+      map.on('mouseleave', LYR_CLUSTERS_RETIRED, onClusterLeave)
     })
 
     mapRef.current = map
@@ -405,25 +472,28 @@ export const MapView: React.FC = () => {
 
   // ─── 마커 데이터 갱신 ─────────────────────────────────────
   useEffect(() => {
+    if (!mapLoaded) return
     const map = mapRef.current
-    if (!map || !map.isStyleLoaded()) return
+    if (!map) return
     const src = map.getSource(SRC_MARKERS) as maplibregl.GeoJSONSource | undefined
     src?.setData(markersToGeoJSON(markers))
-  }, [markers])
+  }, [markers, mapLoaded])
 
   // ─── 클러스터 데이터 갱신 ─────────────────────────────────
   useEffect(() => {
+    if (!mapLoaded) return
     const map = mapRef.current
-    if (!map || !map.isStyleLoaded()) return
+    if (!map) return
     const src = map.getSource(SRC_CLUSTERS) as maplibregl.GeoJSONSource | undefined
     src?.setData(clustersToGeoJSON(clusters))
-  }, [clusters])
+  }, [clusters, mapLoaded])
 
   // ─── 인프라 데이터 갱신 (bbox 변경 시) ───────────────────
   const infraAbortRef = useRef<AbortController | null>(null)
   useEffect(() => {
+    if (!mapLoaded) return
     const map = mapRef.current
-    if (!map || !map.isStyleLoaded()) return
+    if (!map) return
     const bbox = map.getBounds()
     if (!bbox) return
 
@@ -459,25 +529,27 @@ export const MapView: React.FC = () => {
     }
 
     return () => { infraAbortRef.current?.abort() }
-  }, [markers, clusters, layers.substation, layers.powerline])
+  }, [markers, clusters, layers.substation, layers.powerline, mapLoaded])
 
   // ─── 레이어 가시성 토글 반영 ────────────────────────────
   useEffect(() => {
+    if (!mapLoaded) return
     const map = mapRef.current
-    if (!map || !map.isStyleLoaded()) return
+    if (!map) return
     if (map.getLayer(LYR_SUBSTATIONS)) {
       map.setLayoutProperty(LYR_SUBSTATIONS, 'visibility', layers.substation ? 'visible' : 'none')
     }
     if (map.getLayer(LYR_POWERLINES)) {
       map.setLayoutProperty(LYR_POWERLINES, 'visibility', layers.powerline ? 'visible' : 'none')
     }
-  }, [layers.substation, layers.powerline])
+  }, [layers.substation, layers.powerline, mapLoaded])
 
   // ─── 하이라이트 feature-state 갱신 ───────────────────────
   const prevHighlightRef = useRef<number | null>(null)
   useEffect(() => {
+    if (!mapLoaded) return
     const map = mapRef.current
-    if (!map || !map.isStyleLoaded()) return
+    if (!map) return
 
     // 이전 하이라이트 해제
     if (prevHighlightRef.current !== null) {
@@ -494,7 +566,7 @@ export const MapView: React.FC = () => {
       )
     }
     prevHighlightRef.current = highlightedId
-  }, [highlightedId])
+  }, [highlightedId, mapLoaded])
 
   // ─── URL 딥링크: 초기 로드 시 복원 ───────────────────────
   useEffect(() => {
@@ -523,13 +595,40 @@ export const MapView: React.FC = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  // ─── 레이어 가시성 반영 ───────────────────────────────────
+  // ─── 마커 상태 필터 반영 (active/stopped/retired 토글) ──
   useEffect(() => {
+    if (!mapLoaded) return
     const map = mapRef.current
-    if (!map || !map.isStyleLoaded()) return
-    // 개별 마커 레이어는 zoom에 따라 제어되므로 여기선 추가 처리 생략
-    // (레이어별 필터링은 paint 속성으로 처리 가능하지만 단순화)
-  }, [layers])
+    if (!map) return
+
+    const anyPvOn = layers.active || layers.stopped || layers.retired
+    const isCluster = map.getZoom() < CLUSTER_ZOOM
+
+    // 클러스터/마커 visibility — zoom 레벨과 레이어 상태 둘 다 반영
+    const setV = (id: string, on: boolean) => {
+      if (map.getLayer(id)) map.setLayoutProperty(id, 'visibility', on ? 'visible' : 'none')
+    }
+    setV(LYR_CLUSTERS_ACTIVE,  isCluster && layers.active)
+    setV(LYR_CLUSTERS_STOPPED, isCluster && layers.stopped)
+    setV(LYR_CLUSTERS_RETIRED, isCluster && layers.retired)
+    setV(LYR_CLUSTER_COUNT,    isCluster && anyPvOn)
+    setV(LYR_MARKERS,          !isCluster && anyPvOn)
+
+    // 개별 마커 상태 필터
+    if (map.getLayer(LYR_MARKERS)) {
+      const allowed: string[] = []
+      if (layers.active)  allowed.push('정상가동')
+      if (layers.stopped) allowed.push('가동중단')
+      if (layers.retired) allowed.push('폐기')
+
+      map.setFilter(
+        LYR_MARKERS,
+        allowed.length === 0
+          ? ['==', 1, 0]
+          : ['in', ['get', 'status'], ['literal', allowed]],
+      )
+    }
+  }, [layers.active, layers.stopped, layers.retired, mapLoaded])
 
   // ─── 외부 flyTo 요청 반영 (mapStore.viewport 변경) ───────
   const flyTo = useCallback((lng: number, lat: number, zoom = 15) => {

@@ -34,8 +34,8 @@ interface UseFacilitiesReturn {
 const CLUSTER_ZOOM_THRESHOLD = 10
 
 export function useFacilities(): UseFacilitiesReturn {
-  const bbox      = useMapStore((s) => s.viewport.bbox)
-  const zoom      = useMapStore((s) => s.viewport.zoom)
+  const bbox       = useMapStore((s) => s.viewport.bbox)
+  const zoom       = useMapStore((s) => s.viewport.zoom)
   const setDbError = useUiStore((s) => s.setDbError)
 
   const [markers,  setMarkers]  = useState<Facility[]>([])
@@ -61,7 +61,7 @@ export function useFacilities(): UseFacilitiesReturn {
 
     const load = async () => {
       try {
-        if (isCluster) {
+          if (isCluster) {
           // zoom < 10: 시군구 집계 클러스터
           const data = await fetchClusters()
           setClusters(data)
