@@ -18,7 +18,7 @@ import { LandcoverLegend } from './LandcoverLegend'
 import type { Facility, ClusterItem, Substation, PowerLine } from '../../types'
 
 // ─── MapTiler ───────────────────────────────────────────────
-const MAPTILER_KEY = 'QDyL8SVpZi4TNH5AykBi'
+const MAPTILER_KEY = import.meta.env.VITE_MAPTILER_KEY
 
 // ─── 색상 상수 ──────────────────────────────────────────────
 const COLOR = {
