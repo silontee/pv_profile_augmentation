@@ -7,6 +7,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { useMapStore } from '../stores/mapStore'
 import { useUiStore } from '../stores/uiStore'
+import { useSearchStore } from '../stores/searchStore'
 import { fetchBbox, fetchClusters } from '../api/facilities'
 import type { Facility, ClusterItem } from '../types'
 
@@ -38,6 +39,10 @@ export function useFacilities(): UseFacilitiesReturn {
   const zoom       = useMapStore((s) => s.viewport.zoom)
   const setDbError = useUiStore((s) => s.setDbError)
 
+  const capRange  = useSearchStore((s) => s.capRange)
+  const yearRange = useSearchStore((s) => s.yearRange)
+  const status    = useSearchStore((s) => s.status)
+
   const [markers,  setMarkers]  = useState<Facility[]>([])
   const [clusters, setClusters] = useState<ClusterItem[]>([])
   const [loading,  setLoading]  = useState(false)
@@ -61,14 +66,22 @@ export function useFacilities(): UseFacilitiesReturn {
 
     const load = async () => {
       try {
-          if (isCluster) {
+        const filterOpts = {
+          status:   status   || undefined,
+          cap_min:  capRange[0],
+          cap_max:  capRange[1],
+          year_min: yearRange[0],
+          year_max: yearRange[1],
+        }
+
+        if (isCluster) {
           // zoom < 10: 시군구 집계 클러스터
-          const data = await fetchClusters()
+          const data = await fetchClusters(filterOpts)
           setClusters(data)
           setMarkers([])
         } else if (bbox) {
           // zoom ≥ 10: 개별 마커
-          const data = await fetchBbox(bbox)
+          const data = await fetchBbox(bbox, filterOpts)
           setMarkers(data)
           setClusters([])
         }
@@ -90,7 +103,7 @@ export function useFacilities(): UseFacilitiesReturn {
     return () => {
       abortRef.current?.abort()
     }
-  }, [bbox, zoom, setDbError])
+  }, [bbox, zoom, setDbError, status, capRange, yearRange])
 
   return { markers, clusters, loading, error }
 }

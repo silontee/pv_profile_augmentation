@@ -9,7 +9,7 @@ services:
       POSTGRES_USER: pv_user
       POSTGRES_PASSWORD: pv_password
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - pv_pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -34,8 +34,8 @@ services:
       DB_PASSWORD: pv_password
       DATA_ROOT: /data
     volumes:
-      - ../source/processed:/data/processed:ro
-      - ../source/openinframap/by_sido:/data/openinframap/by_sido:ro
+      - ../data/processed:/data/processed:ro
+      - ../data/openinframap/by_sido:/data/openinframap/by_sido:ro
     command: ["python", "-m", "app.db.load_data"]
     restart: "no"
 
@@ -57,7 +57,7 @@ services:
       # 소스 코드 (dev hot-reload)
       - ./backend/app:/app/app
       # 데이터 (read-only)
-      - ../source/boundaries:/data/boundaries:ro
+      - ../data/boundaries:/data/boundaries:ro
     command: ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
 
   # ── React 프론트엔드 (Vite dev server) ───────────────────────

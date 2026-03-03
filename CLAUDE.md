@@ -6,8 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 태양광 발전소 전기사업허가 데이터(data.go.kr)를 자동 수집·정제·지오코딩하여 `rps_rawdata`와 실제 세부 발전량 데이터 간 간극을 보완하는 파이프라인. 최종 목표는 통계적 증강까지 포함.
 
-PRD 문서: `plan/overall/PRD_v0.7.md` (단일 기준 문서)
-세부 트랙 PRD: `plan/crawling/`, `plan/preprocessing/`, `plan/ui/`, `plan/statistical_augmentation/`
+PRD 문서: `plan/overall/PRD_v0.8.md` (단일 기준 문서)
+세부 트랙 PRD: `plan/crawling/`, `plan/preprocessing/`, `plan/ui/PRD_v0.2.md`, `plan/statistical_augmentation/`
 
 ## 환경 및 실행
 
@@ -26,49 +26,62 @@ uv run python src/crawlers/data_go_kr_solar_download_playwright.py --headless
 # 전처리 + 지오코딩 실행
 uv run python src/preprocessing/preprocess.py
 
+# 토지피복 오프라인 수집 (선택)
+uv run python src/crawlers/land_cover_crawler.py --sido 서울 경기
+
 # 지도 생성 (정적 HTML — 레거시)
 uv run python src/map/generate_map.py
 
 # UI 실행 (풀스택)
 cd src/ui
-docker compose up --build   # 최초 빌드 + ETL 적재
+docker compose up --build   # 최초 빌드 + ETL 적재 (pyproject.toml 변경 시 --no-cache)
 docker compose up -d         # 이후 실행
 # 접속: http://localhost:5173
+# DB:   localhost:5433 (기존 pv-main-db와 포트 분리)
 ```
 
 ## 코드 구조
 
 ```
-generator/          # 레거시 — 건드리지 않음, 안정화 후 제거 예정
 src/     # 모든 신규 개발은 여기서만
-  crawlers/         # 수집 스크립트
+  crawlers/
+    data_go_kr_solar_download_playwright.py
+    recloud_solar_crawler.py
+    openinframap_power_crawler.py
+    land_cover_crawler.py   # EGIS WFS 토지피복 오프라인 수집
   preprocessing/    # 전처리 스크립트
   map/              # 정적 HTML 지도 (folium) — 레거시화 예정
   ui/               # 풀스택 UI (Docker)
-    docker-compose.yml
+    docker-compose.yml      # DB 포트: 5433 (pv-main-db 충돌 방지)
     backend/        # FastAPI + asyncpg + PostGIS
       app/
-        api/        # 발전소·인프라·통계 엔드포인트
+        api/        # 발전소·인프라·통계·토지피복 엔드포인트
+          facilities.py / infra.py / stats.py
+          landcover.py      # EGIS WFS 프록시 (/api/landcover)
         db/         # DB 세션 + ETL 로더
     frontend/       # React + Vite + MapLibre GL JS
       src/
-        components/ # MapView, LayerToggle, SearchPanel, DetailPanel, RangeSlider
-        hooks/      # useFacilities, useSearch
+        components/map/
+          MapView.tsx         # 3D지형·토지피복 포함
+          LayerToggle.tsx     # 레이어 토글 UI
+          LandcoverLegend.tsx # 토지피복 범례 (우상단 오버레이)
+        hooks/      # useFacilities (필터동기화), useSearch
         stores/     # mapStore, searchStore, uiStore (Zustand)
         api/        # facilities, infra, stats 클라이언트
-  source/
+  data/             # 데이터 파일 (구 source/)
     raw_csv/        # data.go.kr 시군구별 전기사업허가 CSV
     recloud/        # recloud 시군구별 RPS 이용률 CSV (rps_*.csv)
     openinframap/   # OSM 전력 인프라 GeoJSON (by_sido/)
     processed/      # 전처리 산출물 (parquet, preprocess_state.csv)
+    landcover/      # EGIS 토지피복 GeoJSON (오프라인 수집 예정)
     logs/
       crawler/      # 크롤 상태/다운로드 로그
       geocode/      # 지오코딩 캐시/실패 로그
 plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
-  overall/          # 전체 파이프라인 PRD
+  overall/          # 전체 파이프라인 PRD (최신: PRD_v0.8.md)
   crawling/
   preprocessing/
-  ui/               # UI 트랙 PRD
+  ui/               # UI 트랙 PRD (최신: PRD_v0.2.md)
   statistical_augmentation/
 ```
 
@@ -78,19 +91,24 @@ plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
 - `data_go_kr_solar_download_playwright.py`: Playwright로 data.go.kr 시군구별 CSV 증분 다운로드
 - `recloud_solar_crawler.py`: recloud.energy.or.kr에서 시군구별 RPS 이용률 비동기 수집
 - `openinframap_power_crawler.py`: Overpass API로 OSM 전력 인프라(변전소·송배전선·발전소) GeoJSON 수집
+- `land_cover_crawler.py`: 환경부 EGIS WFS 토지피복지도 오프라인 수집
 
 **2. 전처리** (`src/preprocessing/preprocess.py`) — 완료
 - raw_csv → Polars 통합·정규화 → parquet 출력 (가동상태 전체 보존)
 - Kakao API 지오코딩 인라인 retry: 도로명→지번, 원본→정제 순 fallback
 - 실패 로그: `geocode_failures_kakao_raw.csv`
 
-**3. UI 시각화** (`src/ui/`) — v0.1 완료
+**3. UI 시각화** (`src/ui/`) — v0.2 완료
 - Docker: PostgreSQL+PostGIS / FastAPI / React+MapLibre GL JS
 - zoom < 10: 시군구 클러스터 (정상가동=초록·가동중단=회색·폐기=빨강 3레이어)
 - zoom ≥ 10: 개별 마커 (상태별 색상)
 - 검색·필터 패널 (텍스트·상태·용량·연도), 발전소 상세 패널
 - 변전소·송배전선 인프라 레이어
-- 세부: `plan/ui/PRD_v0.1.md`
+- **[v0.2]** 3D 지형: MapTiler DEM (`terrain-rgb-v2`) + hillshade + pitch 50°
+- **[v0.2]** 토지피복 레이어: 환경부 EGIS WFS 프록시 → 7색 중분류 폴리곤
+- **[v0.2]** 토지피복 범례: 레이어 ON 시 우상단 오버레이
+- **[v0.2]** 필터 → 지도 동기화: 설비용량·설치연도·상태가 마커/클러스터에 반영
+- 세부: `plan/ui/PRD_v0.2.md`
 
 **3-레거시. 정적 지도** (`src/map/generate_map.py`) — 완료 (레거시화 예정)
 - folium + FastMarkerCluster로 114,840개 발전소 포인트 클러스터링
@@ -99,6 +117,13 @@ plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
 **4. 통계적 증강** (미착수 — 방법론 미확정)
 - recloud RPS 이용률과 data.go.kr 발전소 허가 데이터 결합
 - 발전량 추정, 입지 적합성 분석 예정
+
+## 외부 서비스 키 / URL
+
+- **MapTiler API 키**: `QDyL8SVpZi4TNH5AykBi` (MapView.tsx 하드코딩 — 배포 전 환경변수 분리 필요)
+- **EGIS WFS**: `https://api.mcee.go.kr/geoserver/wfs` (egisapp.me.go.kr → 301 리다이렉트)
+  - 중분류 레이어: `EGIS:lv2_2025y` / 세분류: `EGIS:lv3_2025y`
+  - CORS 헤더 없음 → 반드시 FastAPI 프록시를 통해 호출
 
 ## 핵심 파일 스키마
 
@@ -111,7 +136,7 @@ plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
 **지오코딩 실패 로그** (`geocode_failures_kakao_raw.csv`):
 `geo_addr, reason, updated_at`
 
-## 데이터 현황 (2026-02-28 기준)
+## 데이터 현황 (2026-03-03 기준)
 
 | 데이터 소스 | 수량 | 비고 |
 |---|---|---|
@@ -134,6 +159,7 @@ plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
 2. 설치연도·설비용량 오기 데이터 전처리 미완료
 3. 통계적 증강 방법론 미선정
 4. UI 시군구 경계 GeoJSON 미확보 (boundary 레이어 미구현)
+5. MapTiler API 키 소스 하드코딩 (배포 전 `.env` 분리 필요)
 
 ## 개발 규칙
 

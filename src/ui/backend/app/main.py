@@ -10,7 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from app.db.session import engine, Base
-from app.api import facilities, stats, infra
+from app.api import facilities, stats, infra, landcover
 
 # 로깅 설정
 logging.basicConfig(
@@ -56,6 +56,7 @@ app.add_middleware(
 app.include_router(facilities.router, prefix="/api")
 app.include_router(stats.router, prefix="/api")
 app.include_router(infra.router, prefix="/api")
+app.include_router(landcover.router, prefix="/api")
 
 
 @app.get("/health")

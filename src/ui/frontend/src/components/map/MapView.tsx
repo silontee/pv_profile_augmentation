@@ -14,7 +14,11 @@ import { useFacilities } from '../../hooks/useFacilities'
 import { fetchFacility } from '../../api/facilities'
 import { fetchSubstationsBbox, fetchPowerLinesBbox } from '../../api/infra'
 import { LayerToggle } from './LayerToggle'
+import { LandcoverLegend } from './LandcoverLegend'
 import type { Facility, ClusterItem, Substation, PowerLine } from '../../types'
+
+// ─── MapTiler ───────────────────────────────────────────────
+const MAPTILER_KEY = 'QDyL8SVpZi4TNH5AykBi'
 
 // ─── 색상 상수 ──────────────────────────────────────────────
 const COLOR = {
@@ -30,10 +34,14 @@ const COLOR = {
 const CLUSTER_ZOOM = 10  // zoom < 10: 클러스터 모드
 
 // ─── 소스/레이어 ID 상수 ────────────────────────────────────
-const SRC_MARKERS     = 'pv-markers'
-const SRC_CLUSTERS    = 'pv-clusters'
-const SRC_SUBSTATIONS = 'infra-substations'
-const SRC_POWERLINES  = 'infra-powerlines'
+const SRC_MARKERS        = 'pv-markers'
+const SRC_CLUSTERS       = 'pv-clusters'
+const SRC_SUBSTATIONS    = 'infra-substations'
+const SRC_POWERLINES     = 'infra-powerlines'
+const SRC_TERRAIN        = 'maptiler-terrain'
+const SRC_LANDCOVER_VEC  = 'landcover-vec'
+const LYR_HILLSHADE      = 'lyr-hillshade'
+const LYR_LANDCOVER_VEC  = 'lyr-landcover-vec'
 const LYR_MARKERS          = 'pv-marker-layer'
 const LYR_CLUSTERS_ACTIVE  = 'pv-cluster-active'
 const LYR_CLUSTERS_STOPPED = 'pv-cluster-stopped'
@@ -128,6 +136,10 @@ export const MapView: React.FC = () => {
   const layers       = useUiStore((s) => s.layers)
   const setDbError   = useUiStore((s) => s.setDbError)
 
+  // 토지피복 fetch AbortController + 최신 콜백 ref (stale closure 방지)
+  const landcoverAbortRef       = useRef<AbortController | null>(null)
+  const fetchLandcoverOnMoveRef = useRef<() => void>(() => {})
+
   const { markers, clusters } = useFacilities()
 
   // layers를 ref로 추적 — onMove 클로저에서 최신 값 접근용
@@ -157,6 +169,54 @@ export const MapView: React.FC = () => {
     })
 
     map.on('load', () => {
+      // ── MapTiler DEM 소스 (3D 지형·hillshade용) ──────────
+      map.addSource(SRC_TERRAIN, {
+        type: 'raster-dem',
+        url: `https://api.maptiler.com/tiles/terrain-rgb-v2/tiles.json?key=${MAPTILER_KEY}`,
+        tileSize: 256,
+      })
+
+      // ── hillshade 레이어 (3D 지형 음영 효과) ─────────────
+      map.addLayer({
+        id: LYR_HILLSHADE,
+        type: 'hillshade',
+        source: SRC_TERRAIN,
+        layout: { visibility: 'none' },
+        paint: {
+          'hillshade-shadow-color': '#000000',
+          'hillshade-highlight-color': '#ffffff',
+          'hillshade-exaggeration': 0.5,
+        },
+      })
+
+      // ── sky 대기층 ────────────────────────────────────────
+      map.addLayer({
+        id: 'sky',
+        type: 'sky',
+        paint: {
+          'sky-type': 'atmosphere',
+          'sky-atmosphere-sun': [0.0, 90.0],
+          'sky-atmosphere-sun-intensity': 15,
+        },
+      } as maplibregl.LayerSpecification)
+
+      // ── 토지피복 벡터 소스/레이어 ────────────────────────
+      map.addSource(SRC_LANDCOVER_VEC, {
+        type: 'geojson',
+        data: { type: 'FeatureCollection', features: [] },
+      })
+      map.addLayer({
+        id: LYR_LANDCOVER_VEC,
+        type: 'fill',
+        source: SRC_LANDCOVER_VEC,
+        layout: { visibility: 'none' },
+        paint: {
+          'fill-color': ['get', 'color'],
+          'fill-opacity': 0.45,
+          'fill-outline-color': 'rgba(0,0,0,0.1)',
+        },
+      })
+
       // ── 개별 마커 소스/레이어 ─────────────────────────────
       map.addSource(SRC_MARKERS, {
         type: 'geojson',
@@ -370,6 +430,9 @@ export const MapView: React.FC = () => {
         setClusterVis(LYR_CLUSTERS_RETIRED, isCluster && lyr.retired)
         setClusterVis(LYR_CLUSTER_COUNT,    isCluster && (lyr.active || lyr.stopped || lyr.retired))
         setClusterVis(LYR_MARKERS,          !isCluster && (lyr.active || lyr.stopped || lyr.retired))
+
+        // 토지피복 ON 상태면 이동 후 재fetch
+        fetchLandcoverOnMoveRef.current()
       }
 
       map.on('moveend', onMove)
@@ -544,6 +607,61 @@ export const MapView: React.FC = () => {
     }
   }, [layers.substation, layers.powerline, mapLoaded])
 
+  // ─── 3D 지형 토글 ────────────────────────────────────────
+  useEffect(() => {
+    if (!mapLoaded) return
+    const map = mapRef.current
+    if (!map) return
+    if (layers.terrain) {
+      map.setTerrain({ source: SRC_TERRAIN, exaggeration: 1.5 })
+      if (map.getLayer(LYR_HILLSHADE)) map.setLayoutProperty(LYR_HILLSHADE, 'visibility', 'visible')
+      map.easeTo({ pitch: 50, duration: 800 })
+    } else {
+      map.setTerrain(null)
+      if (map.getLayer(LYR_HILLSHADE)) map.setLayoutProperty(LYR_HILLSHADE, 'visibility', 'none')
+      map.easeTo({ pitch: 0, duration: 800 })
+    }
+  }, [layers.terrain, mapLoaded])
+
+  // ─── 토지피복 레이어 토글 + bbox 변경 시 fetch ──────────
+  useEffect(() => {
+    if (!mapLoaded) return
+    const map = mapRef.current
+    if (!map || !map.getLayer(LYR_LANDCOVER_VEC)) return
+
+    if (!layers.landcover) {
+      map.setLayoutProperty(LYR_LANDCOVER_VEC, 'visibility', 'none')
+      fetchLandcoverOnMoveRef.current = () => {}
+      return
+    }
+
+    map.setLayoutProperty(LYR_LANDCOVER_VEC, 'visibility', 'visible')
+
+    const fetchLandcover = async () => {
+      landcoverAbortRef.current?.abort()
+      landcoverAbortRef.current = new AbortController()
+      const b = map.getBounds()
+      const params = new URLSearchParams({
+        xmin: b.getWest().toFixed(5),
+        ymin: b.getSouth().toFixed(5),
+        xmax: b.getEast().toFixed(5),
+        ymax: b.getNorth().toFixed(5),
+      })
+      try {
+        const res = await fetch(`/api/landcover?${params}`, { signal: landcoverAbortRef.current.signal })
+        if (!res.ok) return
+        const geojson = await res.json()
+        const src = map.getSource(SRC_LANDCOVER_VEC) as maplibregl.GeoJSONSource | undefined
+        src?.setData(geojson)
+      } catch { /* AbortError or network */ }
+    }
+
+    fetchLandcoverOnMoveRef.current = fetchLandcover
+    fetchLandcover()
+
+    return () => { landcoverAbortRef.current?.abort() }
+  }, [layers.landcover, mapLoaded])
+
   // ─── 하이라이트 feature-state 갱신 ───────────────────────
   const prevHighlightRef = useRef<number | null>(null)
   useEffect(() => {
@@ -651,6 +769,9 @@ export const MapView: React.FC = () => {
 
       {/* 레이어 토글 오버레이 */}
       <LayerToggle />
+
+      {/* 토지피복 범례 (우상단) */}
+      <LandcoverLegend />
 
       {/* 현재 줌 레벨 표시 (디버그) */}
       <div

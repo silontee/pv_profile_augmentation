@@ -22,6 +22,8 @@ export interface UiState {
     substation: boolean    // 변전소
     powerline: boolean     // 송배전선
     boundary: boolean      // 시군구 경계
+    terrain: boolean       // 3D 지형 (MapTiler DEM)
+    landcover: boolean     // 토지피복 (환경부 EGIS WFS)
   }
 
   // 액션
@@ -40,6 +42,8 @@ export const useUiStore = create<UiState>((set) => ({
     substation: true,
     powerline:  true,
     boundary:   false,
+    terrain:    false,
+    landcover:  false,
   },
 
   setPanelMode: (mode) => set({ panelMode: mode }),

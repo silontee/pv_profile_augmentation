@@ -25,6 +25,11 @@ const LAYERS: LayerConfig[] = [
   { key: 'boundary',   label: '시군구 경계', color: 'var(--text-muted)'    },
 ]
 
+const EXTRA_LAYERS: LayerConfig[] = [
+  { key: 'terrain',   label: '⛰ 3D 지형',  color: '#a78bfa' },
+  { key: 'landcover', label: '🗺 토지피복', color: '#34d399' },
+]
+
 export const LayerToggle: React.FC = () => {
   const { layers, toggleLayer } = useUiStore()
   const [open, setOpen] = useState(true)
@@ -69,6 +74,41 @@ export const LayerToggle: React.FC = () => {
                 className="sr-only"
               />
               {/* 커스텀 체크박스 */}
+              <span
+                className={`flex items-center justify-center w-3.5 h-3.5 rounded-sm border
+                            transition-colors flex-shrink-0
+                            ${layers[key]
+                              ? 'border-transparent'
+                              : 'border-[var(--border-hover)] bg-transparent'
+                            }`}
+                style={layers[key] ? { backgroundColor: color } : {}}
+              >
+                {layers[key] && (
+                  <svg className="w-2.5 h-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                )}
+              </span>
+              <span>{label}</span>
+            </label>
+          ))}
+
+          {/* 구분선 */}
+          <div className="border-t border-[var(--border-default)] my-1" />
+
+          {EXTRA_LAYERS.map(({ key, label, color }) => (
+            <label
+              key={key}
+              className="flex items-center gap-2 cursor-pointer
+                         text-[var(--text-secondary)] hover:text-[var(--text-primary)]
+                         transition-colors"
+            >
+              <input
+                type="checkbox"
+                checked={layers[key]}
+                onChange={() => toggleLayer(key)}
+                className="sr-only"
+              />
               <span
                 className={`flex items-center justify-center w-3.5 h-3.5 rounded-sm border
                             transition-colors flex-shrink-0

@@ -27,6 +27,8 @@ dependencies = [
     # 응답 캐시 (stats 엔드포인트)
     "cachetools>=5.3.0",
     "greenlet>=3.3.2",
+    # 외부 WFS 프록시 (토지피복 EGIS)
+    "httpx>=0.27.0",
 ]
 
 [build-system]
