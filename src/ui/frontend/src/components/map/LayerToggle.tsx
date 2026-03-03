@@ -37,7 +37,7 @@ export const LayerToggle: React.FC = () => {
   return (
     <div
       className="absolute bottom-24 left-3 z-10
-                 bg-[var(--bg-elevated)]/90 backdrop-blur-sm
+                 bg-[var(--bg-elevated)]
                  border border-[var(--border-default)] rounded-lg
                  shadow-lg text-xs"
     >

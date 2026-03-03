@@ -212,7 +212,7 @@ export const MapView: React.FC = () => {
         layout: { visibility: 'none' },
         paint: {
           'fill-color': ['get', 'color'],
-          'fill-opacity': 0.45,
+          'fill-opacity': 0.65,
           'fill-outline-color': 'rgba(0,0,0,0.1)',
         },
       })
