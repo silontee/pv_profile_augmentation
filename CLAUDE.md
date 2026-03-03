@@ -21,16 +21,16 @@ UI 스택: Docker (PostgreSQL+PostGIS 16, FastAPI, React+MapLibre GL JS)
 uv sync
 
 # 크롤러 실행 (프로젝트 루트에서)
-uv run python generator_next/crawlers/data_go_kr_solar_download_playwright.py --headless
+uv run python src/crawlers/data_go_kr_solar_download_playwright.py --headless
 
 # 전처리 + 지오코딩 실행
-uv run python generator_next/preprocessing/preprocess.py
+uv run python src/preprocessing/preprocess.py
 
 # 지도 생성 (정적 HTML — 레거시)
-uv run python generator_next/map/generate_map.py
+uv run python src/map/generate_map.py
 
 # UI 실행 (풀스택)
-cd generator_next/ui
+cd src/ui
 docker compose up --build   # 최초 빌드 + ETL 적재
 docker compose up -d         # 이후 실행
 # 접속: http://localhost:5173
@@ -40,7 +40,7 @@ docker compose up -d         # 이후 실행
 
 ```
 generator/          # 레거시 — 건드리지 않음, 안정화 후 제거 예정
-generator_next/     # 모든 신규 개발은 여기서만
+src/     # 모든 신규 개발은 여기서만
   crawlers/         # 수집 스크립트
   preprocessing/    # 전처리 스크립트
   map/              # 정적 HTML 지도 (folium) — 레거시화 예정
@@ -74,17 +74,17 @@ plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
 
 ## 파이프라인 4단계
 
-**1. 크롤링** (`generator_next/crawlers/`)
+**1. 크롤링** (`src/crawlers/`)
 - `data_go_kr_solar_download_playwright.py`: Playwright로 data.go.kr 시군구별 CSV 증분 다운로드
 - `recloud_solar_crawler.py`: recloud.energy.or.kr에서 시군구별 RPS 이용률 비동기 수집
 - `openinframap_power_crawler.py`: Overpass API로 OSM 전력 인프라(변전소·송배전선·발전소) GeoJSON 수집
 
-**2. 전처리** (`generator_next/preprocessing/preprocess.py`) — 완료
+**2. 전처리** (`src/preprocessing/preprocess.py`) — 완료
 - raw_csv → Polars 통합·정규화 → parquet 출력 (가동상태 전체 보존)
 - Kakao API 지오코딩 인라인 retry: 도로명→지번, 원본→정제 순 fallback
 - 실패 로그: `geocode_failures_kakao_raw.csv`
 
-**3. UI 시각화** (`generator_next/ui/`) — v0.1 완료
+**3. UI 시각화** (`src/ui/`) — v0.1 완료
 - Docker: PostgreSQL+PostGIS / FastAPI / React+MapLibre GL JS
 - zoom < 10: 시군구 클러스터 (정상가동=초록·가동중단=회색·폐기=빨강 3레이어)
 - zoom ≥ 10: 개별 마커 (상태별 색상)
@@ -92,9 +92,9 @@ plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
 - 변전소·송배전선 인프라 레이어
 - 세부: `plan/ui/PRD_v0.1.md`
 
-**3-레거시. 정적 지도** (`generator_next/map/generate_map.py`) — 완료 (레거시화 예정)
+**3-레거시. 정적 지도** (`src/map/generate_map.py`) — 완료 (레거시화 예정)
 - folium + FastMarkerCluster로 114,840개 발전소 포인트 클러스터링
-- 출력: `generator_next/map/output/pv_map.html`
+- 출력: `src/map/output/pv_map.html`
 
 **4. 통계적 증강** (미착수 — 방법론 미확정)
 - recloud RPS 이용률과 data.go.kr 발전소 허가 데이터 결합
@@ -137,7 +137,7 @@ plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
 
 ## 개발 규칙
 
-- 신규 코드는 반드시 `generator_next/`에 작성
+- 신규 코드는 반드시 `src/`에 작성
 - PRD 문서는 덮어쓰기 금지 — 수정 시 버전 올린 새 파일 생성 (예: `PRD_v0.4.md`)
 - 인코딩: CSV 읽기/쓰기 시 `utf-8-sig` 사용 (BOM 포함, 한글 호환)
 - 경로는 프로젝트 루트 기준 상대경로 사용

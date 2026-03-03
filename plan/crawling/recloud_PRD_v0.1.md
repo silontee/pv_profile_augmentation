@@ -10,20 +10,20 @@ RPS 발전설비 이용률 기준 집계 데이터 — 개소수·설비용량·
 
 ## 구현 파일
 
-`generator_next/crawlers/recloud_solar_crawler.py`
+`src/crawlers/recloud_solar_crawler.py`
 
 ## 실행
 
 ```bash
 # 전국 수집 (기본)
-uv run python generator_next/crawlers/recloud_solar_crawler.py
+uv run python src/crawlers/recloud_solar_crawler.py
 
 # 특정 시도만 수집 (예: 인천 = 28)
-uv run python generator_next/crawlers/recloud_solar_crawler.py --sido 28
+uv run python src/crawlers/recloud_solar_crawler.py --sido 28
 
 # 출력 경로 지정
-uv run python generator_next/crawlers/recloud_solar_crawler.py \
-  --output-dir generator_next/source/recloud \
+uv run python src/crawlers/recloud_solar_crawler.py \
+  --output-dir src/data/recloud \
   --concurrency 5
 ```
 
@@ -50,8 +50,8 @@ uv run python generator_next/crawlers/recloud_solar_crawler.py \
 
 | 경로 | 내용 |
 |------|------|
-| `generator_next/source/recloud/sido_summary_{timestamp}.csv` | 광역시도 집계 (18건) |
-| `generator_next/source/recloud/gugun_detail_{timestamp}.csv` | 시군구별 상세 (228건) |
+| `src/data/recloud/sido_summary_{timestamp}.csv` | 광역시도 집계 (18건) |
+| `src/data/recloud/gugun_detail_{timestamp}.csv` | 시군구별 상세 (228건) |
 
 ## 특이사항
 

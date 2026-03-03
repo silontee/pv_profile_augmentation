@@ -41,7 +41,7 @@ recloud RPS 이용률 데이터·OSM 전력 인프라와 결합하여 발전소 
 
 - `generate_map.py`: folium + FastMarkerCluster 기반 HTML 지도 생성
 - 114,840개 발전소 포인트 + 변전소 1,185 + 송배전선 4,685
-- 출력: `generator_next/map/output/pv_map.html`
+- 출력: `src/map/output/pv_map.html`
 - 상세: `plan/map/PRD_v0.1.md`
 
 ### 3.4 통계적 증강 트랙 — 미착수

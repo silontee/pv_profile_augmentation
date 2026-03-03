@@ -24,7 +24,7 @@
 - Playwright 기반 data.go.kr 시군구별 CSV 증분 다운로드 크롤러 완성
 - 상태 파일(`pv_facility_profile_state.csv`) 기반 중복 방지/재실행 복구 동작
 - 원천 CSV 135개, 119,558행 수집 완료 (2026-02-27 기준)
-- 구현 파일: `generator_next/crawlers/data_go_kr_solar_download_playwright.py`
+- 구현 파일: `src/crawlers/data_go_kr_solar_download_playwright.py`
 
 ### 3.2 전처리 트랙 — 구현 완료, 실행 검증 필요
 

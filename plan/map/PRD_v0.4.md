@@ -22,7 +22,7 @@ southkorea-maps (2018 topo-simple, 553KB)
   → sigungu_2018_simple.geojson (731KB, 250개 시군구)
 ```
 
-저장 경로: `generator_next/source/boundaries/sigungu_2018_simple.geojson`
+저장 경로: `src/data/boundaries/sigungu_2018_simple.geojson`
 
 ## 현재 구현 레이어 전체 목록
 

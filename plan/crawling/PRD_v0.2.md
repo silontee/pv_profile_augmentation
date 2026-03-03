@@ -14,10 +14,10 @@
 
 ## 출력 경로 규약
 
-모든 크롤러 산출물은 `generator_next/source/` 하위에 저장:
+모든 크롤러 산출물은 `src/data/` 하위에 저장:
 
 ```
-generator_next/source/
+src/data/
   raw_csv/          # data.go.kr 시군구별 전기사업허가 CSV
   recloud/          # recloud 시군구별 이용률 CSV
   openinframap/     # OSM 전력 인프라 GeoJSON (by_sido/)

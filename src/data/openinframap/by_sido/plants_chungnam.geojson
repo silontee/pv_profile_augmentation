@@ -1,0 +1,6055 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2275672,
+          36.9031831
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7603976531,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "1050 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2287581,
+          36.9035177
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7603976532,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "1050 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2304211,
+          36.904041
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7603976533,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2312728,
+          36.9042791
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7603976534,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2320834,
+          36.9045058
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7603976535,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.23296,
+          36.9047509
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7603976536,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2340588,
+          36.9050581
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7603976537,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2348794,
+          36.9052875
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7603976538,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2357369,
+          36.9055273
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7603976539,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2365579,
+          36.9057568
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7603976540,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4860785,
+          36.3972612
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056327,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "450 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.486057,
+          36.395603
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056328,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "450 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4860463,
+          36.3961558
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056329,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "450 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4956915,
+          36.4012336
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056330,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4947474,
+          36.401199
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056331,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4935243,
+          36.4011558
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056332,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4916789,
+          36.4011472
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056333,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4926338,
+          36.4011299
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056334,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.490885,
+          36.4011127
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056335,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4895654,
+          36.4010436
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056336,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4886856,
+          36.4010436
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056337,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5052402,
+          37.0567525
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056350,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "1020 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5063882,
+          37.0564443
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056351,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "1020 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5079009,
+          37.0557337
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056352,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5089019,
+          37.0554674
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056353,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5096744,
+          37.0552619
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056354,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.510611,
+          37.0550127
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056355,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5118985,
+          37.0546702
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056356,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5127321,
+          37.0544485
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056357,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5136076,
+          37.0542156
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056358,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5145314,
+          37.0539698
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7606056359,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "500 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7805636,
+          36.9567679
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7609563638,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7790186,
+          36.9584911
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7609563639,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7816472,
+          36.9557648
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7609563640,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7828917,
+          36.9578567
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7609563641,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "biomass",
+        "plant_output": "105 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4852095,
+          36.3842717
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7609585490,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "1000 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.485188,
+          36.3852391
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 7609585491,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "1000 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4383888,
+          36.5196404
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 9196588574,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "wind",
+        "plant_output": "10 kW",
+        "plant_method": "wind_turbine",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7841333,
+          36.9565891
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 10198181474,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "biomass",
+        "plant_output": "105 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3046358,
+          36.7694211
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 10236801603,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "wind",
+        "plant_output": "",
+        "plant_method": "wind_turbine",
+        "operator": "태안군"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4667362,
+          36.8019342
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11662155856,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4667848,
+          36.8019452
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11662155857,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4843181,
+          36.5184156
+        ]
+      },
+      "properties": {
+        "osm_type": "node",
+        "osm_id": 11773865847,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "홍성모산도 풍력",
+        "name_en": "",
+        "plant_source": "wind",
+        "plant_output": "2 MW",
+        "plant_method": "wind_turbine",
+        "operator": "한국농어촌공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4913084,
+          36.4017835
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 113679449,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "보령화력발전소",
+        "name_en": "Boryeong Power Plant",
+        "plant_source": "coal;gas",
+        "plant_output": "5350 MW",
+        "plant_method": "combustion",
+        "operator": "한국중부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4571618,
+          36.5954425
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 427210988,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5084675,
+          37.0578508
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 474135165,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "당진화력발전소",
+        "name_en": "Dangjin Thermal Power Plant",
+        "plant_source": "coal",
+        "plant_output": "6040 MW",
+        "plant_method": "combustion",
+        "operator": "한국동서발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5920246,
+          37.0152061
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 558538424,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "대성 바이오",
+        "name_en": "",
+        "plant_source": "biomass",
+        "plant_output": "4 MW",
+        "plant_method": "combustion",
+        "operator": "대성에코에너지센터"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.099316,
+          36.4622976
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 625602096,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "공주보",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2351015,
+          36.9038108
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 814019740,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "태안화력발전소",
+        "name_en": "Taean Thermal Power Plant",
+        "plant_source": "coal",
+        "plant_output": "6446.33 MW",
+        "plant_method": "combustion",
+        "operator": "한국서부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4886956,
+          36.3853707
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 814246611,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "신보령화력발전소",
+        "name_en": "Shin Boryeong Power Plant",
+        "plant_source": "coal",
+        "plant_output": "2000 MW",
+        "plant_method": "combustion",
+        "operator": "한국중부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7812797,
+          36.9575844
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 814635244,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "당진복합화력발전소",
+        "name_en": "GS Dangjin Power Plant",
+        "plant_source": "gas;biomass",
+        "plant_output": "2513.7 MW",
+        "plant_method": "combustion",
+        "operator": "GS EPS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3650375,
+          36.9977059
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 814808456,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "대산복합화력발전소",
+        "name_en": "Daesan Power Plant",
+        "plant_source": "oil",
+        "plant_output": "465.8 MW",
+        "plant_method": "combustion",
+        "operator": "CGN"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6883725,
+          36.6610929
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 890751788,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "내포그린에너지",
+        "name_en": "Naepo Green Energy power station",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2339753,
+          36.8993195
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 935167449,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "Taean IGCC",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "346.33 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.714388,
+          36.9908735
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 946549706,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "현대제철 당진공장",
+        "name_en": "Hyundai Dangjin Steel Mill Power Station",
+        "plant_source": "",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": "Hyundai Green Power"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4434229,
+          36.5167487
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 959080401,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "201 kW",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6430835,
+          36.0587056
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 979812865,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7809271,
+          36.9259008
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1018634869,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7952567,
+          36.9145144
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1018634870,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0954651,
+          36.5873708
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1019633692,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4869502,
+          37.047537
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1051205772,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5525275,
+          36.9593061
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1051209351,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5513768,
+          36.9605475
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1051209352,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5552714,
+          36.9636455
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1051209353,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5534395,
+          36.9654639
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1051209354,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6152215,
+          36.9449272
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1051209355,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.611333,
+          36.9489685
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1051209356,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6186266,
+          36.9518692
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1051209357,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6137222,
+          36.950583
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1051209358,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6136645,
+          36.956083
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1051209359,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1192273,
+          36.2610492
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1052815721,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.121412,
+          36.2619544
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1052815722,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.122509,
+          36.263318
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1052815723,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1215689,
+          36.265832
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1052815724,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1227813,
+          36.2668096
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1052815725,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1228174,
+          36.2641203
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1052815726,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4000936,
+          36.4192644
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1054054938,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5803317,
+          36.3219614
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1055876542,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5817028,
+          36.326904
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1055896653,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5937031,
+          36.2911884
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1062058084,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5931871,
+          36.2916432
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1062058085,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5667974,
+          36.2786385
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1062906827,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5570737,
+          36.2638102
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1064296625,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.578661,
+          36.2779489
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1064296646,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5893584,
+          36.3039365
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1070830892,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3462224,
+          36.50708
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1105004419,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6993741,
+          36.0143627
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1107662985,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7832073,
+          36.9572642
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1115050847,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "Dangjin Bio-1 Power Plant",
+        "name_en": "",
+        "plant_source": "",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": "GS Electric Power and Services (GS EPS)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.129789,
+          36.4796884
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1120640637,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1296673,
+          36.4796027
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1120640638,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1295448,
+          36.4795186
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1120640639,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1294236,
+          36.4794273
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1120640640,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2453972,
+          36.9063381
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1141853204,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "coal",
+        "plant_output": "",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0935481,
+          36.8000778
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1147096258,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "한국토지주택공사 아산에너지사업단",
+        "name_en": "Korea Land & Housing Corporation Asan Energy Supply Headquarters",
+        "plant_source": "",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4959132,
+          36.1443
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1162630405,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "신서천발전본부",
+        "name_en": "Shin Seocheon Power Plant",
+        "plant_source": "coal",
+        "plant_output": "1018 MW",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0093023,
+          36.1941728
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1199799848,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.1639385,
+          36.7580311
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1200966856,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.1655559,
+          36.7594193
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1200966857,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.1678116,
+          36.7593967
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1200966858,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2757424,
+          36.7417232
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1200972856,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5439968,
+          36.5556314
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1204318245,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5063926,
+          36.5106925
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1204318430,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5598379,
+          36.5105934
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1204319566,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5591606,
+          36.5120312
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1204319567,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3625722,
+          36.9952779
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1205282034,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "CGN Daesan Biomass Power Station",
+        "plant_source": "biomass",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0426409,
+          36.2748647
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1211022550,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4919498,
+          36.7251866
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1211023575,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5007739,
+          36.6907667
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1211023576,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4925453,
+          36.6873619
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1211023578,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1715747,
+          36.5628316
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1212761800,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "태양광발전소",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5223795,
+          37.0523579
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1213510822,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "태양광발전소",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.232634,
+          36.7509588
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1232831074,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4698477,
+          36.5391655
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256463634,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4703475,
+          36.5389679
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256463635,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5807405,
+          36.4264213
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256463966,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.581266,
+          36.4264111
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256463967,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.582054,
+          36.427574
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256463968,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8040581,
+          36.4469617
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256464277,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3009835,
+          36.7601305
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256550928,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3040722,
+          36.7625118
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256550932,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3042114,
+          36.7623737
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256550934,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.304916,
+          36.7619192
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256550941,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3066168,
+          36.7560663
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256550995,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3028935,
+          36.7583727
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256551005,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3027695,
+          36.7584528
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256551006,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8400114,
+          36.6994833
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256586338,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8399436,
+          36.6996144
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256586339,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8393341,
+          36.6996648
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256586340,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8396011,
+          36.6999355
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256586341,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8391874,
+          36.7000763
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1256586342,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4875677,
+          36.4035495
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278406727,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "보령화력 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "7.5 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "한국중부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4843879,
+          36.3871603
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278406728,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "신보령화력 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "5 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "한국중부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4968448,
+          36.1476996
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278406729,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "신서천화력 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "2.586 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "한국중부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2436163,
+          36.9028582
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278406730,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "태안화력 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "7.2 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "한국서부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.496728,
+          37.0602985
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278406731,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "당진화력 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "8.198 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "한국동서발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9979292,
+          36.7222847
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278406733,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "궁평 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "0.18 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "한국농어촌공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6242174,
+          36.37886
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278406734,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "보령지구 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "0.49 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "한국농어촌공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8083097,
+          36.6423377
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278406735,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "예당 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "0.48 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "한국농어촌공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1478622,
+          36.1760973
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278406736,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "탑정 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "0.32 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "한국농어촌공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7577248,
+          36.0306091
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278428268,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "서포양수장 소수력",
+        "name_en": "",
+        "plant_source": "hydro",
+        "plant_output": "0.35 MW",
+        "plant_method": "run-of-the-river",
+        "operator": "한국농어촌공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3925997,
+          36.9969555
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278647874,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "서해 열병합",
+        "name_en": "",
+        "plant_source": "biomass",
+        "plant_output": "29 MW",
+        "plant_method": "combustion",
+        "operator": "대산파워"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5890102,
+          37.0095152
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278647875,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "석문 바이오",
+        "name_en": "",
+        "plant_source": "biomass",
+        "plant_output": "38.9 MW",
+        "plant_method": "combustion",
+        "operator": "석문에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9750553,
+          36.8043017
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278647876,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "신창 바이오",
+        "name_en": "",
+        "plant_source": "biomass",
+        "plant_output": "2 MW",
+        "plant_method": "combustion",
+        "operator": "농업회사법인 바이오에너지팜아산"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5672747,
+          36.5044941
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278647877,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "홍성 바이오",
+        "name_en": "",
+        "plant_source": "biomass",
+        "plant_output": "1 MW",
+        "plant_method": "combustion",
+        "operator": "기반"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.099176,
+          36.1850786
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278647879,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "논산 바이오매스",
+        "name_en": "",
+        "plant_source": "biomass",
+        "plant_output": "0.86 MW",
+        "plant_method": "combustion",
+        "operator": "논산계룡축협"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0331724,
+          36.3975206
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278647880,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "석계 바이오가스",
+        "name_en": "",
+        "plant_source": "biogas",
+        "plant_output": "0.35 MW",
+        "plant_method": "gasification",
+        "operator": "농업회사법인석계"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5622066,
+          36.5267073
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278647881,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "원천 에너지전환센터",
+        "name_en": "",
+        "plant_source": "biogas",
+        "plant_output": "0.43 MW",
+        "plant_method": "anaerobic_digestion",
+        "operator": "원천마을회"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7558674,
+          36.4505977
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278647882,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "청양 바이오가스",
+        "name_en": "",
+        "plant_source": "biogas",
+        "plant_output": "0.44 MW",
+        "plant_method": "anaerobic_digestion",
+        "operator": "여영농장"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9087002,
+          36.3331812
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278647883,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "칠성 바이오가스",
+        "name_en": "",
+        "plant_source": "biogas",
+        "plant_output": "1.34 MW",
+        "plant_method": "anaerobic_digestion",
+        "operator": "영농조합법인 칠성에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5975224,
+          36.4777569
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278647884,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "홍보그린텍 바이오가스",
+        "name_en": "",
+        "plant_source": "biogas",
+        "plant_output": "0.49 MW",
+        "plant_method": "anaerobic_digestion",
+        "operator": "농업회사법인 홍보그린텍"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4873733,
+          36.3937888
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278691824,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "신보령 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "7.48 MW",
+        "plant_method": "fuel_cell",
+        "operator": "한국중부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1616164,
+          36.7869983
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278691825,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "천안청수 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "5.28 MW",
+        "plant_method": "fuel_cell",
+        "operator": "한국서부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3439666,
+          36.9929419
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278691826,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "대산 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "1 MW",
+        "plant_method": "fuel_cell",
+        "operator": "KH파워"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7797123,
+          36.9615763
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278691829,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "부곡 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "2.4 MW",
+        "plant_method": "fuel_cell",
+        "operator": "GS EPS"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5994702,
+          36.9898005
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278691830,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "석문 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "19.8 MW",
+        "plant_method": "fuel_cell",
+        "operator": "석문그린에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5562032,
+          36.3545163
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1281448066,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "보령 그린발전",
+        "name_en": "",
+        "plant_source": "waste",
+        "plant_output": "0.44 MW",
+        "plant_method": "combustion",
+        "operator": "보령시설관리공단"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4809206,
+          36.1090601
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1290620458,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7901103,
+          36.1712326
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1298670119,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7576519,
+          36.3416674
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1298895844,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7553628,
+          36.3401716
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1298895845,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1057653,
+          36.5560537
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1298906958,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6437692,
+          36.3014524
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1299149044,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1730955,
+          36.2059414
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1299163879,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5054866,
+          36.5705103
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1299930810,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3706858,
+          36.4329756
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1300379885,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.2308895,
+          36.2725611
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1304299844,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.2310556,
+          36.2726649
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1304299845,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7495874,
+          36.5686757
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1308353901,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7061644,
+          36.4739433
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1311481448,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7089694,
+          36.4691477
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1311481449,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6607292,
+          36.4940209
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1311481488,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7237249,
+          36.4872995
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1311481521,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6526745,
+          36.5046786
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1311481526,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6521421,
+          36.5057599
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1311481527,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6529595,
+          36.503039
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1311481528,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7942925,
+          36.6717331
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1311647763,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1512529,
+          36.19401
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1314541348,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1523874,
+          36.1951334
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1314541349,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3558867,
+          36.5733044
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1324926971,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.2351323,
+          36.8171151
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1331493977,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1939,
+          36.1233352
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1333366058,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9701824,
+          36.7383855
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1336365662,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1211625,
+          36.1610297
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1341446258,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1239386,
+          36.1622542
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1341446259,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1257612,
+          36.1637777
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1341446260,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1241465,
+          36.1674176
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1341446262,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1628709,
+          36.1561419
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1341449262,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3672083,
+          36.6417515
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1343303246,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3671413,
+          36.652671
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1343303247,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2230048,
+          36.8854755
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1347880984,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5608504,
+          36.5396602
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1357664010,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5561405,
+          36.5370725
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1357664011,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5728668,
+          36.5452404
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1357664227,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.519869,
+          36.613984
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1357684311,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5190482,
+          36.6155352
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1357684312,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5204001,
+          36.6129689
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1357684313,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4955259,
+          36.1129666
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1362480912,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4953417,
+          36.113089
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1362480913,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.51718,
+          36.2059165
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1364206306,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5393901,
+          36.067892
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1377634981,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5418429,
+          36.069388
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1377634982,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5378933,
+          36.0699733
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1377634983,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0955233,
+          36.2592617
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1388959623,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0956534,
+          36.260874
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1388959624,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0934352,
+          36.260541
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1388959625,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0661397,
+          36.2446733
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1388959665,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9929248,
+          36.2852753
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1388960140,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6847484,
+          36.4830889
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1396128680,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.6214228,
+          36.6335721
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1396173921,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2158915,
+          36.7596111
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1396183050,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0386082,
+          36.2231563
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1419044496,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0403328,
+          36.2222475
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1419044497,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0423016,
+          36.2218429
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1419044498,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.5217555,
+          36.8185633
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1424926087,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3848622,
+          36.8582281
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1426597070,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3589243,
+          36.5666162
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1431041550,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.421971,
+          36.1768695
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1436840899,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4188677,
+          36.176446
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1436840900,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4125175,
+          36.1807366
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1436840960,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4229433,
+          36.1995446
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1437045212,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4215136,
+          36.1983975
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1437045213,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1802852,
+          36.3066104
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442249422,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3500352,
+          36.8097106
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442567963,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3972671,
+          36.7896631
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442567964,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3892151,
+          36.7793396
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442567966,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3957897,
+          36.772974
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442567967,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.4045086,
+          36.7721527
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442567968,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3879915,
+          36.7827294
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442567972,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3653793,
+          36.7996516
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442567973,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3906521,
+          36.7830103
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442567974,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.3624816,
+          36.8027529
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442567975,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.426796,
+          36.9723312
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895654,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3834706,
+          36.9582663
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895655,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4589675,
+          36.9661747
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895656,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4598826,
+          36.9607887
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895657,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3828826,
+          36.9680696
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895658,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.449261,
+          36.9721377
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895659,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3864813,
+          36.9444402
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895660,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3816402,
+          36.9609977
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895661,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3809915,
+          36.9601453
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895662,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4554868,
+          36.9727727
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895663,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3833141,
+          36.9600247
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895664,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4586738,
+          36.9724586
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895665,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3836191,
+          36.9657199
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895666,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3857183,
+          36.9586373
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895667,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3822541,
+          36.9557982
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895668,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3840431,
+          36.962352
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895669,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4510127,
+          36.976328
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895670,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3898544,
+          36.9443472
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895671,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3785692,
+          36.9615249
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442895672,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4523738,
+          36.9075605
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442896935,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3997149,
+          36.8692601
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442896936,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4276355,
+          36.8969291
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442896937,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.3988815,
+          36.8674096
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442896938,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4189222,
+          36.9076971
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442896939,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4202353,
+          36.9237192
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442896940,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.423193,
+          36.8917153
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442896941,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.4164958,
+          36.9208227
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1442896942,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.163192,
+          36.4577056
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1443938279,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.162998,
+          36.4576748
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1443938280,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1629071,
+          36.4577509
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1443938281,
+        "sido": "충청남도",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.5435689,
+          36.1909946
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1447581955,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1820152,
+          36.2409256
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1453243120,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8015434,
+          36.4586092
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1462188994,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": "청양군청"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9585952,
+          36.2116138
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1465534959,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9404044,
+          36.2043399
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1465535013,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9404541,
+          36.2065312
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1465535014,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9394174,
+          36.2057434
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1465535015,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9366842,
+          36.2074878
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1465535016,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9336856,
+          36.1983802
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1465535027,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9358903,
+          36.1993888
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1465535028,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2207396,
+          36.886476
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 12738029,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.2337565,
+          36.8955835
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 12738030,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9171256,
+          36.1724499
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 16382691,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.336816,
+          36.9871535
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17543855,
+        "sido": "충청남도",
+        "power_type": "plant",
+        "name": "대산그린 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "50.16 MW",
+        "plant_method": "fuel_cell",
+        "operator": "대산그린에너지"
+      }
+    }
+  ]
+}

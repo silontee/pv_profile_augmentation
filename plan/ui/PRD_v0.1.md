@@ -8,14 +8,14 @@
 ## 1. 목적
 
 전처리·지오코딩이 완료된 발전소 데이터를 웹 브라우저에서 인터랙티브하게 탐색할 수 있는 풀스택 UI 구축.
-folium 정적 HTML 출력(`generator_next/map/`)의 한계(레이어 토글 불가, 검색 불가, 대용량 렌더링 한계)를 해소.
+folium 정적 HTML 출력(`src/map/`)의 한계(레이어 토글 불가, 검색 불가, 대용량 렌더링 한계)를 해소.
 
 ---
 
 ## 2. 아키텍처
 
 ```
-generator_next/ui/
+src/ui/
   docker-compose.yml         # 4개 서비스 오케스트레이션
   backend/
     app/
@@ -140,7 +140,7 @@ generator_next/ui/
 ## 5. 데이터 흐름
 
 ```
-parquet (generator_next/source/processed/)
+parquet (src/data/processed/)
   └─ ETL (load_data.py)
        └─ PostgreSQL/PostGIS (pv_facility, substation, power_line)
             └─ FastAPI
@@ -155,7 +155,7 @@ parquet (generator_next/source/processed/)
 ## 6. 실행
 
 ```bash
-cd generator_next/ui
+cd src/ui
 
 # 최초 실행 (빌드 + ETL 적재 포함)
 docker compose up --build

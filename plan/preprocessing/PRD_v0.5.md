@@ -18,25 +18,25 @@
 
 ## 구현 스크립트
 
-### `generator_next/preprocessing/preprocess.py` — 메인 파이프라인 (유일한 실행 진입점)
+### `src/preprocessing/preprocess.py` — 메인 파이프라인 (유일한 실행 진입점)
 
 ```bash
 # 전체 실행 (기본)
-uv run python generator_next/preprocessing/preprocess.py
+uv run python src/preprocessing/preprocess.py
 
 # 증분 실행 (신규 파일만)
-uv run python generator_next/preprocessing/preprocess.py --mode incremental
+uv run python src/preprocessing/preprocess.py --mode incremental
 
 # 지오코딩 없이 변환만
-uv run python generator_next/preprocessing/preprocess.py --no-geocode
+uv run python src/preprocessing/preprocess.py --no-geocode
 
 # 전체 옵션
-uv run python generator_next/preprocessing/preprocess.py \
-  --raw-csv-dir    generator_next/source/raw_csv \
-  --output-dir     generator_next/source/processed \
-  --cache-path     generator_next/source/logs/geocode/geocode_cache_kakao_raw.csv \
-  --failures-path  generator_next/source/logs/geocode/geocode_failures_kakao_raw.csv \
-  --crawler-state  generator_next/source/logs/crawler/pv_facility_profile_state.csv \
+uv run python src/preprocessing/preprocess.py \
+  --raw-csv-dir    src/data/raw_csv \
+  --output-dir     src/data/processed \
+  --cache-path     src/data/logs/geocode/geocode_cache_kakao_raw.csv \
+  --failures-path  src/data/logs/geocode/geocode_failures_kakao_raw.csv \
+  --crawler-state  src/data/logs/crawler/pv_facility_profile_state.csv \
   --mode           full | incremental \
   --no-geocode
 ```
@@ -109,18 +109,18 @@ uv run python generator_next/preprocessing/preprocess.py \
 
 | 경로 | 설명 |
 |------|------|
-| `generator_next/source/raw_csv/*.csv` | 시군구별 원천 CSV (`utf-8-sig` BOM) |
-| `generator_next/source/logs/geocode/geocode_cache_kakao_raw.csv` | 기존 지오코딩 캐시 |
-| `generator_next/source/logs/crawler/pv_facility_profile_state.csv` | 크롤러 상태 (증분 모드용) |
+| `src/data/raw_csv/*.csv` | 시군구별 원천 CSV (`utf-8-sig` BOM) |
+| `src/data/logs/geocode/geocode_cache_kakao_raw.csv` | 기존 지오코딩 캐시 |
+| `src/data/logs/crawler/pv_facility_profile_state.csv` | 크롤러 상태 (증분 모드용) |
 
 ### 출력
 
 | 경로 | 컬럼 |
 |------|------|
-| `generator_next/source/processed/pv_facility_processed.parquet` | 원천 컬럼 전체 + `source_file` |
-| `generator_next/source/processed/preprocess_state.csv` | `source_file, row_count_raw, row_count_filtered, processed_at` |
-| `generator_next/source/logs/geocode/geocode_cache_kakao_raw.csv` | 신규 지오코딩 결과 append |
-| `generator_next/source/logs/geocode/geocode_failures_kakao_raw.csv` | 실패 행 append |
+| `src/data/processed/pv_facility_processed.parquet` | 원천 컬럼 전체 + `source_file` |
+| `src/data/processed/preprocess_state.csv` | `source_file, row_count_raw, row_count_filtered, processed_at` |
+| `src/data/logs/geocode/geocode_cache_kakao_raw.csv` | 신규 지오코딩 결과 append |
+| `src/data/logs/geocode/geocode_failures_kakao_raw.csv` | 실패 행 append |
 
 ## 증분 처리 (`--mode incremental`)
 

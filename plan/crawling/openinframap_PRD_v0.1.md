@@ -10,25 +10,25 @@ OpenInfraMap이 보여주는 데이터와 동일한 OSM 원본.
 
 ## 구현 파일
 
-- `generator_next/crawlers/openinframap_power_crawler.py` — 수집
-- `generator_next/crawlers/visualize_infra_map.py` — folium 지도 시각화
+- `src/crawlers/openinframap_power_crawler.py` — 수집
+- `src/crawlers/visualize_infra_map.py` — folium 지도 시각화
 
 ## 실행
 
 ```bash
 # 전국 수집 (이미 수집된 시도는 자동 스킵)
-uv run python generator_next/crawlers/openinframap_power_crawler.py
+uv run python src/crawlers/openinframap_power_crawler.py
 
 # 특정 시도만 수집
-uv run python generator_next/crawlers/openinframap_power_crawler.py --sido 인천광역시
+uv run python src/crawlers/openinframap_power_crawler.py --sido 인천광역시
 
 # 강제 재수집
-uv run python generator_next/crawlers/openinframap_power_crawler.py --force
+uv run python src/crawlers/openinframap_power_crawler.py --force
 
 # 지도 시각화
-uv run python generator_next/crawlers/visualize_infra_map.py \
-  --substations generator_next/source/openinframap/substations_*.geojson \
-  --lines generator_next/source/openinframap/power_lines_*.geojson
+uv run python src/crawlers/visualize_infra_map.py \
+  --substations src/data/openinframap/substations_*.geojson \
+  --lines src/data/openinframap/power_lines_*.geojson
 ```
 
 ## 수집 대상
@@ -45,7 +45,7 @@ uv run python generator_next/crawlers/visualize_infra_map.py \
 ## 출력 구조
 
 ```
-generator_next/source/openinframap/
+src/data/openinframap/
   by_sido/
     substations_{sido}.geojson    # 시도별 변전소
     power_lines_{sido}.geojson    # 시도별 송배전선

@@ -13,18 +13,18 @@
 
 ## 현재 구현 상태 — v1.2 (folium HTML)
 
-`generator_next/map/generate_map.py`로 정적 HTML 지도 생성.
+`src/map/generate_map.py`로 정적 HTML 지도 생성.
 추후 풀스택 웹앱으로 전환 예정.
 
 ## 실행
 
 ```bash
-uv run python generator_next/map/generate_map.py
-uv run python generator_next/map/generate_map.py --no-infra        # 인프라 레이어 제외
-uv run python generator_next/map/generate_map.py --status 정상가동  # 특정 상태만
+uv run python src/map/generate_map.py
+uv run python src/map/generate_map.py --no-infra        # 인프라 레이어 제외
+uv run python src/map/generate_map.py --status 정상가동  # 특정 상태만
 ```
 
-출력: `generator_next/map/output/pv_map.html`
+출력: `src/map/output/pv_map.html`
 
 ## 구현 내용
 

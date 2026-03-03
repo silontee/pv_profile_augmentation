@@ -22,17 +22,17 @@
 
 ## 구현 스크립트
 
-### `generator_next/preprocessing/preprocess.py`
+### `src/preprocessing/preprocess.py`
 
 ```bash
 # 전체 실행
-uv run python generator_next/preprocessing/preprocess.py
+uv run python src/preprocessing/preprocess.py
 
 # 증분 실행 (신규 파일만)
-uv run python generator_next/preprocessing/preprocess.py --mode incremental
+uv run python src/preprocessing/preprocess.py --mode incremental
 
 # 지오코딩 없이 변환만
-uv run python generator_next/preprocessing/preprocess.py --no-geocode
+uv run python src/preprocessing/preprocess.py --no-geocode
 ```
 
 환경변수: `KAKAO_API_KEY` (`.env` 파일에 저장, 지오코딩 사용 시 필수)

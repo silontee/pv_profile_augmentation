@@ -1,0 +1,2315 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8837316,
+          37.5397262
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 470423681,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "서울에너지공사(목동)",
+        "name_en": "Mokdong Yancheon power station",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0581688,
+          37.6408214
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 474276584,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "노원열병합발전소",
+        "name_en": "Nowon CHP Plant",
+        "plant_source": "",
+        "plant_output": "39 MW",
+        "plant_method": "",
+        "operator": "서울에너지공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9170813,
+          37.5443634
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 879319755,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.919689,
+          37.543891
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 879319764,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9202344,
+          37.544352
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 879319765,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "yes",
+        "plant_method": "combustion",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0305541,
+          37.5655956
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1028453947,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.946152,
+          37.5021954
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1079493547,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9461659,
+          37.5022718
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1079493548,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0899484,
+          37.6216932
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1081703085,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0791368,
+          37.5943192
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1108037029,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0792472,
+          37.5943455
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1108037030,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0759608,
+          37.5575589
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1126759905,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8729033,
+          37.512576
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1227215258,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9170221,
+          37.515283
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274565239,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "SK 신길 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.0258 MW",
+        "plant_method": "photovoltaic",
+        "operator": "SK에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9203638,
+          37.625313
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274565240,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "SK 은평뉴타운 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.02064 MW",
+        "plant_method": "photovoltaic",
+        "operator": "SK에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8661484,
+          37.5094476
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274565241,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "SK 신평 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.0258 MW",
+        "plant_method": "photovoltaic",
+        "operator": "SK에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0321134,
+          37.6449626
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274565242,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "SK 삼미북부 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.01806 MW",
+        "plant_method": "photovoltaic",
+        "operator": "SK에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9026496,
+          37.4373681
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274565243,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "SK 박미 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.02064 MW",
+        "plant_method": "photovoltaic",
+        "operator": "SK에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0326771,
+          37.6446027
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274565244,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "SK 창동 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.01806 MW",
+        "plant_method": "photovoltaic",
+        "operator": "SK에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.958377,
+          37.4787854
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274565245,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "SK 신봉천 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.01548 MW",
+        "plant_method": "photovoltaic",
+        "operator": "SK에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0760176,
+          37.544352
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274565246,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "건국대 경영관 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.0972 MW",
+        "plant_method": "photovoltaic",
+        "operator": "건국대학교"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0750417,
+          37.5440414
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274565247,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "건국대 상허연구관 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.1 MW",
+        "plant_method": "photovoltaic",
+        "operator": "건국대학교"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0745022,
+          37.5409667
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274565248,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "건국대 생명과학관 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.09792 MW",
+        "plant_method": "photovoltaic",
+        "operator": "건국대"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1232636,
+          37.4739937
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274566709,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1223545,
+          37.4736541
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274566710,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7952457,
+          37.5804939
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274573263,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.795551,
+          37.5798358
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274573264,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7957195,
+          37.5790615
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274573265,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.168357,
+          37.5665147
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274573266,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "고덕차량기지 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.612 MW",
+        "plant_method": "photovoltaic",
+        "operator": "서울에너지공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.150188,
+          37.5549583
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274573267,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1507292,
+          37.5560751
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274573268,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1514169,
+          37.5562498
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274573269,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1518435,
+          37.555
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274573270,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8083108,
+          37.5876322
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274573271,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "방화차량기지 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.63423 MW",
+        "plant_method": "photovoltaic",
+        "operator": "서울에너지공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0491519,
+          37.5510559
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274573272,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "불광천 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.143075 MW",
+        "plant_method": "photovoltaic",
+        "operator": "옴니시스템"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9333011,
+          37.5040643
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274574403,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "성대골햇빛 태양광 3호",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.025125 MW",
+        "plant_method": "photovoltaic",
+        "operator": "성대골에너지협동조합"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0464648,
+          37.6922455
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597539,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "그리드위즈 도봉 1호 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.168 MW",
+        "plant_method": "photovoltaic",
+        "operator": "아산신재생복합발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0465554,
+          37.691711
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597540,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "그리드위즈 도봉 2호 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.036 MW",
+        "plant_method": "photovoltaic",
+        "operator": "아산신재생복합발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1091966,
+          37.6109751
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597541,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "신내차량기지 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.63423 MW",
+        "plant_method": "photovoltaic",
+        "operator": "서울에너지공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1047254,
+          37.6131894
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597542,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "신내차량기지  태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "1.70496 MW",
+        "plant_method": "photovoltaic",
+        "operator": "케이서울햇빛발전소"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1539403,
+          37.5599673
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597543,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "고덕 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.9984 MW",
+        "plant_method": "photovoltaic",
+        "operator": "케이서울햇빛발전소"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8281488,
+          37.574013
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597544,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8285418,
+          37.574948
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597545,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8319097,
+          37.5736262
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597546,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.830384,
+          37.5731649
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597547,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8309463,
+          37.5729306
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597548,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.831901,
+          37.5728707
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597549,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8289652,
+          37.575888
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597550,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8295017,
+          37.5768544
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597551,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9366478,
+          37.5486506
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597554,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "광성중학교 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.074 MW",
+        "plant_method": "photovoltaic",
+        "operator": "KS솔라"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0595357,
+          37.5577393
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597555,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0596409,
+          37.5572733
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597556,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0595139,
+          37.556827
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597557,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.058977,
+          37.5555495
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597558,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0599794,
+          37.5555236
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597559,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0414799,
+          37.4611717
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597560,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0416709,
+          37.4611503
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597561,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0413905,
+          37.4610206
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597562,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0946036,
+          37.4934206
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597563,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0947117,
+          37.4930046
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597564,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.095558,
+          37.4929322
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597565,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0956444,
+          37.4931916
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597566,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.041832,
+          37.4604068
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1274597567,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "양재 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": "한화솔루션"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8282956,
+          37.5152729
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278459093,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "신정 열병합",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "6 MW",
+        "plant_method": "combustion",
+        "operator": "서울에너지공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0386648,
+          37.5730014
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278640419,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "동대문 환경자원센터",
+        "name_en": "",
+        "plant_source": "biogas",
+        "plant_output": "1.065 MW",
+        "plant_method": "anaerobic_digestion",
+        "operator": "동대문환경개발공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1636835,
+          37.568081
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278678664,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "강동 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "19.8 MW",
+        "plant_method": "fuel_cell",
+        "operator": "파주에너지서비스"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9024798,
+          37.437211
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278678665,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "SK(박미) 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "0.3 MW",
+        "plant_method": "fuel_cell",
+        "operator": "SK에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8329212,
+          37.5281009
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278678666,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "SK(개나리) 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "0.3 MW",
+        "plant_method": "fuel_cell",
+        "operator": "SK에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.10204,
+          37.5132181
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1278678667,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "롯데월드타워 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "0.8 MW",
+        "plant_method": "fuel_cell",
+        "operator": "롯데물산"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8711128,
+          37.5480469
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1280178715,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8710182,
+          37.5478936
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1280178716,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8717024,
+          37.5482612
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1280178718,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8714255,
+          37.5480666
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1280178719,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.030348,
+          37.6630408
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1280183130,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0667543,
+          37.5395598
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1280867357,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.067056,
+          37.539437
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1280867358,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9169845,
+          37.5154002
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1281474110,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "SK(신길) 연료전지",
+        "name_en": "",
+        "plant_source": "gas",
+        "plant_output": "0.3 MW",
+        "plant_method": "fuel_cell",
+        "operator": "SK에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0185822,
+          37.5926944
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1286210235,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1114174,
+          37.6181519
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1374941098,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1116908,
+          37.6182669
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1374941099,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1117572,
+          37.6176654
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1374941100,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1115266,
+          37.6178781
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1374941101,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1100213,
+          37.6176463
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1374941592,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1099855,
+          37.6177294
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1374941593,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1099474,
+          37.6174979
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1374941594,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1106317,
+          37.6181747
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1374941869,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1096398,
+          37.6178621
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1374941870,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8947113,
+          37.4724077
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1395939693,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0597661,
+          37.5951756
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1415860451,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0791222,
+          37.589167
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1420202785,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0900443,
+          37.5937554
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1452250698,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0897706,
+          37.5936433
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1452250701,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.9692132,
+          37.6060664
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1455090287,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0610382,
+          37.5981065
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1455917376,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0609927,
+          37.5980287
+        ]
+      },
+      "properties": {
+        "osm_type": "way",
+        "osm_id": 1455917377,
+        "sido": "서울특별시",
+        "power_type": "generator",
+        "name": "",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "yes",
+        "plant_method": "photovoltaic",
+        "operator": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1228734,
+          37.4738358
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17496656,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "코원ES햇빛 송파 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "1.31544 MW",
+        "plant_method": "photovoltaic",
+        "operator": "부산정관에너지"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.7954852,
+          37.5797055
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17496732,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "김포차량사업소 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.99 MW",
+        "plant_method": "photovoltaic",
+        "operator": "서울에너지공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1512464,
+          37.5555565
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17496733,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "배재고등학교 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.4977 MW",
+        "plant_method": "photovoltaic",
+        "operator": "서울에너지공사"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.1403992,
+          37.5628142
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17496768,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "서울나눔 1호 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "2.5 MW",
+        "plant_method": "photovoltaic",
+        "operator": "불가리아나눔발전소"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.143159,
+          37.5615751
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17496769,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "암사 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "2.499 MW",
+        "plant_method": "photovoltaic",
+        "operator": "OCI"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8295617,
+          37.5751944
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17497024,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "서남물재생센터 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "2.995 MW",
+        "plant_method": "photovoltaic",
+        "operator": "코스콘태양광"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          126.8301749,
+          37.5782693
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17497025,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "서울 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "1.301 MW",
+        "plant_method": "photovoltaic",
+        "operator": "한국중부발전"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0594792,
+          37.5564577
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17497026,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "중랑물재생센터 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.7 MW",
+        "plant_method": "photovoltaic",
+        "operator": "코스콘태양광"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0414976,
+          37.4611047
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17497027,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "만남 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.056 MW",
+        "plant_method": "photovoltaic",
+        "operator": "하이패스태양광"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0950111,
+          37.4932027
+        ]
+      },
+      "properties": {
+        "osm_type": "relation",
+        "osm_id": 17497028,
+        "sido": "서울특별시",
+        "power_type": "plant",
+        "name": "강남 태양광",
+        "name_en": "",
+        "plant_source": "solar",
+        "plant_output": "0.4248 MW",
+        "plant_method": "photovoltaic",
+        "operator": "한국지역난방공사"
+      }
+    }
+  ]
+}

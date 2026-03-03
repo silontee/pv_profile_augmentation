@@ -27,7 +27,7 @@
 ### Track 2. 전처리·지오코딩 — 완료
 - raw_csv → Polars 통합·정규화 → parquet
 - Kakao API 지오코딩 (도로명→지번 fallback, retry)
-- 산출물: `generator_next/source/processed/pv_facility_processed.parquet`
+- 산출물: `src/data/processed/pv_facility_processed.parquet`
 
 ### Track 3. UI 시각화 — **v0.1 완료**
 - 풀스택 Docker 구성 (PostgreSQL+PostGIS / FastAPI / React+MapLibre)
@@ -71,7 +71,7 @@
 
 ```
 generator/              # 레거시 — 건드리지 않음
-generator_next/         # 모든 신규 개발
+src/         # 모든 신규 개발
   crawlers/             # Track 1
   preprocessing/        # Track 2
   map/                  # 정적 HTML 지도 (folium) — 레거시화 예정
@@ -100,11 +100,11 @@ plan/
 ```bash
 # Python 파이프라인 (Track 1, 2)
 uv sync
-uv run python generator_next/crawlers/data_go_kr_solar_download_playwright.py --headless
-uv run python generator_next/preprocessing/preprocess.py
+uv run python src/crawlers/data_go_kr_solar_download_playwright.py --headless
+uv run python src/preprocessing/preprocess.py
 
 # UI (Track 3)
-cd generator_next/ui
+cd src/ui
 docker compose up --build   # 최초
 docker compose up -d         # 이후
 # 접속: http://localhost:5173
