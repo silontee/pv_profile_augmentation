@@ -6,14 +6,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 태양광 발전소 전기사업허가 데이터(data.go.kr)를 자동 수집·정제·지오코딩하여 `rps_rawdata`와 실제 세부 발전량 데이터 간 간극을 보완하는 파이프라인. 최종 목표는 통계적 증강까지 포함.
 
-PRD 문서: `plan/overall/PRD_v0.8.md` (단일 기준 문서)
-세부 트랙 PRD: `plan/crawling/`, `plan/preprocessing/`, `plan/ui/PRD_v0.2.md`, `plan/statistical_augmentation/`
+PRD 문서: `plan/overall/PRD_v0.9.md` (단일 기준 문서)
+세부 트랙 PRD: `plan/crawling/`, `plan/preprocessing/`, `plan/ui/PRD_v0.3.md`, `plan/statistical_augmentation/`
 
 ## 환경 및 실행
 
 패키지 관리자: `uv` (pyproject.toml + uv.lock)
 Python: 3.12+
-핵심 라이브러리: Polars, Playwright, requests, folium
+핵심 라이브러리: Polars, Playwright, requests
 UI 스택: Docker (PostgreSQL+PostGIS 16, FastAPI, React+MapLibre GL JS)
 
 ```bash
@@ -28,9 +28,6 @@ uv run python src/preprocessing/preprocess.py
 
 # 토지피복 오프라인 수집 (선택)
 uv run python src/crawlers/land_cover_crawler.py --sido 서울 경기
-
-# 지도 생성 (정적 HTML — 레거시)
-uv run python src/map/generate_map.py
 
 # UI 실행 (풀스택)
 cd src/ui
@@ -50,7 +47,6 @@ src/     # 모든 신규 개발은 여기서만
     openinframap_power_crawler.py
     land_cover_crawler.py   # EGIS WFS 토지피복 오프라인 수집
   preprocessing/    # 전처리 스크립트
-  map/              # 정적 HTML 지도 (folium) — 레거시화 예정
   ui/               # 풀스택 UI (Docker)
     docker-compose.yml      # DB 포트: 5433 (pv-main-db 충돌 방지)
     backend/        # FastAPI + asyncpg + PostGIS
@@ -108,11 +104,7 @@ plan/               # PRD 문서들 (버전 관리, 덮어쓰기 금지)
 - **[v0.2]** 토지피복 레이어: 환경부 EGIS WFS 프록시 → 7색 중분류 폴리곤
 - **[v0.2]** 토지피복 범례: 레이어 ON 시 우상단 오버레이
 - **[v0.2]** 필터 → 지도 동기화: 설비용량·설치연도·상태가 마커/클러스터에 반영
-- 세부: `plan/ui/PRD_v0.2.md`
-
-**3-레거시. 정적 지도** (`src/map/generate_map.py`) — 완료 (레거시화 예정)
-- folium + FastMarkerCluster로 114,840개 발전소 포인트 클러스터링
-- 출력: `src/map/output/pv_map.html`
+- 세부: `plan/ui/PRD_v0.3.md`
 
 **4. 통계적 증강** (미착수 — 방법론 미확정)
 - recloud RPS 이용률과 data.go.kr 발전소 허가 데이터 결합

@@ -65,7 +65,7 @@ async def get_landcover(
     # 각 feature에 color 속성 추가
     for feat in geojson.get("features", []):
         props = feat.get("properties") or {}
-        code = str(props.get("lcm_cd", ""))[:1]
+        code = str(props.get("l2_code", ""))[:1]
         props["color"] = _CODE_COLOR.get(code, "#9ca3af")
         feat["properties"] = props
 
